@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use App\Models\CarBrand;
-use App\Models\CarModel;
+use App\Models\Carbrand;
+use App\Models\Carmodel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -27,19 +27,19 @@ class Car extends Model
         'interior',
         'kilometers',
         'price',
-        'models_id',
-        'brands_id',
+        'carmodel_id',
+        'carbrand_id',
         'year',
     ];
 
-    public function carBrand()
+    public function carbrand()
     {
-        return $this->belongsTo(CarBrand::class);
+        return $this->belongsTo(Carbrand::class);
     }
 
-    public function carModel()
+    public function carmodel()
     {
-        return $this->belongsTo(CarModel::class);
+        return $this->belongsTo(Carmodel::class);
     }
 
 }
