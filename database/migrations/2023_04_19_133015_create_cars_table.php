@@ -28,8 +28,8 @@ return new class extends Migration
             $table->string('interior');
             $table->integer('kilometers');
             $table->float('price');
-            $table->foreignId('model_id');
-            $table->foreignId('brand_id');
+            $table->foreignId('carmodel_id');
+            $table->foreignId('carbrand_id');
             $table->integer('year');
             $table->timestamps();
         });

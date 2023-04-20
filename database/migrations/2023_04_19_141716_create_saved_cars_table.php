@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('saved_cars', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('cars_id');
-            $table->foreignId('users_id');
+            $table->foreignId('car_id');
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }
