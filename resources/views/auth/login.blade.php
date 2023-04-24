@@ -14,6 +14,7 @@
         <x-header/>
         <div class="log">
         <form method="POST" id="form" action="{{ route('login') }}">
+            @csrf
             <h2>Welcome</h2>
             <x-text-input id="email" class="block mt-1 w-full" placeholder="Email" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
