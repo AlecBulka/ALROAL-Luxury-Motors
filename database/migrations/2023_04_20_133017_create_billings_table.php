@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('province');
             $table->string('postalCode');
             $table->string('country');
-            $table->foreginId('user_id');
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }
