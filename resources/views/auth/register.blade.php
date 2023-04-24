@@ -30,7 +30,7 @@
                             name="password_confirmation" required autocomplete="new-password" />
 
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        <label for=""><input type="text" placeholder="Phone Number"></label>
+        <label for=""><input type="tel" placeholder="Phone Number"></label>
         <label for=""><input type="submit" placeholder="Register" value="Register"></label>
         <p class="p0">Alredy registered?</p>
         <a href="{{ route('login') }}">Login</a>
