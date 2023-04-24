@@ -1,4 +1,7 @@
+
 <div class="nav">
+    <img src='img/logo/logo-color.svg'>
+    <div class="links">
             @if (Route::has('register'))
                     @auth
                         <a href="{{ url('/dashboard') }}" class="">Dashboard</a>
@@ -24,6 +27,7 @@
                     @endauth
                 </div>
             @endif
+        </div>
           </div>
         </div>
     </div>
