@@ -1,19 +1,19 @@
 <div class="nav">
     <img src='img/logo/logo-color.svg'>
     <div class="links">
-        @if (Route::has('register'))
-            @auth
-                <a href="{{ url('/dashboard') }}" class="">Dashboard</a>
-            @else
-                <a href="{{ route('login') }}" class="">Home</a>
+            @if (Route::has('register'))
+                    @auth
+                        <a href="{{ url('/dashboard') }}" class="">Dashboard</a>
+                    @else
+                        <a href="{{ url('login') }}" class="">Home</a>
 
-                <a href="{{ route('login') }}" class="">Buy Cars</a>
+                        <a href="{{ url('buy-cars') }}" class="">Buy Cars</a>
 
-                <a href="{{ route('login') }}" class="">Sell Cars</a>
+                        <a href="{{ url('login') }}" class="">Sell Cars</a>
 
-                <a href="{{ route('login') }}" class="">Tunning</a>
+                        <a href="{{ url('login') }}" class="">Tunning</a>
 
-                <a href="{{ route('login') }}" class="">Contact</a>
+                        <a href="{{ url('/contact') }}" class="">Contact</a>
 
                 <a href="{{ route('login') }}" class="">
                     <svg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
