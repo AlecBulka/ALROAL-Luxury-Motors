@@ -36,7 +36,7 @@ developed by the best Italian craftsmen, to Forged Composite, an innovative carb
     </div>
 
     <div class="gwa">
-        <div class="gwagon"><img src="img/tunning/gwagon.png" id="gwagon"></div>
+
         <p id="p4">With the help of our team of experts, it is possible to follow
             the development of the supercar itself in each of the phases
             of definition of colours, equipment and materials.
@@ -44,6 +44,7 @@ developed by the best Italian craftsmen, to Forged Composite, an innovative carb
             advice is preceded by the experience  inside the factory,
              a guided tour inside the establishment to immediately see some
             examples of the possible configurations of their models.</p>
+            <div class="gwagon"><img src="img/tunning/gwagon.png" id="gwagon"></div>
     </div>
     <x-footer/>
 </body>
