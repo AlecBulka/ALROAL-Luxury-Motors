@@ -23,6 +23,7 @@
                 required autocomplete="current-password" />
 <x-input-error :messages="$errors->get('password')" class="mt-2" />
             <label for="">
+            <a class="a4" href="{{ route('password.request') }}">Forgot your password?</a><br>
             <input type="submit" placeholder="Login" value="Login"></label>
             <p class="p0">Alredy logged in?</p>
             <a href="{{ route('register') }}">Register</a>

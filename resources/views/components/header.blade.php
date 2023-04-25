@@ -6,15 +6,15 @@
                     @auth
                         <a href="{{ url('/dashboard') }}" class="">Dashboard</a>
                     @else
-                        <a href="{{ route('login') }}" class="">Home</a>
+                        <a href="{{ url('login') }}" class="">Home</a>
 
-                        <a href="{{ route('login') }}" class="">Buy Cars</a>
+                        <a href="{{ url('buy-cars') }}" class="">Buy Cars</a>
 
-                        <a href="{{ route('login') }}" class="">Sell Cars</a>
+                        <a href="{{ url('login') }}" class="">Sell Cars</a>
 
-                        <a href="{{ route('login') }}" class="">Tunning</a>
+                        <a href="{{ url('login') }}" class="">Tunning</a>
 
-                        <a href="{{ route('login') }}" class="">Contact</a>
+                        <a href="{{ url('/contact') }}" class="">Contact</a>
 
                         <a href="{{ route('register') }}" class="">
                         <svg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
