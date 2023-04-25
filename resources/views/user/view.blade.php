@@ -12,7 +12,7 @@
         <link rel="stylesheet" href={{ asset('style/user/view.css') }}>
     </head>
     <body>
-        <x-header></x-header>
+        <x-header/>
     <h1>Account Settings</h1>
     <div class="account-settings">
         <form id="personal-details" name="personal-details">
@@ -22,7 +22,10 @@
             <label for="">Email:</label>
             <input type="email" name="email" id="email">
             <label for="">Phone Number:</label>
-            <input type="tel" name="phone" id="phone"><br><br>
+            <input type="tel" name="phone" id="phone">
+            <div class="btnSave">
+                <button type="submit" id="save">Save Changes</button>
+            </div>
         </form>
         <form id="biling-details" name="biling-details">
             <h3>Biling Details</h3>
@@ -36,6 +39,9 @@
             <input type="text" name="code" id="code">
             <label for="">Country:</label>
             <input type="text" name="country" id="country">
+            <div class="btnSave">
+                <button type="submit" id="save">Save Changes</button>
+            </div>
         </form>
         <form id="update-password" name="update-password">
             <h3>Update Password</h3>
