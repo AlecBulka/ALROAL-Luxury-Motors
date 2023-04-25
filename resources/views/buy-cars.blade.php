@@ -18,10 +18,24 @@
     <div class="container">
         <img class="car" src="/img/main-img1.jpg" alt="">
         <div class="text">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Noteworthy technology
-                acquisitions 2021</h5>
-            <p class="mb-3 font-normal text-gray-700">Here are the biggest enterprise technology
-                acquisitions of 2021 so far, in reverse chronological order.</p>
+            <h3>Pre-Owned 2022</h3>
+            <h2>Lamborghini STO</h2>
+            <hr>
+            <div class="seccion">
+                <div class="left-seccion">
+                    <p>Odometer: 2,500 KM</p>
+                    <p>Exterior: Red</p>
+                    <p>Interior: Black</p>
+                    <h3>Price (EUR)</h3>
+                </div>
+                <div class="right-seccion">
+                    <p>Drivetrain: AWD</p>
+                    <p>Transmission: 7-Speed</p>
+                    <p>Engine: 640HP</p>
+                    <h3>€250,000.00</h3>
+                </div>
+            </div>
+            <a href="#"></a>
         </div>
     </div>
     <x-footer />
