@@ -6,31 +6,41 @@ body{
 .nav{
     background-color: white;
     display: flex;
-    justify-content: end;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
     height: 50px;
-    border-bottom: solid 1px;
-    border-color: #939393;
+    border: solid 1px #939393;
 }
 
-.nav a{
+img{
+    width: 50px;
+}
+
+.nav img{
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.links{
+    display: flex;
+    align-items: center;
     padding: 10px;
-    margin-top: 5px;
     text-decoration: none;
     color: black;
 }
 
-.menu{
-    display: flex;
+.links a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+h1{
     margin-left: 38px;
     margin-top: 20px;
-}
-
-.menu a{
-    text-decoration: none;
-    color: black;
     font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+    font-size: 25px;
     font-weight: bold;
 }
 
@@ -38,27 +48,44 @@ body{
     margin-left: 38px;
 }
 
-.personal-details{
+.account-settings{
     width: 1100px;
-    margin-top: 50px;
     margin-left: 120px;
-    height: 200px;
+    height: 560px;
+    background-color: #EEEEEE;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+}
+
+#biling-details{
+    border-top: 1px solid #858585;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#update-password{
+    border-top: 1px solid #858585;
+}
+
+.delete-account{
+    width: 1100px;
+    margin-left: 120px;
+    height: 100px;
     background-color: #EEEEEE;
     font-family: 'Poppins', sans-serif;
     border-radius: 20px;
     margin-bottom: 150px;
 }
 
-.details{
-    margin-top: 20px;
+h3{
+    margin-left: 20px;
 }
 
 form input{
     border-radius: 10px;
     border: 1px solid black;
     width: 150px;
-    height: 20px;
-    margin-top: 70px;
+    height: 23px;
 }
 
 label{
@@ -70,21 +97,46 @@ label{
     width: 200px;
 }
 
-.btnEdit{
+#address{
+    width: 200px;
+}
+
+.btnSave{
     text-align: end;
 }
 
-#edit{
-    width: 100px;
-    height: 30px;
+#save{
+    width: 110px;
+    height: 40px;
     background-color: #374151;
     color: white;
     margin-right: 20px;
     border-radius: 10px;
     border: 1px solid black;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-#edit:hover{
+#save:hover{
+    cursor: pointer;
+}
+
+.btnDelete{
+    text-align: end;
+}
+
+#delete{
+    width: 120px;
+    height: 40px;
+    background-color: #FF0000;
+    color: white;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+#delete:hover{
     cursor: pointer;
 }
 

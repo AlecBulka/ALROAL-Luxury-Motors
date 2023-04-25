@@ -40,4 +40,8 @@ Route::get('/user-dashboard', function () {
     return view('user/dashboard');
 });
 
+Route::get('/user-view', function () {
+    return view('user/view');
+});
+
 require __DIR__.'/auth.php';

@@ -16,7 +16,7 @@
 <body>
     <x-header />
     <div class="container">
-        <img src="/img/main-img1.jpg" alt="">
+        <img class="car" src="/img/main-img1.jpg" alt="">
         <div class="text">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Noteworthy technology
                 acquisitions 2021</h5>

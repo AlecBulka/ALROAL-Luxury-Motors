@@ -1,5 +1,6 @@
     <!DOCTYPE html>
     <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
         <link rel="stylesheet" href={{ asset('style/login/style.css') }}>
     </head>
+
     <body>
-        <x-header/>
+        <x-header />
         <div class="log">
         <form method="POST" id="form" action="{{ route('login') }}">
+        @csrf
             <h2>Welcome</h2>
             <x-text-input id="email" class="block mt-1 w-full" placeholder="Email" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
@@ -31,4 +34,5 @@
     </div>
         <x-footer/>
     </body>
+
     </html>
