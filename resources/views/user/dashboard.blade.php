@@ -12,7 +12,7 @@
         <link rel="stylesheet" href={{ asset('style/user/dashboard.css') }}>
     </head>
     <body>
-        <x-header></x-header>
+        <x-header/>
     <div class="menu">
         <div class="dashboard">
             <a href="#">Dashboard</a>
