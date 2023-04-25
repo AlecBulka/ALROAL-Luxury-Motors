@@ -1,5 +1,4 @@
 body{
-    background-color: greenyellow;
     margin: 0;
     padding: 0;
 }
@@ -37,8 +36,95 @@ img{
     color: black;
 }
 
+.vol{
+    display: flex;
+}
+
+.volante{
+    width: 300px;
+}
+
+#volante{
+    width: 170px;
+    margin: 20px;
+    margin-left: 100px;
+    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 41% 100%, 0 64%);
+
+}
+
 #p1{
     width: 400px;
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+
+.for{
+    display: flex;
+    margin-top: 30px;
+}
+
+.ford{
+    width: 300px;
+    margin-left: 20px;
+}
+
+#ford{
+    width: 350px;
+    margin: 20px;
+    clip-path: polygon(0% 0%, 100% 0, 100% 71%, 60% 100%, 0 100%);
+}
+
+#p2{
+    width: 500px;
+    margin-left: 100px;
+    margin-top: 80px;
+}
+
+.asien{
+    display: flex;
+    margin-top: 30px;
+}
+
+.asiento{
+    width: 300px;
+    margin-left: 20px;
+}
+
+#asiento{
+    width: 250px;
+    margin: 20px;
+    margin-left: 80px;
+    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 31% 100%, 0 59%);
+}
+
+#p3{
+    width: 450px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.gwa{
+    display: flex;
+    margin-top: 30px;
+}
+
+.gwagon{
+    width: 300px;
+    margin-left: 20px;
+}
+
+#gwagon{
+    width: 350px;
+    margin: 20px;
+    margin-left: 80px;
+    clip-path: polygon(65% 0, 100% 37%, 100% 100%, 0 100%, 0 0);
+}
+
+#p4{
+    width: 450px;
+    margin-left: 200px;
+    margin-top: 70px;
 }
 
 .footer{
