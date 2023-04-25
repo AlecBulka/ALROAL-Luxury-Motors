@@ -33,9 +33,9 @@
                     <p>Transmission: 7-Speed</p>
                     <p>Engine: 640HP</p>
                     <h3>€250,000.00</h3>
+                    <a class="viewCar" href="#">View Car</a>
                 </div>
             </div>
-            <a class="viewCar" href="#">View Car</a>
         </div>
     </div>
     <x-footer />
