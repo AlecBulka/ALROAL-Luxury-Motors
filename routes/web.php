@@ -44,4 +44,8 @@ Route::get('/user-view', function () {
     return view('user/view');
 });
 
+Route::get('/car-details', function () {
+    return view('car-details');
+});
+
 require __DIR__.'/auth.php';
