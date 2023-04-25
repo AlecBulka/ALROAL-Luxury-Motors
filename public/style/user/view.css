@@ -6,16 +6,32 @@ body{
 .nav{
     background-color: white;
     display: flex;
-    justify-content: end;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
     height: 50px;
-    border-bottom: solid 1px;
-    border-color: #939393;
+    border: solid 1px #939393;
 }
 
-.nav a{
+img{
+    width: 50px;
+}
+
+.nav img{
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.links{
+    display: flex;
+    align-items: center;
     padding: 10px;
-    margin-top: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.links a{
+    padding: 10px;
     text-decoration: none;
     color: black;
 }
@@ -35,7 +51,7 @@ h1{
 .account-settings{
     width: 1100px;
     margin-left: 120px;
-    height: 470px;
+    height: 560px;
     background-color: #EEEEEE;
     font-family: 'Poppins', sans-serif;
     border-radius: 20px;
@@ -43,7 +59,7 @@ h1{
 
 #biling-details{
     border-top: 1px solid #858585;
-    margin: 10px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -69,7 +85,7 @@ form input{
     border-radius: 10px;
     border: 1px solid black;
     width: 150px;
-    height: 20px;
+    height: 23px;
 }
 
 label{
