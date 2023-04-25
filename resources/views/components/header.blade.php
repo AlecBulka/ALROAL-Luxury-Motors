@@ -11,7 +11,7 @@
 
                         <a href="{{ url('login') }}" class="">Sell Cars</a>
 
-                        <a href="{{ url('login') }}" class="">Tunning</a>
+                        <a href="{{ url('/tunning') }}" class="">Tunning</a>
 
                         <a href="{{ url('/contact') }}" class="">Contact</a>
 
