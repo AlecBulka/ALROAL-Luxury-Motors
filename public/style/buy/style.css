@@ -107,3 +107,14 @@ hr {
     display: flex;
     justify-content: space-between;
 }
+
+.viewCar {
+    padding: 10px 40px;
+    background-color: #374151;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: end;
+}

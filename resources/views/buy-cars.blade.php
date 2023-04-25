@@ -35,7 +35,7 @@
                     <h3>€250,000.00</h3>
                 </div>
             </div>
-            <a href="#"></a>
+            <a class="viewCar" href="#">View Car</a>
         </div>
     </div>
     <x-footer />
