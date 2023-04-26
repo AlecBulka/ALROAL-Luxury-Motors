@@ -22,6 +22,10 @@ Route::get('/buy-cars', function () {
     return view('buy-cars');
 });
 
+Route::get('/sell-cars', function () {
+    return view('sell-cars');
+});
+
 Route::get('/tunning', function () {
     return view('tunning');
 });

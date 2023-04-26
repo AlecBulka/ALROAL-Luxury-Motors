@@ -9,7 +9,7 @@
 
                         <a href="{{ url('buy-cars') }}" class="">Buy Cars</a>
 
-                        <a href="{{ url('login') }}" class="">Sell Cars</a>
+                        <a href="{{ url('/sell-cars') }}" class="">Sell Cars</a>
 
                         <a href="{{ url('/tunning') }}" class="">Tunning</a>
 
