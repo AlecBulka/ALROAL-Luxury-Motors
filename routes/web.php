@@ -60,4 +60,8 @@ Route::get('/saved-cars', function () {
     return view('user/saved-cars');
 });
 
+Route::get('/add-user', function () {
+    return view('admin/add-user');
+});
+
 require __DIR__.'/auth.php';
