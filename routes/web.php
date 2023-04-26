@@ -56,4 +56,8 @@ Route::get('/car-details', function () {
     return view('car-details');
 });
 
+Route::get('/saved-cars', function () {
+    return view('user/saved-cars');
+});
+
 require __DIR__.'/auth.php';
