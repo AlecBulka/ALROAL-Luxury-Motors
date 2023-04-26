@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href={{ asset('style/user/dashboard.css') }}>
+        <link rel="stylesheet" href={{ asset('style/admin/add-user.css') }}>
     </head>
     <body>
         <x-header/>
@@ -48,8 +48,6 @@
                 <input type="text" name="city" id="city">
             </div>
             <div class="colum-two">
-                <label for="">Last Name:</label>
-                <input type="text" name="lastname" id="lastname">
                 <label for="">Phone Number:</label>
                 <input type="tel" name="number" id="number">
                 <label for="">Role:</label>
@@ -59,6 +57,8 @@
                     <option value="admin">Admin</option>
                     <option value="employee">Employee</option>
                 </select>
+                <label for="">Password:</label>
+                <input type="password" name="passwd" id="passwd">
                 <label for="">Country:</label>
                 <input type="text" name="country" id="country">
                 <label for="">Province:</label>
