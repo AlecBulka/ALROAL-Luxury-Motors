@@ -35,14 +35,37 @@
     </div>
     <div class="user-details">
         <form>
-            <label for="">Name:</label>
-            <input type="text" name="name" id="name">
-            <label for="">Email:</label>
-            <input type="email" name="email" id="email">
-            <label for="">Postal Code:</label>
-            <input type="text" name="code" id="code">
-            <div class="btnEdit">
-                <button type="submit" id="edit" >Edit</button>
+            <div class="colum-one">
+                <label for="">Name:</label>
+                <input type="text" name="name" id="name">
+                <label for="">Email:</label>
+                <input type="email" name="email" id="email">
+                <label for="">Postal Code:</label>
+                <input type="text" name="code" id="code">
+                <label for="">Address:</label>
+                <input type="text" name="address" id="address">
+                <label for="">City:</label>
+                <input type="text" name="city" id="city">
+            </div>
+            <div class="colum-two">
+                <label for="">Last Name:</label>
+                <input type="text" name="lastname" id="lastname">
+                <label for="">Phone Number:</label>
+                <input type="tel" name="number" id="number">
+                <label for="">Role:</label>
+                <select name="role" id="role">
+                    <option value="default">Select Role</option>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                    <option value="employee">Employee</option>
+                </select>
+                <label for="">Country:</label>
+                <input type="text" name="country" id="country">
+                <label for="">Province:</label>
+                <input type="text" name="province" id="province">
+            </div>
+            <div class="btnAdd">
+                <button type="submit" id="addUser" >AddUser</button>
             </div>
         </form>
     </div>
