@@ -72,6 +72,10 @@ Route::get('/add-user', function () {
     return view('admin/add-user');
 });
 
+Route::get('/edit-user', function () {
+    return view('admin/edit-user');
+});
+
 Route::get('/admin-dashboard-add-car', function () {
     return view('admin/admin-dashboard-add-car');
 });
