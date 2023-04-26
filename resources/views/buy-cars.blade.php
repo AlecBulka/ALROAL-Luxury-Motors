@@ -38,6 +38,75 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <img class="car" src="/img/main-img1.jpg" alt="">
+        <div class="text">
+            <h3>Pre-Owned 2022</h3>
+            <h2>Lamborghini STO</h2>
+            <hr>
+            <div class="seccion">
+                <div class="left-seccion">
+                    <p>Odometer: 2,500 KM</p>
+                    <p>Exterior: Red</p>
+                    <p>Interior: Black</p>
+                    <h3>Price (EUR)</h3>
+                </div>
+                <div class="right-seccion">
+                    <p>Drivetrain: AWD</p>
+                    <p>Transmission: 7-Speed</p>
+                    <p>Engine: 640HP</p>
+                    <h3>€250,000.00</h3>
+                    <a class="viewCar" href="#">View Car</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <img class="car" src="/img/main-img1.jpg" alt="">
+        <div class="text">
+            <h3>Pre-Owned 2022</h3>
+            <h2>Lamborghini STO</h2>
+            <hr>
+            <div class="seccion">
+                <div class="left-seccion">
+                    <p>Odometer: 2,500 KM</p>
+                    <p>Exterior: Red</p>
+                    <p>Interior: Black</p>
+                    <h3>Price (EUR)</h3>
+                </div>
+                <div class="right-seccion">
+                    <p>Drivetrain: AWD</p>
+                    <p>Transmission: 7-Speed</p>
+                    <p>Engine: 640HP</p>
+                    <h3>€250,000.00</h3>
+                    <a class="viewCar" href="#">View Car</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <img class="car" src="/img/main-img1.jpg" alt="">
+        <div class="text">
+            <h3>Pre-Owned 2022</h3>
+            <h2>Lamborghini STO</h2>
+            <hr>
+            <div class="seccion">
+                <div class="left-seccion">
+                    <p>Odometer: 2,500 KM</p>
+                    <p>Exterior: Red</p>
+                    <p>Interior: Black</p>
+                    <h3>Price (EUR)</h3>
+                </div>
+                <div class="right-seccion">
+                    <p>Drivetrain: AWD</p>
+                    <p>Transmission: 7-Speed</p>
+                    <p>Engine: 640HP</p>
+                    <h3>€250,000.00</h3>
+                    <a class="viewCar" href="#">View Car</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <x-footer />
 </body>
 
