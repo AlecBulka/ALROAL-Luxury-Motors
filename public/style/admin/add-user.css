@@ -74,43 +74,59 @@ img{
     margin-top: 20px;
 }
 
+.user-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+}
 
 form input{
     border-radius: 5px;
     border: 1px solid black;
     width: 150px;
     height: 23px;
-    display: flex;
+}
+
+form select{
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 155px;
+    height: 27px;
 }
 
 .column-one{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    margin-right: 40px;
 }
 
-#email{
-    width: 200px;
+.column-two{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
 }
 
-#address{
-    width: 200px;
+
+.btnAdd{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
-.btnEdit{
-    text-align: end;
-}
-
-#edit{
-    width: 100px;
-    height: 30px;
+#add{
+    width: 150px;
+    height: 40px;
     background-color: #374151;
     color: white;
     margin-right: 20px;
     border-radius: 10px;
     border: 1px solid black;
+    font-size: large;
 }
 
-#edit:hover{
+#add:hover{
     cursor: pointer;
 }
 
