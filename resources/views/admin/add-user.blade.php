@@ -33,42 +33,42 @@
             <a href="#">Buy Cars</a>
         </div>
     </div>
-    <div class="user-details">
         <form>
-            <div class="colum-one">
-                <label for="">Name:</label>
-                <input type="text" name="name" id="name">
-                <label for="">Email:</label>
-                <input type="email" name="email" id="email">
-                <label for="">Postal Code:</label>
-                <input type="text" name="code" id="code">
-                <label for="">Address:</label>
-                <input type="text" name="address" id="address">
-                <label for="">City:</label>
-                <input type="text" name="city" id="city">
-            </div>
-            <div class="colum-two">
-                <label for="">Phone Number:</label>
-                <input type="tel" name="number" id="number">
-                <label for="">Role:</label>
-                <select name="role" id="role">
-                    <option value="default">Select Role</option>
-                    <option value="user">User</option>
-                    <option value="admin">Admin</option>
-                    <option value="employee">Employee</option>
-                </select>
-                <label for="">Password:</label>
-                <input type="password" name="passwd" id="passwd">
-                <label for="">Country:</label>
-                <input type="text" name="country" id="country">
-                <label for="">Province:</label>
-                <input type="text" name="province" id="province">
+            <div class="user-details">
+                <div class="column-one">
+                    <label for="">Name:</label>
+                    <input type="text" name="name" id="name"><br>
+                    <label for="">Email:</label>
+                    <input type="email" name="email" id="email"><br>
+                    <label for="">Postal Code:</label>
+                    <input type="text" name="code" id="code"><br>
+                    <label for="">Address:</label>
+                    <input type="text" name="address" id="address"><br>
+                    <label for="">City:</label>
+                    <input type="text" name="city" id="city"><br>
+                </div>
+                <div class="column-two">
+                    <label for="">Phone Number:</label>
+                    <input type="tel" name="number" id="number"><br>
+                    <label for="">Role:</label>
+                    <select name="role" id="role">
+                        <option value="default">Select Role</option>
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                        <option value="employee">Employee</option>
+                    </select><br>
+                    <label for="">Password:</label>
+                    <input type="password" name="passwd" id="passwd"><br>
+                    <label for="">Country:</label>
+                    <input type="text" name="country" id="country"><br>
+                    <label for="">Province:</label>
+                    <input type="text" name="province" id="province"><br>
+                </div>
             </div>
             <div class="btnAdd">
-                <button type="submit" id="addUser" >AddUser</button>
+                <button type="submit" id="add" >Add User</button>
             </div>
         </form>
-    </div>
-<x-footer></x-footer>
-  </body>
+        <x-footer></x-footer>
+    </body>
 </html>
