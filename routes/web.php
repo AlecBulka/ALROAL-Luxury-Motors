@@ -26,7 +26,9 @@ Route::get('/sell-cars', function () {
     return view('sell-cars');
 });
 
-
+Route::get('/view-users', function () {
+    return view('admin/view-users');
+});
 
 Route::get('/admin-dashboard-add-car', function () {
     return view('admin-dashboard-add-car');
