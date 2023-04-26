@@ -84,4 +84,8 @@ Route::get('/employee-dashboard-add-car', function () {
     return view('employee/employee-dashboard-add-car');
 });
 
+Route::get('/employee-dashboard-edit-car', function () {
+    return view('employee/employee-dashboard-edit-car');
+});
+
 require __DIR__.'/auth.php';

@@ -8,11 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href={{ asset('style/admin/admin-dashboard-edit-car.css') }}>
+    <link rel="stylesheet" href={{ asset('style/employee/employee-dashboard-edit-car.css') }}>
 </head>
 <body>
     <x-header/>
-    <x-header-admin/>
+    <x-header-employee/>
         <div class="sell">
             <div class="img"><p id="p1">Select image</p></div>
             <div class="column">
