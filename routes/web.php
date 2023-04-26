@@ -26,11 +26,6 @@ Route::get('/sell-cars', function () {
     return view('sell-cars');
 });
 
-
-
-Route::get('/admin-dashboard-add-car', function () {
-    return view('admin-dashboard-add-car');
-});
 Route::get('/tunning', function () {
     return view('tunning');
 });
@@ -67,6 +62,10 @@ Route::get('/saved-cars', function () {
 
 Route::get('/add-user', function () {
     return view('admin/add-user');
+});
+
+Route::get('/admin-dashboard-add-car', function () {
+    return view('admin//admin-dashboard-add-car');
 });
 
 require __DIR__.'/auth.php';
