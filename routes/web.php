@@ -73,7 +73,11 @@ Route::get('/add-user', function () {
 });
 
 Route::get('/admin-dashboard-add-car', function () {
-    return view('admin//admin-dashboard-add-car');
+    return view('admin/admin-dashboard-add-car');
+});
+
+Route::get('/admin-dashboard-edit-car', function () {
+    return view('admin/admin-dashboard-edit-car');
 });
 
 require __DIR__.'/auth.php';
