@@ -20,7 +20,7 @@
         <div class="text">
             <div class="top">
                 <div>
-                    <h3>Pre-Owned 2022</h3>
+                    <h3>2022</h3>
                     <h2>Lamborghini STO</h2>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -52,7 +52,7 @@
         <div class="text">
             <div class="top">
                 <div>
-                    <h3>Pre-Owned 2022</h3>
+                    <h3>2022</h3>
                     <h2>Lamborghini STO</h2>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
