@@ -30,6 +30,10 @@ Route::get('/view-users', function () {
     return view('admin/view-users');
 });
 
+Route::get('/view-cars', function () {
+    return view('admin/view-cars');
+});
+
 Route::get('/admin-dashboard-add-car', function () {
     return view('admin-dashboard-add-car');
 });
