@@ -31,6 +31,7 @@ return new class extends Migration
             $table->foreignId('carmodel_id');
             $table->foreignId('carbrand_id');
             $table->integer('year');
+            $table->boolean('isSold')->default(false);
             $table->timestamps();
         });
     }
