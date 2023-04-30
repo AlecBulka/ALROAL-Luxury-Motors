@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CarController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,13 +25,9 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/buy-cars', function () {
-    return view('buy-cars');
-});
+Route::get('/buy-cars', [CarController::class, 'index'])->name('buy-cars');
 
-Route::get('/car-details', function () {
-    return view('car-details');
-});
+Route::get('/car/{car}', [CarController::class, 'show'])->name('car-details');
 
 Route::get('/sell-cars', function () {
     return view('sell-cars');
@@ -59,17 +57,19 @@ Route::get('/user/saved-cars', function () {
 
 
 //Employee Routes
-Route::get('/employee/view-cars', function () {
-    return view('employee/view-cars');
-});
+Route::get('/employee/view-cars', [EmployeeController::class, 'index'])->name('employee-view-cars');
 
-Route::get('/employee/add-car', function () {
-    return view('employee/employee-dashboard-add-car');
-});
+Route::get('/employee/add-car', [EmployeeController::class, 'create'])->name('employee-add-cars');
 
-Route::get('/employee/edit-car', function () {
-    return view('employee/employee-dashboard-edit-car');
-});
+Route::post('/employee/add-car', [EmployeeController::class, 'store'])->name('employee-store-cars');
+
+Route::get('/employee/edit-car/{car}', [EmployeeController::class, 'edit'])->name('employee-edit-cars');
+
+Route::put('/employee/edit-car/{car}', [EmployeeController::class, 'update'])->name('employee-update-cars');
+
+Route::delete('/employee/delete-car/{car}', [EmployeeController::class, 'destroy'])->name('employee-delete-cars');
+
+
 
 
 //Admin Routes

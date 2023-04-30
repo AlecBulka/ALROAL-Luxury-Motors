@@ -84,16 +84,13 @@ input,select{
     margin-bottom: 30px;
     margin-top: 10px;
     margin-left: 100px;
-}
-#a1{
-    background-color: rgb(55, 65, 81);
-    text-decoration: none;
+    background-color: #374151;
     color: white;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    height: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
     font-weight: bold;
     border-radius: 3px;
 }

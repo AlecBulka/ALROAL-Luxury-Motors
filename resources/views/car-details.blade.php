@@ -18,7 +18,7 @@
     <div class="container">
         <div class="hero">
             <div class="header">
-                <h1>Lamborghini STO</h1>
+                <h1>{{$car->name}}</h1>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="none" class="saved">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
                   </svg>
@@ -29,10 +29,10 @@
         </div>
         <div class="buy">
             <div class="price">
-                <h3>250,000.00€</h3>
+                <h3>{{$car->price}}€</h3>
             </div>
             <div class="btnBuy">
-                <button type="submit" id="buyCar">BUY</button>
+                <button type="submit" id="buyCar">Buy</button>
             </div>
         </div>
     </div>
@@ -40,24 +40,24 @@
         <h2>Technical specifications</h2>
         <div class="list">
             <ul id="list-one">
-                <li>ENGINE: V10</li>
-                <li>MAX HORSEPOWER: 640 HP</li>
-                <li>MAX TORQUE: 565 NM</li>
-                <li>CONSUMPTION:13.9/100KM</li>
-                <li>TOP SPEED: 310KM/H</li>
-                <li>ACCELERATION 0-100KM/H: 3.0SEC</li>
-                <li>WHEELS: 245/30 R20</li>
-                <li>TIRES: 8.5J X 20</li>
+                <li>Engine: {{$car->engine}}</li>
+                <li>Max Horsepower: {{$car->horsepower}} HP</li>
+                <li>Max Torque: {{$car->torque}} NM</li>
+                <li>Consumption: {{$car->consumption}}L/100KM</li>
+                <li>Top Speed: {{$car->topSpeed}}KM/H</li>
+                <li>Acceleration 0-100KM/H: {{$car->acceleration}}Sec</li>
+                <li>Wheels: {{$car->wheels}}</li>
+                <li>Tires: {{$car->tires}}</li>
             </ul>
             <ul id="list-two">
-                <li>DRIVETRAIN: RWD</li>
-                <li>GEARBOX: 7-SPEED DUAL-CLUCH</li>
-                <li>EXTERIOR: RED</li>
-                <li>INTERIOR: BLACK</li>
-                <li>BRAND: LAMBORGHINI</li>
-                <li>MODEL: STO</li>
-                <li>ODOMETER: 2.500KM</li>
-                <li>YEAR: 2022</li>
+                <li>Drivetrain: {{$car->driveTrain}}</li>
+                <li>Gearbox: {{$car->gearbox}}</li>
+                <li>Exterior: {{$car->exterior}}</li>
+                <li>Interior: {{$car->interior}}</li>
+                <li>Brand: {{$car->carbrand->name}}</li>
+                <li>Model: {{$car->carmodel->name}}</li>
+                <li>Odometer: {{$car->kilometers}}KM</li>
+                <li>Year: {{$car->year}}</li>
             </ul>
         </div>
     </div>

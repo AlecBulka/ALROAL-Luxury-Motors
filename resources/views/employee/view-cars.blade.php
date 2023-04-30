@@ -15,7 +15,7 @@
 
 <body>
     <x-header />
-    <x-header-employee/>
+    <x-header-employee />
 
     <div class="container">
         <h1 class="title">Users List</h1>
@@ -39,86 +39,32 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td class="td">
-                        Lamborghini Huracán STO
-                    </td>
-                    <td class="td">
-                        2022
-                    </td>
-                    <td class="td">
-                        15.000 km
-                    </td>
-                    <td class="td">
-                        250.000,00€
-                    </td>
-                    <td class="td">
-                        <button class="edit"><a href="#" >Edit</a></button>
-                    </td>
-                    <td class="td">
-                        <button class="delete"><a href="#" >Delete</a></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td">
-                        Lamborghini Huracán STO
-                    </td>
-                    <td class="td">
-                        2022
-                    </td>
-                    <td class="td">
-                        15.000 km
-                    </td>
-                    <td class="td">
-                        250.000,00€
-                    </td>
-                    <td class="td">
-                        <button class="edit"><a href="#" >Edit</a></button>
-                    </td>
-                    <td class="td">
-                        <button class="delete"><a href="#" >Delete</a></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td">
-                        Lamborghini Huracán STO
-                    </td>
-                    <td class="td">
-                        2022
-                    </td>
-                    <td class="td">
-                        15.000 km
-                    </td>
-                    <td class="td">
-                        250.000,00€
-                    </td>
-                    <td class="td">
-                        <button class="edit"><a href="#" >Edit</a></button>
-                    </td>
-                    <td class="td">
-                        <button class="delete"><a href="#" >Delete</a></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td">
-                        Lamborghini Huracán STO
-                    </td>
-                    <td class="td">
-                        2022
-                    </td>
-                    <td class="td">
-                        15.000 km
-                    </td>
-                    <td class="td">
-                        250.000,00€
-                    </td>
-                    <td class="td">
-                        <button class="edit"><a href="#" >Edit</a></button>
-                    </td>
-                    <td class="td">
-                        <button class="delete"><a href="#" >Delete</a></button>
-                    </td>
-                </tr>
+                @foreach ($cars as $car)
+                    <tr>
+                        <td class="td">
+                            {{ $car->name }}
+                        </td>
+                        <td class="td">
+                            {{ $car->year }}
+                        </td>
+                        <td class="td">
+                            {{ $car->kilometers }} KM
+                        </td>
+                        <td class="td">
+                            {{ $car->price }}€
+                        </td>
+                        <td class="td">
+                            <button class="edit"><a href="{{ route('employee-edit-cars', $car) }}">Edit</a></button>
+                        </td>
+                        <td class="td">
+                            <form action="{{ route('employee-delete-cars', $car) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button class="delete">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
