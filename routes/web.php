@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,7 @@ require __DIR__.'/auth.php';
 //Main Routes
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/buy-cars', [CarController::class, 'index'])->name('buy-cars');
 
@@ -44,15 +45,15 @@ Route::get('/contact', function () {
 
 // User Routes
 Route::get('/user/dashboard', function () {
-    return view('user/dashboard');
+    return view('user.dashboard');
 });
 
 Route::get('/user/account', function () {
-    return view('user/view');
+    return view('user.view');
 });
 
 Route::get('/user/saved-cars', function () {
-    return view('user/saved-cars');
+    return view('user.saved-cars');
 });
 
 
@@ -73,29 +74,33 @@ Route::delete('/employee/delete-car/{car}', [EmployeeController::class, 'destroy
 
 
 //Admin Routes
-Route::get('/admin/view-cars', function () {
-    return view('admin/view-cars');
-});
+Route::get('/admin/view-cars', [AdminController::class, 'viewCars'])->name('admin-view-cars');
 
-Route::get('/admin/add-car', function () {
-    return view('admin/admin-dashboard-add-car');
-});
+Route::get('/admin/add-car', [AdminController::class, 'createCars'])->name('admin-add-cars');
 
-Route::get('/admin/edit-car', function () {
-    return view('admin/admin-dashboard-edit-car');
-});
+Route::post('/admin/add-car', [AdminController::class, 'storeCars'])->name('admin-store-cars');
 
-Route::get('/admin/view-users', function () {
-    return view('admin/view-users');
-});
+Route::get('/admin/edit-car/{car}', [AdminController::class, 'editCars'])->name('admin-edit-cars');
 
-Route::get('/admin/add-user', function () {
-    return view('admin/add-user');
-});
+Route::put('/admin/edit-car/{car}', [AdminController::class, 'updateCars'])->name('admin-update-cars');
 
-Route::get('/admin/edit-user', function () {
-    return view('admin/edit-user');
-});
+Route::delete('/admin/delete-car/{car}', [AdminController::class, 'destroyCars'])->name('admin-delete-cars');
+
+
+
+
+
+Route::get('/admin/view-users', [AdminController::class, 'viewUsers'])->name('admin-view-users');
+
+Route::get('/admin/add-user', [AdminController::class, 'createUsers'])->name('admin-add-users');
+
+Route::post('/admin/add-user', [AdminController::class, 'storeUsers'])->name('admin-store-users');
+
+Route::get('/admin/edit-user/{user}', [AdminController::class, 'editUsers'])->name('admin-edit-users');
+
+Route::put('/admin/edit-user/{user}', [AdminController::class, 'updateUsers'])->name('admin-update-users');
+
+Route::delete('/admin/delete-user/{user}', [AdminController::class, 'destroyUsers'])->name('admin-delete-users');
 
 
 

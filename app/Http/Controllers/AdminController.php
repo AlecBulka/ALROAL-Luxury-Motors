@@ -3,23 +3,33 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Car;
+use App\Models\Carmodel;
+use App\Models\Carbrand;
+use App\Models\User;
+use App\Models\Role;
+use App\Models\Billing;
 
 class AdminController extends Controller
 {
-    public function index()
+    public function viewCars()
     {
         $cars = Car::all();
-        return view('buy-cars', [
+        return view('admin.view-cars', [
             'cars' => $cars
         ]);
     }
 
-    public function create()
+    public function createCars()
     {
-        return view();
+        return view('admin.add-car', [
+            'brands' => $brands = Carbrand::all(),
+            'models' => $models = Carmodel::all()
+        ]);
     }
 
-    public function store(Request $request)
+    public function storeCars(Request $request)
     {
         $validated = $request->validate([
             'name'=>'required|string|max:45',
@@ -42,18 +52,24 @@ class AdminController extends Controller
             'year'=>'required|integer',
         ]);
 
+        $validated['isSold'] = false;
+
         Car::create($validated);
 
-        return redirect(route());
+        return redirect(route('admin-view-cars'));
 
     }
 
-    public function edit(string $id)
+    public function editCars(Car $car)
     {
-        return view();
+        return view('admin.edit-car', [
+            'car' => $car,
+            'brands' => $brands = Carbrand::all(),
+            'models' => $models = Carmodel::all()
+        ]);
     }
 
-    public function update(Request $request, Car $car)
+    public function updateCars(Request $request, Car $car)
     {
         $validated = $request->validate([
             'name'=>'string|max:45',
@@ -78,12 +94,116 @@ class AdminController extends Controller
 
         $car->update($validated);
 
-        return redirect(route());
+        return redirect(route('admin-view-cars'));
     }
 
-    public function destroy(Car $car)
+    public function destroyCars(Car $car)
     {
         $car->delete();
-        return redirect(route());
+
+        return redirect(route('admin-view-cars'));
     }
+
+
+
+
+
+
+
+
+
+
+
+    public function viewUsers()
+    {
+        $users = User::all();
+        return view('admin.view-users', [
+            'users' => $users
+        ]);
+    }
+
+    public function createUsers()
+    {
+        return view('admin.add-user', [
+            'roles' => $roles = Role::all()
+        ]);
+    }
+
+    public function storeUsers(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'password' => 'required|string',
+            'phoneNumber' => 'required|integer',
+            'role_id' => 'required|integer',
+            'address' => 'required|string',
+            'city' => 'required|string',
+            'province' => 'required|string',
+            'postalCode' => 'required|string',
+            'country' => 'required|string',
+        ]);
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'phoneNumber' => $request->phoneNumber,
+            'role_id' => $request->role_id,
+        ]);
+
+        Billing::create([
+            'address' => $request->address,
+            'city' => $request->city,
+            'province' => $request->province,
+            'postalCode' => $request->postalCode,
+            'country' => $request->country,
+            'user_id' => $user->id
+        ]);
+
+        return redirect(route('admin-view-users'));
+
+    }
+
+    public function editUsers(User $user)
+    {
+        return view('admin.edit-user', [
+            'user' => $user,
+            'roles' => $roles = Role::all()
+        ]);
+    }
+
+    public function updateUsers(Request $request, User $user)
+    {
+        //dd($request);
+        $userValidated = $request->validate([
+            'name' => 'string',
+            'email' => 'email',
+            'password' => 'string',
+            'phoneNumber' => 'integer',
+            'role_id' => 'integer',
+        ]);
+
+        $billingValidated = $request->validate([
+            'address' => 'string',
+            'city' => 'string',
+            'province' => 'string',
+            'postalCode' => 'string',
+            'country' => 'string',
+        ]);
+
+        $user->update($userValidated);
+
+        $user->billing->update($billingValidated);
+
+        return redirect(route('admin-view-users'));
+    }
+
+    public function destroyUsers(User $user)
+    {
+        $user->delete();
+
+        return redirect(route('admin-view-users'));
+    }
+
 }

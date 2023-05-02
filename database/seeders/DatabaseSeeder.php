@@ -4,10 +4,12 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 Use App\Models\Role;
 Use App\Models\Carmodel;
 Use App\Models\Carbrand;
 Use App\Models\Car;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -36,6 +38,30 @@ class DatabaseSeeder extends Seeder
         Role::create([
             'role' => 'admin',
             'description' => 'Admin'
+        ]);
+
+        User::create([
+            'name' => 'Alec',
+            'email' => 'alec@gmail.com',
+            'password' => Hash::make('Alec123'),
+            'phoneNumber' => 645434565,
+            'role_id' => 3
+        ]);
+
+        User::create([
+            'name' => 'Roger',
+            'email' => 'roger@gmail.com',
+            'password' => Hash::make('Roger123'),
+            'phoneNumber' => 654123789,
+            'role_id' => 2
+        ]);
+
+        User::create([
+            'name' => 'Alex',
+            'email' => 'alex@gmail.com',
+            'password' => Hash::make('Alex123'),
+            'phoneNumber' => 789765456,
+            'role_id' => 1
         ]);
 
         Carbrand::create([

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href={{ asset('style/employee/employee-dashboard-add-car.css') }}>
+    <link rel="stylesheet" href={{ asset('style/admin/admin-dashboard-add-car.css') }}>
 </head>
-
 <body>
-    <x-header />
-    <x-header-employee />
-    <form action="{{ route('employee-store-cars') }}" method="post">
+    <x-header/>
+    <x-header-admin/>
+    <form action="{{ route('admin-store-cars') }}" method="post">
         @csrf
         <div class="sell">
             <div class="img">
@@ -106,7 +104,6 @@
         </div>
         <button class="boton">Add Car</button>
     </form>
-    <x-footer />
+    <x-footer/>
 </body>
-
 </html>
