@@ -9,20 +9,28 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href={{ asset('style/user/view.css') }}>
+        <link rel="stylesheet" href={{ asset('style/user/account.css') }}>
     </head>
     <body>
         <x-header/>
+        <div class="menu">
+            <div class="dashboard">
+                <a href="#">Dashboard</a>
+            </div>
+            <div class="saved-cars">
+                <a href="#">Saved Cars</a>
+            </div>
+        </div>
     <h1>Account Settings</h1>
     <div class="account-settings">
         <form id="personal-details" name="personal-details">
             <h3>Personal Details</h3>
             <label for="">Name:</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" value="{{$user->name}}">
             <label for="">Email:</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" value="{{$user->email}}">
             <label for="">Phone Number:</label>
-            <input type="tel" name="phone" id="phone">
+            <input type="tel" name="phoneNumber" id="phone" value="{{$user->phoneNumber}}">
             <div class="btnSave">
                 <button type="submit" id="save">Save Changes</button>
             </div>
@@ -30,15 +38,15 @@
         <form id="biling-details" name="biling-details">
             <h3>Biling Details</h3>
             <label for="">Address:</label>
-            <input type="text" name="address" id="address">
+            <input type="text" name="address" id="address" value="{{$user->billing->address}}">
             <label for="">City:</label>
-            <input type="text" name="city" id="city">
+            <input type="text" name="city" id="city"  value="{{$user->billing->city}}">
             <label for="">Province:</label>
-            <input type="text" name="province" id="province"><br><br>
+            <input type="text" name="province" id="province"  value="{{$user->billing->province}}"><br><br>
             <label for="">Postal Code:</label>
-            <input type="text" name="code" id="code">
+            <input type="text" name="postalCode" id="code"  value="{{$user->billing->postalCode}}">
             <label for="">Country:</label>
-            <input type="text" name="country" id="country">
+            <input type="text" name="country" id="country"  value="{{$user->billing->country}}">
             <div class="btnSave">
                 <button type="submit" id="save">Save Changes</button>
             </div>
@@ -46,11 +54,11 @@
         <form id="update-password" name="update-password">
             <h3>Update Password</h3>
             <label for="">Current Password:</label>
-            <input type="password" name="current-passwd" id="current-passwd">
+            <input type="password" name="password" id="current-passwd">
             <label for="">New Password:</label>
-            <input type="password" name="new-passwd" id="new-passwd">
+            <input type="password" name="newPassword" id="new-passwd">
             <label for="">Confirm Password:</label>
-            <input type="password" name="confirm-passwd" id="confirm-passwd"><br><br>
+            <input type="password" name="newPasswordConfirmed" id="confirm-passwd"><br><br>
             <div class="btnSave">
                 <button type="submit" id="save">Save Changes</button>
             </div>

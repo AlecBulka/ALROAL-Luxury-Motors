@@ -45,11 +45,15 @@ Route::get('/contact', function () {
 
 // User Routes
 Route::get('/user/dashboard', function () {
-    return view('user.dashboard');
+    return view('user.dashboard', [
+        'user' => Auth::user()
+    ]);
 });
 
 Route::get('/user/account', function () {
-    return view('user.view');
+    return view('user.account', [
+        'user' => Auth::user()
+    ]);
 });
 
 Route::get('/user/saved-cars', function () {

@@ -15,6 +15,14 @@
 
 <body>
     <x-header />
+    <div class="menu">
+        <div class="dashboard">
+            <a href="#">Dashboard</a>
+        </div>
+        <div class="saved-cars">
+            <a href="#">Saved Cars</a>
+        </div>
+    </div>
     <div class="container">
         <img class="car" src="/img/main-img1.jpg" alt="">
         <div class="text">

@@ -24,11 +24,11 @@
     <div class="personal-details">
         <form>
             <label for="">Name:</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name"  value="{{$user->name}}">
             <label for="">Email:</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" value="{{$user->email}}">
             <label for="">Phone Number:</label>
-            <input type="tel" name="phone" id="phone"><br><br>
+            <input type="tel" name="phoneNumber" id="phone" value="{{$user->phoneNumber}}"><br><br>
             <div class="btnEdit">
                 <button type="submit" id="edit" >Edit</button>
             </div>
