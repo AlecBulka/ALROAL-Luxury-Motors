@@ -33,8 +33,8 @@
                 <hr>
                 <div class="seccion">
                     <div class="left-seccion">
-                        <p>Odometer: {{$car->kilometers}} KM</p>
-                        <p>Exterior: {{$car->exterior}}</p>
+                        <p aria-label="Odometer: {{$car->kilometers}}">Odometer: {{$car->kilometers}} KM</p>
+                        <p aria-label="Exteriror">Exterior: {{$car->exterior}}</p>
                         <p>Interior: {{$car->interior}}</p>
                         <h3>Price (EUR)</h3>
                     </div>
