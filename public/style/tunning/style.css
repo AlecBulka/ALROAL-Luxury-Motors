@@ -259,7 +259,7 @@ img{
       margin: 5px;
     }
 }
-/* Media query para pantallas de hasta 468px */
+
 @media screen and (max-width: 320px) {
     .nav {
       height: 40px;

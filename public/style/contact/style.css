@@ -110,7 +110,6 @@ a{
     width: 100%;
     height: 150px;
     bottom: 0;
-    position: absolute;
     border: none;
     border-top: 1px solid black;
 }
@@ -136,3 +135,72 @@ a{
     flex-direction: row;
     justify-content: center;
 }
+
+@media screen and (max-width: 768px) {
+    .nav {
+      height: 40px;
+    }
+    img {
+      width: 40px;
+    }
+    .nav img {
+      margin-left: 5px;
+    }
+    .links {
+      padding: 5px;
+    }
+    .links a {
+      padding: 5px;
+    }
+    
+    .footer {
+      height: 100px;
+    }
+    .p1,
+    .p2,
+    .p3 {
+      padding: 2px;
+      margin: 5px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .nav {
+        height: 40px;
+        padding: 5px;
+      }
+      .nav img {
+        width: 20px;
+        margin-left: 5px;
+      }
+      .links {
+        font-size: 10px;
+        padding: 5px;
+      }
+
+    .p1, .p2, .p3 {
+      font-size: 12px;
+      padding: 3px;
+      margin: 5px;
+    }
+
+     .footer {
+        height: auto;
+    }
+
+  .foot1,
+  .foot2,
+  .foot3 {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .foot2 {
+    margin-top: 5px;
+  }
+
+  .foot2 p,
+  .foot3 p {
+    margin: 3px;
+  }
+  }
