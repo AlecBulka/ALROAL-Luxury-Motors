@@ -84,7 +84,16 @@ input,select{
     margin-bottom: 30px;
     margin-top: 10px;
     margin-left: 100px;
+    width: 150px;
+    height: 40px;
+    background-color: #374151;
+    color: white;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: large;
 }
+
 #a1{
     background-color: rgb(55, 65, 81);
     text-decoration: none;
