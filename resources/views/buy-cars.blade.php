@@ -21,8 +21,8 @@
             <div class="text">
                 <div class="top">
                     <div>
-                        <h3 aria-label="Car year">{{$car->year}}</h3>
-                        <h2 aria-label="Car name">{{$car->name}}</h2>
+                        <h3 aria-label="Car year {{$car->year}}">{{$car->year}}</h3>
+                        <h2 aria-label="Car name {{$car->name}}">{{$car->name}}</h2>
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="none" class="bookmark" aria-label="Save Card">
@@ -33,17 +33,17 @@
                 <hr>
                 <div class="seccion">
                     <div class="left-seccion">
-                        <p aria-label="Odometer: {{$car->kilometers}}">Odometer: {{$car->kilometers}} KM</p>
-                        <p aria-label="Exteriror">Exterior: {{$car->exterior}}</p>
-                        <p>Interior: {{$car->interior}}</p>
-                        <h3>Price (EUR)</h3>
+                        <p aria-label="Odometer {{$car->kilometers}} KM">Odometer: {{$car->kilometers}} KM</p>
+                        <p aria-label="Exteriror {{$car->exterior}}">Exterior: {{$car->exterior}}</p>
+                        <p aria-label="Interior {{$car->interior}}">Interior: {{$car->interior}}</p>
+                        <h3 aria-label="Price (EUR)">Price (EUR)</h3>
                     </div>
                     <div class="right-seccion">
-                        <p>Drivetrain: {{$car->driveTrain}}</p>
-                        <p>Transmission: {{$car->gearbox}}</p>
-                        <p>Engine: {{$car->horsepower}} HP</p>
-                        <h3>{{$car->price}}€</h3>
-                        <button class="viewCar"><a href="{{route('car-details', $car)}}" aria-label="Button">View Car</a></button>
+                        <p aria-label="Drivetrain {{$car->driveTrain}}">Drivetrain: {{$car->driveTrain}}</p>
+                        <p aria-label="Transmission {{$car->gearbox}}">Transmission: {{$car->gearbox}}</p>
+                        <p aria-label="Engine {{$car->horsepower}} HP">Engine: {{$car->horsepower}} HP</p>
+                        <h3 aria-label="{{$car->price}}€">{{$car->price}}€</h3>
+                        <button class="viewCar"><a href="{{route('car-details', $car)}}" aria-label="View Car">View Car</a></button>
                     </div>
                 </div>
             </div>
