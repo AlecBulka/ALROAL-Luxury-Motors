@@ -14,90 +14,33 @@
     <x-header/>
         <div class="sell">
             <div class="img"><p id="p1">Select image</p></div>
-            <div class="column">
-                <div>
-                  <label for="name">Name</label><br>
-                  <input type="text" id="name">
+            <form method="POST" name="form" id="form">
+                <div class="f1">
+                    <div class="name">
+                        <label for="name">Name</label><br>
+                        <input type="text" id="name"><br>
+                    </div>
+                    <div class="model">
+                        <label for="model">Model</label><br>
+                        <input type="text" id="model"><br>
+                    </div>
+                    <div class="kilometer">
+                        <label for="kilometers">Kilometers</label><br>
+                    <input type="text" id="kilometers"><br>
+                    </div>
                 </div>
-                <div>
-                  <label for="torque">Torque</label><br>
-                  <input type="text" id="torque">
+                <div class="f2">
+                    <div class="brand">
+                        <label for="brand">Brand</label><br>
+                        <input type="text" id="Brand"><br>
+                    </div>
+                    <div class="year">
+                        <label for="year">Year</label><br>
+                        <input type="number" id="year"><br>
+                    </div>
                 </div>
-                <div>
-                  <label for="top-speed">Top Speed</label><br>
-                  <input type="text" id="top-speed">
-                </div>
-                <div>
-                  <label for="motor">Motor</label><br>
-                  <input type="text" id="motor">
-                </div>
-                <div>
-                  <label for="tires">Tires</label><br>
-                  <input type="text" id="tires">
-                </div>
-                <div>
-                  <label for="gearbox">GearBox</label><br>
-                  <input type="text" id="gearbox">
-                </div>
-                <div>
-                  <label for="kilometers">Kilometers</label><br>
-                  <input type="text" id="kilometers">
-                </div>
-                <div>
-                  <label for="price">Price</label><br>
-                  <input type="text" id="price">
-                </div>
-                <div>
-                  <label for="brand">Brand</label><br>
-                  <select id="brand">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                  </select>
-                </div>
-                <div>
-                  <label for="horsepower">Horse Power</label><br>
-                  <input type="text" id="horsepower">
-                </div>
-                <div>
-                  <label for="consumption">Consumption</label><br>
-                  <input type="text" id="consumption">
-                </div>
-                <div>
-                  <label for="acceleration">Acceleration</label><br>
-                  <input type="text" id="acceleration">
-                </div>
-                <div>
-                  <label for="wheels">Wheels</label><br>
-                  <input type="text" id="wheels">
-                </div>
-                <div>
-                  <label for="drivetrain">DriveTrain</label><br>
-                  <input type="text" id="drivetrain">
-                </div>
-                <div>
-                  <label for="exterior">Exterior</label><br>
-                  <input type="text" id="exterior">
-                </div>
-                <div>
-                  <label for="interior">Interior</label><br>
-                  <input type="text" id="interior">
-                </div>
-                <div>
-                  <label for="year">Year</label><br>
-                  <input type="text" id="year">
-                </div>
-                <div>
-                  <label for="model">Model</label><br>
-                  <select id="model">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                  </select>
-                </div>
-              </div>
+
+            </form>
         </div>
         <div class="boton"><a href="" id="a1">Sell Car</a></div>
     <x-footer/>

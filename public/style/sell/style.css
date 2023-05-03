@@ -1,6 +1,9 @@
 body{
     margin: 0;
     padding: 0;
+    background-image: url('/img/main-img4.jpg');
+    background-position: 100% 60%;
+    background-size: 130%;
 }
 
 .nav{
@@ -10,7 +13,7 @@ body{
     align-items: center;
     width: 100%;
     height: 50px;
-    border: solid 1px #939393;
+    border-bottom: solid 1px #939393;
 }
 
 img{
@@ -50,19 +53,33 @@ img{
     margin-top: 160px;
 }
 
-.column{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-left: 150px;
+form{
+    display: flex;
+    margin-top: 50px;
+}
+
+form input{
+    border-radius: 7px;
+    border: 1px solid black;
+    width: 150px;
+    height: 23px;
+}
+
+.model{
     margin-top: 20px;
 }
 
-input,select{
-    border: 1px solid black;
-    border-radius: 3px;
-    width: 170px;
-    background-color: white;
+.f2{
+    margin-left: 80px;
+}
+
+.kilometer{
+    margin-top: 20px;
+}
+
+
+.year{
+    margin-top: 20px;
 }
 
 .boton{
