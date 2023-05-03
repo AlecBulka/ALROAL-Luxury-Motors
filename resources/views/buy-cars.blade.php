@@ -39,7 +39,7 @@
                         <h3 aria-label="Price (EUR)">Price (EUR)</h3>
                     </div>
                     <div class="right-seccion">
-                        <p aria-label="Drivetrain {{$car->driveTrain}}">Drivetrain: {{$car->driveTrain}}</p>
+                        <p aria-label="loololololollolollolololololololololololo">Drivetrain: {{$car->driveTrain}}</p>
                         <p aria-label="Transmission {{$car->gearbox}}">Transmission: {{$car->gearbox}}</p>
                         <p aria-label="Engine {{$car->horsepower}} HP">Engine: {{$car->horsepower}} HP</p>
                         <h3 aria-label="{{$car->price}}€">{{$car->price}}€</h3>
