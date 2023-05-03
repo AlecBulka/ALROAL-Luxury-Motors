@@ -20,22 +20,22 @@
 
     <form action="" class="form1">
         <h2>Search 8 cars</h2>
-        <select class="sel">
-            <option value="value1" selected>Any Make</option>
-            <option value="value2">Any Make 2</option>
-            <option value="value3">Any Make 3</option>
+        <select class="sel" aria-label="Select make">
+            <option value="value1" selected aria-label="">Any Make</option>
+            <option value="value2" aria-label="">Any Make 2</option>
+            <option value="value3" aria-label="">Any Make 3</option>
           </select>
-          <select class="sel">
-            <option value="value1" selected >Any Model</option>
-            <option value="value2">Any Make 2</option>
-            <option value="value3">Any Make 3</option>
+          <select class="sel" aria-label="Select model">
+            <option value="value1" selected aria-label="">Any Model</option>
+            <option value="value2" aria-label="">Any Make 2</option>
+            <option value="value3" aria-label="">Any Make 3</option>
           </select>
-          <select class="sel">
+          <select class="sel" aria-label="Select price">
             <option value="value1" selected>Max Price</option>
             <option value="value2">Max Price 2</option>
             <option value="value3">Max Price 3</option>
           </select>
-          <input type="Submit" value="Search">
+          <input type="Submit" value="Search" aria-label="Select">
     </form>
 </div>
     <x-footer/>
