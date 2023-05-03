@@ -10,6 +10,7 @@ Use App\Models\Carmodel;
 Use App\Models\Carbrand;
 Use App\Models\Car;
 use App\Models\User;
+use App\Models\Billing;
 
 class DatabaseSeeder extends Seeder
 {
@@ -62,6 +63,18 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('Alex123'),
             'phoneNumber' => 789765456,
             'role_id' => 1
+        ]);
+
+        Billing::create([
+            'user_id' => 1
+        ]);
+
+        Billing::create([
+            'user_id' => 2
+        ]);
+
+        Billing::create([
+            'user_id' => 3
         ]);
 
         Carbrand::create([

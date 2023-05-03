@@ -32,15 +32,15 @@ Route::get('/car/{car}', [CarController::class, 'show'])->name('car-details');
 
 Route::get('/sell-cars', function () {
     return view('sell-cars');
-});
+})->name('sell-cars');
 
 Route::get('/tunning', function () {
     return view('tunning');
-});
+})->name('tunning');
 
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name('contact');
 
 
 // User Routes
@@ -48,17 +48,17 @@ Route::get('/user/dashboard', function () {
     return view('user.dashboard', [
         'user' => Auth::user()
     ]);
-});
+})->name('user-dashboard');
 
 Route::get('/user/account', function () {
     return view('user.account', [
         'user' => Auth::user()
     ]);
-});
+})->name('user-account');
 
 Route::get('/user/saved-cars', function () {
     return view('user.saved-cars');
-});
+})->name('user-saved-cars');
 
 
 //Employee Routes

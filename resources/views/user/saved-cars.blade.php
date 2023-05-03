@@ -17,10 +17,10 @@
     <x-header />
     <div class="menu">
         <div class="dashboard">
-            <a href="#">Dashboard</a>
+            <a href="{{route('user-dashboard')}}">Dashboard</a>
         </div>
         <div class="saved-cars">
-            <a href="#">Saved Cars</a>
+            <a href="{{route('user-saved-cars')}}">Saved Cars</a>
         </div>
     </div>
     <div class="container">
