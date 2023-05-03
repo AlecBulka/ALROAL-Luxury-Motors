@@ -18,7 +18,7 @@ class Car extends Model
         'consumption',
         'topSpeed',
         'acceleration',
-        'motor',
+        'engine',
         'wheels',
         'tires',
         'driveTrain',

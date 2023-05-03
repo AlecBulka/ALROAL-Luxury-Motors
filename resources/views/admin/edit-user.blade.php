@@ -15,40 +15,45 @@
 <body>
     <x-header />
     <x-header-admin />
-    <form action="{{ route('admin-store-users') }}" method="post">
+    <form action="{{ route('admin-update-users', $user) }}" method="post">
         @csrf
+        @method('PUT')
         <div class="user-details">
             <div class="column-one">
                 <label for="">Name:</label>
-                <input type="text" name="name" id="name"><br>
+                <input type="text" name="name" id="name" value="{{$user->name}}"><br>
                 <label for="">Email:</label>
-                <input type="email" name="email" id="email"><br>
+                <input type="email" name="email" id="email" value="{{$user->email}}"><br>
                 <label for="">Postal Code:</label>
-                <input type="text" name="postalCode" id="code"><br>
+                <input type="text" name="postalCode" id="code" value="{{$user->billing->postalCode}}"><br>
                 <label for="">Address:</label>
-                <input type="text" name="address" id="address"><br>
+                <input type="text" name="address" id="address" value="{{$user->billing->address}}"><br>
                 <label for="">City:</label>
-                <input type="text" name="city" id="city"><br>
+                <input type="text" name="city" id="city" value="{{$user->billing->city}}"><br>
             </div>
             <div class="column-two">
                 <label for="">Phone Number:</label>
-                <input type="tel" name="phoneNumber" id="number"><br>
+                <input type="tel" name="phoneNumber" id="number"  value="{{$user->phoneNumber}}"><br>
                 <label for="">Role:</label>
                 <select name="role_id" id="role">
                     @foreach ($roles as $role)
-                        <option value={{ $role->id }}>{{ $role->role }}</option>
+                    @if ($user->role_id == $role->id)
+                    <option value={{ $role->id }} selected>{{ $role->role }}</option>
+                    @else
+                    <option value={{ $role->id }}>{{ $role->role }}</option>
+                    @endif
                     @endforeach
                 </select><br>
                 <label for="">Password:</label>
-                <input type="password" name="password" id="passwd"><br>
+                <input type="password" name="password" id="passwd""><br>
                 <label for="">Country:</label>
-                <input type="text" name="country" id="country"><br>
+                <input type="text" name="country" id="country" value="{{$user->billing->country}}"><br>
                 <label for="">Province:</label>
-                <input type="text" name="province" id="province"><br>
+                <input type="text" name="province" id="province" value="{{$user->billing->province}}"><br>
             </div>
         </div>
         <div class="btnAdd">
-            <button type="submit" id="add">Add User</button>
+            <button type="submit" id="add">Save Changes</button>
         </div>
     </form>
     <x-footer></x-footer>

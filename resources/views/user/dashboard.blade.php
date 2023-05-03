@@ -15,22 +15,22 @@
         <x-header/>
     <div class="menu">
         <div class="dashboard">
-            <a href="#">Dashboard</a>
+            <a href="{{route('user-dashboard')}}">Dashboard</a>
         </div>
         <div class="saved-cars">
-            <a href="#">Saved Cars</a>
+            <a href="{{route('user-saved-cars')}}">Saved Cars</a>
         </div>
     </div>
     <div class="personal-details">
         <form>
             <label for="">Name:</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" readonly value="{{$user->name}}">
             <label for="">Email:</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" readonly value="{{$user->email}}">
             <label for="">Phone Number:</label>
-            <input type="tel" name="phone" id="phone"><br><br>
+            <input type="tel" name="phoneNumber" id="phone" readonly value="{{$user->phoneNumber}}"><br><br>
             <div class="btnEdit">
-                <button type="submit" id="edit" >Edit</button>
+                <a id="edit" href="{{route('user-account')}}">Edit</a>
             </div>
         </form>
     </div>

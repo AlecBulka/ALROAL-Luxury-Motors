@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href={{ asset('style/admin/view-users.css') }}>
+    <link rel="stylesheet" href={{ asset('style/admin/view-cars.css') }}>
 </head>
 
 <body>
@@ -25,38 +25,38 @@
                         NAME
                     </th>
                     <th scope="col" class="th">
-                        EMAIL
+                        YEAR
                     </th>
                     <th scope="col" class="th">
-                        PHONE NUMBER
+                        KILOMETERS
                     </th>
                     <th scope="col" class="th">
-                        ROLE
+                        PRICE
                     </th>
                     <th scope="col" class="th"></th>
                     <th scope="col" class="th"></th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($users as $user)
+                @foreach ($cars as $car)
                     <tr>
                         <td class="td">
-                            {{$user->name}}
+                            {{ $car->name }}
                         </td>
                         <td class="td">
-                            {{$user->email}}
+                            {{ $car->year }}
                         </td>
                         <td class="td">
-                            {{$user->phoneNumber}}
+                            {{ $car->kilometers }} KM
                         </td>
                         <td class="td">
-                            {{$user->role->role}}
+                            {{ $car->price }}€
                         </td>
                         <td class="td">
-                            <button class="edit"><a href="{{ route('admin-edit-users', $user) }}">Edit</a></button>
+                            <button class="edit"><a href="{{ route('admin-edit-cars', $car) }}">Edit</a></button>
                         </td>
                         <td class="td">
-                            <form action="{{ route('admin-delete-users', $user) }}" method="post">
+                            <form action="{{ route('admin-delete-cars', $car) }}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button class="delete">Delete</button>
