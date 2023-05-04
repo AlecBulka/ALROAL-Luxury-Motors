@@ -67,8 +67,6 @@
             </tbody>
         </table>
     </div>
-
-    <x-footer />
+  <x-footer />
 </body>
-
 </html>
