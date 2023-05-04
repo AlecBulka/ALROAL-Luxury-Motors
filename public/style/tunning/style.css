@@ -1,0 +1,347 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border: solid 1px #939393;
+}
+
+img{
+    width: 50px;
+}
+
+.nav img{
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.links a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.vol{
+    display: flex;
+}
+
+.volante{
+    width: 300px;
+}
+
+#volante{
+    width: 170px;
+    margin: 20px;
+
+    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 41% 100%, 0 64%);
+
+}
+
+#p1{
+    width: 90%;
+    margin-top: 40px;
+}
+
+
+.for{
+    display: flex;
+    margin-top: 30px;
+}
+
+.ford{
+    width: 280px;
+}
+
+#ford{
+    width: 350px;
+    margin: 20px;
+    clip-path: polygon(0% 0%, 100% 0, 100% 71%, 60% 100%, 0 100%);
+}
+
+#p2{
+    width: 90%;
+    margin-top: 80px;
+}
+
+.asien{
+    display: flex;
+    margin-top: 30px;
+}
+
+.asiento{
+    width: 300px;
+}
+
+#asiento{
+    width: 250px;
+    margin: 20px;
+    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 31% 100%, 0 59%);
+}
+
+#p3{
+    width: 90%;
+    margin-top: 50px;
+}
+
+.gwa{
+    display: flex;
+    margin-top: 30px;
+}
+
+.gwagon{
+    width: 300px;
+}
+
+#gwagon{
+    width: 350px;
+    margin: 20px;
+    clip-path: polygon(65% 0, 100% 37%, 100% 100%, 0 100%, 0 0);
+}
+
+#p4{
+    margin-top: 70px;
+}
+
+.footer{
+    background-color: white;
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+    border: none;
+    border-top: 1px solid black;
+}
+
+.foot1{
+    display: flex;
+    justify-content: center;
+}
+
+.foot2{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.p1,.p2,.p3{
+    padding: 5px;
+    margin: 10px;
+}
+
+.foot3{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+      height: 40px;
+    }
+    img {
+      width: 40px;
+    }
+    .nav img {
+      margin-left: 5px;
+    }
+    .links {
+      padding: 5px;
+    }
+    .links a {
+      padding: 5px;
+    }
+    .vol {
+      flex-direction: column;
+      align-items: center;
+    }
+    .volante {
+      width: 200px;
+    }
+    #volante {
+      width: 100px;
+      margin-left: 50px;
+      clip-path: polygon(0% 0%, 100% 0, 100% 100%, 28% 100%, 0 48%);
+    }
+    #p1 {
+      width: 250px;
+      margin-left: 50px;
+      margin-top: 20px;
+    }
+    .for {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .ford {
+      width: 250px;
+      margin-left: 0;
+    }
+    #ford {
+      width: 250px;
+      margin: 20px;
+      clip-path: polygon(0% 0%, 100% 0, 100% 72%, 50% 100%, 0 100%);
+    }
+    #p2 {
+      width: 250px;
+      margin-left: 50px;
+      margin-top: 20px;
+    }
+    .asien {
+      flex-direction: column;
+      align-items: center;
+    }
+    .asiento {
+      width: 250px;
+      margin-left: 0;
+    }
+    #asiento {
+      width: 150px;
+      margin: 20px;
+      margin-left: 50px;
+      clip-path: polygon(0% 0%, 100% 0, 100% 100%, 24% 100%, 0 38%);
+    }
+    #p3 {
+      width: 250px;
+      margin-left: 50px;
+      margin-top: 20px;
+    }
+    .gwa {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .gwagon {
+      width: 250px;
+      margin-left: 0;
+    }
+    #gwagon {
+      width: 250px;
+      margin: 20px;
+      margin-left: 50px;
+      clip-path: polygon(50% 0, 100% 36%, 100% 100%, 0 100%, 0 0);
+    }
+    #p4 {
+      width: 250px;
+      margin-left: 50px;
+      margin-top: 20px;
+    }
+    .footer {
+      height: 100px;
+    }
+    .p1,
+    .p2,
+    .p3 {
+      padding: 2px;
+      margin: 5px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .nav {
+      height: 40px;
+      padding: 5px;
+    }
+    .nav img {
+      display: none;
+    }
+    .links {
+      font-size: 10px;
+      padding: 5px;
+    }
+    .links a{
+        font-size: 10px;
+    }
+    #volante {
+      width: 150px;
+      margin-left: 20px;
+      clip-path: polygon(0% 0%, 100% 0, 100% 100%, 41% 100%, 0 64%);
+    }
+
+    #p1 {
+      width: 250px;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+
+    #ford {
+      width: 200px;
+      margin-left: 10px;
+      margin-top: 20px;
+    }
+
+    #p2 {
+      width: 300px;
+      margin-left: 10px;
+      margin-top: 30px;
+    }
+
+    #asiento {
+      width: 180px;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+
+    #p3 {
+      width: 250px;
+      margin-left: 10px;
+      margin-top: 30px;
+    }
+
+    #gwagon {
+      width: 220px;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+
+    #p4 {
+      width: 250px;
+      margin-left: 10px;
+      margin-top: 30px;
+    }
+
+    .p1, .p2, .p3 {
+      font-size: 12px;
+      padding: 3px;
+      margin: 5px;
+    }
+
+     .footer {
+    height: auto;
+  }
+
+  .foot1,
+  .foot2,
+  .foot3 {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .foot2 {
+    margin-top: 5px;
+  }
+
+  .foot2 p,
+  .foot3 p {
+    margin: 3px;
+  }
+  }

@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('billings', function (Blueprint $table) {
             $table->id();
-            $table->string('address');
-            $table->string('city');
-            $table->string('province');
-            $table->string('postalCode');
-            $table->string('country');
+            $table->string('address')->nullable();
+            $table->string('city')->nullable();
+            $table->string('province')->nullable();
+            $table->string('postalCode')->nullable();
+            $table->string('country')->nullable();
             $table->foreignId('user_id');
             $table->timestamps();
         });

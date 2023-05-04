@@ -19,7 +19,6 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'lastname',
         'email',
         'password',
         'phoneNumber',
@@ -48,6 +47,15 @@ class User extends Authenticatable
     public function billing()
     {
         return $this->hasOne(Billing::class);
+    }
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function saveds() {
+        return $this->hasMany(Saved::class);
     }
 
 }

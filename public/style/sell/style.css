@@ -1,0 +1,272 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('/img/main-img4.jpg');
+    background-position: 100% 60%;
+    background-size: 130%;
+}
+
+.nav{
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: solid 1px #939393;
+}
+
+img{
+    width: 50px;
+}
+
+.nav img{
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.links a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.sell{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.img{
+    margin: 30px;
+    border: 1px solid black;
+    width: 250px;
+    height: 150px;
+    margin-left: 65px;
+    margin-top: 160px;
+}
+
+form{
+    display: flex;
+    margin-top: 50px;
+}
+
+form input{
+    border-radius: 7px;
+    border: 1px solid black;
+    width: 150px;
+    height: 23px;
+}
+
+.model{
+    margin-top: 20px;
+}
+
+.f2{
+    margin-left: 80px;
+}
+
+.kilometer{
+    margin-top: 20px;
+}
+
+
+.year{
+    margin-top: 20px;
+}
+
+.boton{
+    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+#a1{
+    background-color: rgb(55, 65, 81);
+    text-decoration: none;
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 20px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+#p1{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.footer{
+    background-color: white;
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+    border: none;
+    border-top: 1px solid black;
+}
+
+.foot1{
+    display: flex;
+    justify-content: center;
+}
+
+.foot2{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.p1,.p2,.p3{
+    padding: 5px;
+    margin: 10px;
+}
+
+.foot3{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+      height: 40px;
+    }
+    img {
+      width: 40px;
+    }
+    .nav img {
+      margin-left: 5px;
+    }
+    .links {
+      padding: 5px;
+    }
+    .links a {
+      padding: 5px;
+    }
+    .img {
+        margin: 0;
+        width: 40%;
+        height: 80px;
+        margin-left: 10px;
+        margin-right: 3px;
+        margin-top: 20px;
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        gap: 10px;
+      }
+
+      input, select {
+        width: 100%;
+      }
+
+      .boton {
+        margin-left: 0;
+      }
+
+      #a1 {
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      #p1 {
+        margin-top: 30px;
+
+      }
+    .footer {
+      height: 100px;
+    }
+    .p1,
+    .p2,
+    .p3 {
+      padding: 2px;
+      margin: 5px;
+    }
+}
+/* Media query para pantallas de hasta 468px */
+@media screen and (max-width: 320px) {
+    .nav {
+      height: 40px;
+    }
+    .nav img {
+      display: none;
+    }
+    .links {
+        padding: 5px;
+    }
+    .links a{
+        font-size: 10px;
+    }
+    .img {
+        margin-top: 10px;
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        gap: 10px;
+      }
+
+      input, select {
+        width: 80%;
+        font-size: 10px;
+      }
+
+      .boton {
+        margin-top: 10px;
+        margin-left: 0;
+      }
+
+      #a1 {
+        padding: 10px;
+        font-size: 12px;
+      }
+
+      #p1 {
+        font-size: 14px;
+        margin-top: 20px;
+        width: 40%;
+      }
+    .p1, .p2, .p3 {
+      font-size: 12px;
+      padding: 3px;
+      margin: 5px;
+    }
+
+     .footer {
+    height: auto;
+    }
+
+  .foot1,
+  .foot2,
+  .foot3 {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .foot2 {
+    margin-top: 5px;
+  }
+
+  .foot2 p,
+  .foot3 p {
+    margin: 3px;
+  }
+}

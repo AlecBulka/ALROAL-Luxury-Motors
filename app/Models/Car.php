@@ -18,7 +18,7 @@ class Car extends Model
         'consumption',
         'topSpeed',
         'acceleration',
-        'motor',
+        'engine',
         'wheels',
         'tires',
         'driveTrain',
@@ -42,4 +42,7 @@ class Car extends Model
         return $this->belongsTo(Carmodel::class);
     }
 
+    public function saveds() {
+        return $this->hasMany(Saved::class);
+    }
 }

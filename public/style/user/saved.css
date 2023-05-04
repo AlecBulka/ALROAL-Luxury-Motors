@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: solid 1px #939393;
+}
+
+img{
+width: 50px;
+}
+
+.nav img{
+margin-right: auto;
+margin-left: 10px;
+}
+
+.links{
+display: flex;
+align-items: center;
+padding: 10px;
+text-decoration: none;
+color: black;
+}
+
+.links a{
+padding: 10px;
+text-decoration: none;
+color: black;
+}
+
+.menu{
+    display: flex;
+    margin-left: 38px;
+    margin-top: 20px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.menu .saved-cars{
+    margin-left: 38px;
+}
+
+.container {
+    margin: 20px;
+    display: flex;
+    background-color: #ffffff;
+    flex-direction: row;
+    border-radius: 0.5rem;
+    border: black solid 1px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.container:hover {
+    background-color: #F3F4F6;
+}
+
+.text {
+    width: 100%;
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-left: 20px;
+}
+
+.car {
+    object-fit: cover;
+    width: 25%;
+    height: 280px;
+    border-radius: 0.5rem;
+    margin: 20px 20px 0 20px;
+}
+
+hr {
+    border-width: 0;
+    height: 1px;
+    width: 100%;
+    color: black;
+    background-color: black;
+}
+
+.seccion {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-seccion {
+    text-align: left;
+}
+
+.right-seccion {
+    text-align: right;
+}
+
+.viewCar {
+    padding: 10px 40px;
+    background-color: #374151;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+
+.viewCar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.saved{
+    width: 36px;
+    height: 36px;
+    stroke: black;
+    fill: yellow;
+}
+
+
+.footer{
+    background-color: white;
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+    position: absolute;
+    border-top: 1px solid black;
+}
+.foot1{
+    display: flex;
+    justify-content: center;
+}
+.foot2{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.p1,.p2,.p3{
+    padding: 5px;
+    margin: 10px;
+}
+
+.foot3{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

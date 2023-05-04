@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use App\Models\Billing;
 
 class RegisteredUserController extends Controller
 {
@@ -45,10 +46,14 @@ class RegisteredUserController extends Controller
             'role_id' => 1
         ]);
 
+        Billing::create([
+            'user_id' => $user->id
+        ]);
+
         event(new Registered($user));
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        return redirect('/');
     }
 }
