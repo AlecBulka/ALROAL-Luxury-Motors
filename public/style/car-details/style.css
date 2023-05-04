@@ -52,6 +52,22 @@ h1{
     margin-left: 40%;
 }
 
+.save-btn {
+    width: 36px;
+    height: 36px;
+    margin-right: 85px;
+    margin-top: 20px;
+}
+
+.save {
+    width: 36px;
+    height: 36px;
+    margin-right: 85px;
+    margin-top: 20px;
+    stroke: black;
+    fill: none;
+}
+
 .saved{
     width: 36px;
     height: 36px;

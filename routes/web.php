@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SavedController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,11 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+// Like Routes
+Route::post('/save/{car}', [SavedController::class, 'save'])->name('save');
+
+Route::delete('/save/{car}', [SavedController::class, 'removeSave'])->name('remove-save');
+
 
 // User Routes
 Route::get('/user/dashboard', function () {
@@ -56,9 +62,7 @@ Route::get('/user/account', function () {
     ]);
 })->name('user-account');
 
-Route::get('/user/saved-cars', function () {
-    return view('user.saved-cars');
-})->name('user-saved-cars');
+Route::get('/user/saved-cars', [SavedController::class, 'index'])->name('user-saved-cars');
 
 
 //Employee Routes

@@ -138,12 +138,18 @@ hr {
     justify-content: space-between;
 }
 
-.bookmark{
+.save {
+    width: 36px;
+    height: 36px;
+    stroke: black;
+    fill: none;
+}
+
+.saved{
     width: 36px;
     height: 36px;
     stroke: black;
     fill: yellow;
-
 }
 
 @media screen and (max-width: 768px) {
@@ -207,9 +213,18 @@ hr {
         align-items: center;
         }
 
-        .bookmark{
-        width: 24px;
-        height: 24px;
+        .save {
+            width: 24px;
+            height: 24px;
+            stroke: black;
+            fill: none;
+        }
+
+        .saved{
+            width: 24px;
+            height: 24px;
+            stroke: black;
+            fill: yellow;
         }
 }
 /* Media query para pantallas de hasta 468px */
@@ -287,8 +302,17 @@ hr {
     align-items: center;
     }
 
-    .bookmark{
-    width: 24px;
-    height: 24px;
+    .save {
+        width: 24px;
+        height: 24px;
+        stroke: black;
+        fill: none;
+    }
+
+    .saved{
+        width: 24px;
+        height: 24px;
+        stroke: black;
+        fill: yellow;
     }
 }
