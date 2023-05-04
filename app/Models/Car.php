@@ -42,4 +42,7 @@ class Car extends Model
         return $this->belongsTo(Carmodel::class);
     }
 
+    public function saveds() {
+        return $this->hasMany(Saved::class);
+    }
 }

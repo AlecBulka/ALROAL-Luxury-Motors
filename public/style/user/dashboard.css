@@ -91,13 +91,12 @@ label{
 }
 
 #edit{
-    width: 100px;
-    height: 30px;
+    padding: 5px 40px;
     background-color: #374151;
     color: white;
     margin-right: 20px;
     border-radius: 10px;
-    border: 1px solid black;
+    text-decoration: none;
 }
 
 #edit:hover{

@@ -54,4 +54,8 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class);
     }
 
+    public function saveds() {
+        return $this->hasMany(Saved::class);
+    }
+
 }

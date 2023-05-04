@@ -36,6 +36,12 @@ img{
     color: black;
 }
 
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .vol{
     display: flex;
 }
@@ -266,14 +272,15 @@ img{
       padding: 5px;
     }
     .nav img {
-      width: 20px;
-      margin-left: 5px;
+      display: none;
     }
     .links {
       font-size: 10px;
       padding: 5px;
     }
-
+    .links a{
+        font-size: 10px;
+    }
     #volante {
       width: 150px;
       margin-left: 20px;

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Car;
+use App\Models\Saved;
 
 class CarController extends Controller
 {
@@ -18,7 +19,8 @@ class CarController extends Controller
     public function show(Car $car)
     {
         return view('car-details', [
-            'car' => $car
+            'car' => $car,
+            'saved' => Saved::where('car_id', $car->id)->where('user_id', auth()->id())->get()
         ]);
     }
 }
