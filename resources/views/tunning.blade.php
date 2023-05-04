@@ -14,7 +14,7 @@
     <x-header/>
     <div class="box">
     <div class="vol">
-        <div class="volante"><img src="img/tunning/volante.png" id="volante"></div>
+        <img src="img/tunning/volante.png" id="volante">
         <p id="p1">The Luxury Tunning customization program, available for any luxury vehicle,
             allows each client to create their own custom vehicle,
             evaluating and shaping each desire. The combinations are endless,  from the colors to the materials: from the logo on the seat, sewn by hand instead of fire-engraved.</p>
@@ -24,11 +24,11 @@
         <p id="p2">Or the possibility of choosing between several types of materials,
 from the exclusive semi-aniline leather,  enriched with other effects and
 developed by the best Italian craftsmen, to Forged Composite, an innovative carbon fiber material.</p>
-            <div class="ford"><img src="img/tunning/ford.png" id="ford"></div>
+            <img src="img/tunning/ford.png" id="ford">
     </div>
 
     <div class="asien">
-        <div class="asiento"><img src="img/tunning/asiento.png" id="asiento"></div>
+        <img src="img/tunning/asiento.png" id="asiento">
         <p id="p3">Customers who wish to make use of the personalization program can configure
             their car directly in the Luxury Tuning Department, the area dedicated to personalization
             to offer a unique experience has samples of leathers, colors, materials, seats and wheels,
@@ -45,7 +45,7 @@ developed by the best Italian craftsmen, to Forged Composite, an innovative carb
             advice is preceded by the experience  inside the factory,
              a guided tour inside the establishment to immediately see some
             examples of the possible configurations of their models.</p>
-            <div class="gwagon"><img src="img/tunning/gwagon.png" id="gwagon"></div>
+            <img src="img/tunning/gwagon.png" id="gwagon">
     </div>
 </div>
     <x-footer/>
