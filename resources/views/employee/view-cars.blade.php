@@ -18,7 +18,7 @@
     <x-header-employee />
 
     <div class="container">
-        <h1 class="title">Users List</h1>
+        <h1 class="title">Cars List</h1>
         <table class="table">
             <thead class="thead">
                 <tr>
