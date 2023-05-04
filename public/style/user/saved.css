@@ -125,12 +125,11 @@ hr {
     justify-content: space-between;
 }
 
-.bookmark{
+.saved{
     width: 36px;
     height: 36px;
     stroke: black;
     fill: yellow;
-
 }
 
 
