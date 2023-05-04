@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use App\Models\Billing;
 
 class RegisteredUserController extends Controller
 {
@@ -43,6 +44,10 @@ class RegisteredUserController extends Controller
             'phoneNumber' => $request->phoneNumber,
             'password' => Hash::make($request->password),
             'role_id' => 1
+        ]);
+
+        Billing::create([
+            'user_id' => $user->id
         ]);
 
         event(new Registered($user));
