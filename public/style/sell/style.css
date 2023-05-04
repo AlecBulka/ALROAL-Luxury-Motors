@@ -42,20 +42,24 @@ img{
 .sell{
     display: flex;
     margin-bottom: 10px;
-}
-
-.img{
-    margin: 30px;
-    border: 1px solid black;
-    width: 250px;
-    height: 150px;
-    margin-left: 65px;
-    margin-top: 160px;
+    justify-content: center;
 }
 
 form{
-    display: flex;
+    background-color: #939393;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 500px;
+    height: 250px;
     margin-top: 50px;
+}
+
+#formulario{
+    display: flex;
+}
+
+form label{
+    margin-left: 30px;
 }
 
 form input{
@@ -63,14 +67,21 @@ form input{
     border: 1px solid black;
     width: 150px;
     height: 23px;
+    margin-left: 30px;
 }
 
 .model{
     margin-top: 20px;
 }
 
+
+.f1{
+    margin-top: 10px;
+}
+
 .f2{
     margin-left: 80px;
+    margin-top: 10px;
 }
 
 .kilometer{
@@ -82,27 +93,35 @@ form input{
     margin-top: 20px;
 }
 
-.boton{
-    margin-bottom: 30px;
-    margin-top: 10px;
-    margin-left: 100px;
-}
-#a1{
-    background-color: rgb(55, 65, 81);
-    text-decoration: none;
-    color: white;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    height: 20px;
-    font-weight: bold;
-    border-radius: 3px;
+.addimage{
+    margin-top: 35px;
 }
 
-#p1{
-    margin-top: 60px;
-    text-align: center;
+.addimage input{
+    background-color: white;
+    width: 155px;
+    height: 25px;
+}
+
+.btnsell{
+    display: flex;
+    justify-content: end;
+}
+
+#sell{
+    width: 110px;
+    height: 40px;
+    background-color: #374151;
+    color: white;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#sell:hover{
+    cursor: pointer;
 }
 
 .footer{
