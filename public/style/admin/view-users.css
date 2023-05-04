@@ -224,7 +224,7 @@ img {
     }
 }
 /* Media query para pantallas de hasta 468px */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 414px) {
     .nav {
       height: 40px;
     }
