@@ -190,7 +190,7 @@ img{
       margin-top: 20px;
     }
     .for {
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
     }
     .ford {
@@ -227,7 +227,7 @@ img{
       margin-top: 20px;
     }
     .gwa {
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
     }
     .gwagon {
