@@ -6,6 +6,7 @@ use App\Http\Controllers\CarController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SavedController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,19 +51,19 @@ Route::delete('/save/{car}', [SavedController::class, 'removeSave'])->name('remo
 
 
 // User Routes
-Route::get('/user/dashboard', function () {
-    return view('user.dashboard', [
-        'user' => Auth::user()
-    ]);
-})->name('user-dashboard');
+Route::get('/user/dashboard', [UserController::class, 'dashboard'])->name('user-dashboard');
 
-Route::get('/user/account', function () {
-    return view('user.account', [
-        'user' => Auth::user()
-    ]);
-})->name('user-account');
+Route::get('/user/account', [UserController::class, 'account'])->name('user-account');
 
 Route::get('/user/saved-cars', [SavedController::class, 'index'])->name('user-saved-cars');
+
+Route::put('/user/update-personal-details', [UserController::class, 'updatePersonalDetails'])->name('user-update-personal-details');
+
+Route::put('/user/update-billing-details', [UserController::class, 'updateBillingDetails'])->name('user-update-billing-details');
+
+Route::put('/user/update-password', [UserController::class, 'updatePassword'])->name('user-update-password');
+
+Route::delete('/user/{user}', [UserController::class, 'destroy'])->name('user-delete');
 
 
 //Employee Routes
@@ -113,11 +114,6 @@ Route::delete('/admin/delete-user/{user}', [AdminController::class, 'destroyUser
 
 
 
-
-
-/*Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');*/
 
 /*Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
