@@ -12,6 +12,7 @@
 </head>
 <body>
     <x-header/>
+    <div class="box">
     <div class="vol">
         <div class="volante"><img src="img/tunning/volante.png" id="volante"></div>
         <p id="p1">The Luxury Tunning customization program, available for any luxury vehicle,
@@ -46,6 +47,7 @@ developed by the best Italian craftsmen, to Forged Composite, an innovative carb
             examples of the possible configurations of their models.</p>
             <div class="gwagon"><img src="img/tunning/gwagon.png" id="gwagon"></div>
     </div>
+</div>
     <x-footer/>
 </body>
 </html>

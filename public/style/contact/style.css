@@ -152,6 +152,9 @@ a{
     .links a {
       padding: 5px;
     }
+<<<<<<< HEAD
+    
+=======
     h2 {
         margin-top: 15px;
         }
@@ -188,6 +191,7 @@ a{
         .p0 {
         font-size: x-small;
         }
+>>>>>>> 47afd07108365d7cfe10d0323ef819b3e58136cd
     .footer {
       height: 100px;
     }
@@ -198,6 +202,22 @@ a{
       margin: 5px;
     }
 }
+<<<<<<< HEAD
+
+@media screen and (max-width: 320px) {
+    .nav {
+        height: 40px;
+        padding: 5px;
+      }
+      .nav img {
+        width: 20px;
+        margin-left: 5px;
+      }
+      .links {
+        font-size: 10px;
+        padding: 5px;
+      }
+=======
 /* Media query para pantallas de hasta 468px */
 @media screen and (max-width: 320px) {
     .nav {
@@ -212,6 +232,7 @@ a{
     .links a{
         font-size: 10px;
     }
+>>>>>>> 47afd07108365d7cfe10d0323ef819b3e58136cd
 
     .p1, .p2, .p3 {
       font-size: 12px;
@@ -220,7 +241,11 @@ a{
     }
 
      .footer {
+<<<<<<< HEAD
+        height: auto;
+=======
     height: auto;
+>>>>>>> 47afd07108365d7cfe10d0323ef819b3e58136cd
     }
 
   .foot1,
@@ -238,4 +263,8 @@ a{
   .foot3 p {
     margin: 3px;
   }
+<<<<<<< HEAD
+  }
+=======
 }
+>>>>>>> 47afd07108365d7cfe10d0323ef819b3e58136cd
