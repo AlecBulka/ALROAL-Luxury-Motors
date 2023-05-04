@@ -42,14 +42,14 @@
 
 
             </div>
-            <img class="car" src="/img/main-img1.jpg" alt="">
+            <img class="car" src="/img/main-img1.jpg" alt="" aria-label="image car">
         </div>
         <div class="buy">
             <div class="price">
                 <h3>{{ $car->price }}€</h3>
             </div>
             <div class="btnBuy">
-                <button type="submit" id="buyCar">Buy</button>
+                <button type="submit" id="buyCar" aria-label="Buy car">Buy</button>
             </div>
         </div>
     </div>

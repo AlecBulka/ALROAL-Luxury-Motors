@@ -15,11 +15,11 @@
     <div class="con">
         <form method="POST" id="form" action="{{ route('register') }}">
         <h2>Contact Us</h2>
-        <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" placeholder="Name" :value="old('name')" required autofocus autocomplete="name" /> <x-input-error :messages="$errors->get('name')" class="mt-2" />
-        <x-text-input id="email" class="block mt-1 w-full" placeholder="Email" type="email" name="email" :value="old('email')" required autocomplete="username" />
+        <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" placeholder="Name" :value="old('name')" required autofocus autocomplete="name" aria-label="Insert name"/> <x-input-error :messages="$errors->get('name')" class="mt-2" />
+        <x-text-input id="email" class="block mt-1 w-full" placeholder="Email" type="email" name="email" :value="old('email')" required autocomplete="username" aria-label="Insert email"/>
         <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        <x-text-input id="message" class="block mt-1 w-full" placeholder="Message" type="message" name="message" :value="old('message')" required />
-        <label for=""><input type="submit" value="Send"><label>
+        <x-text-input id="message" class="block mt-1 w-full" placeholder="Message" type="message" name="message" :value="old('message')" required aria-label="Insert message"/>
+        <label for=""><input type="submit" value="Send" aria-label="Send"><label>
     </form>
 </div>
     <x-footer/>

@@ -59,19 +59,17 @@
                 <hr>
                 <div class="seccion">
                     <div class="left-seccion">
-                        <p aria-label="Odometer {{ $car->kilometers }} KM">Odometer: {{ $car->kilometers }} KM</p>
-                        <p aria-label="Exteriror {{ $car->exterior }}">Exterior: {{ $car->exterior }}</p>
-                        <p aria-label="Interior {{ $car->interior }}">Interior: {{ $car->interior }}</p>
-                        <h3 aria-label="Price (EUR)">Price (EUR)</h3>
+                        <p>Odometer: {{$car->kilometers}} KM</p>
+                        <p>Exterior: {{$car->exterior}}</p>
+                        <p>Interior: {{$car->interior}}</p>
+                        <h3>Price (EUR)</h3>
                     </div>
                     <div class="right-seccion">
-                        <p aria-label="loololololollolollolololololololololololo">Drivetrain: {{ $car->driveTrain }}
-                        </p>
-                        <p aria-label="Transmission {{ $car->gearbox }}">Transmission: {{ $car->gearbox }}</p>
-                        <p aria-label="Engine {{ $car->horsepower }} HP">Engine: {{ $car->horsepower }} HP</p>
-                        <h3 aria-label="{{ $car->price }}€">{{ $car->price }}€</h3>
-                        <button class="viewCar"><a href="{{ route('car-details', $car) }}" aria-label="View Car">View
-                                Car</a></button>
+                        <p>Drivetrain: {{$car->driveTrain}}</p>
+                        <p>Transmission: {{$car->gearbox}}</p>
+                        <p>Engine: {{$car->horsepower}} HP</p>
+                        <h3>{{$car->price}}€</h3>
+                        <button class="viewCar" aria-label="View car"><a href="{{route('car-details', $car)}}">View Car</a></button>
                     </div>
                 </div>
             </div>

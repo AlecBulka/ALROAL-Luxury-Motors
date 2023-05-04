@@ -41,7 +41,6 @@ img {
     width: 100%;
     height: 150px;
     bottom: 0;
-    position: absolute;
     border-top: 1px solid black;
 }
 
@@ -168,4 +167,166 @@ img {
     color: white;
     font-size: 20px;
     font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+      height: 40px;
+    }
+    img {
+      width: 40px;
+    }
+    .nav img {
+      margin-left: 5px;
+    }
+    .links {
+      padding: 5px;
+    }
+    .links a {
+      padding: 5px;
+    }
+    .container {
+        margin: 10px;
+        border-radius: 20px;
+        }
+
+        .title {
+        margin-left: 20px;
+        font-size: 18px;
+        }
+
+        .table {
+        font-size: 16px;
+        margin: 0 10px 10px 10px;
+        padding-bottom: 10px;
+        }
+
+        .th, .td {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        }
+
+        .edit, .delete {
+        font-size: 16px;
+        padding: 3px 10px;
+        }
+
+    .footer {
+      height: 100px;
+    }
+    .p1,
+    .p2,
+    .p3 {
+      padding: 2px;
+      margin: 5px;
+    }
+}
+/* Media query para pantallas de hasta 468px */
+@media screen and (max-width: 320px) {
+    .nav {
+      height: 40px;
+    }
+    .nav img {
+      display: none;
+    }
+    .links {
+        padding: 5px;
+    }
+    .links a{
+        font-size: 10px;
+    }
+    .menu{
+        display: block;
+        margin: 20px auto;
+        margin-left: 50px;
+    }
+
+    .menu a{
+        display: block;
+        margin: 10px 0;
+    }
+
+    .menu .view-cars{
+        margin: 10px 0;
+    }
+
+    .menu .view-users{
+        margin: 10px 0;
+    }
+
+    .menu .add-car{
+        margin: 10px 0;
+    }
+
+    .menu .add-user{
+        margin: 10px 0;
+    }
+
+    .menu .buy-cars{
+        margin: 10px 0;
+    }
+
+    .details{
+        margin-top: 20px;
+    }
+
+    .container {
+        margin: 15px;
+        border-radius: 30px;
+        }
+
+        .title {
+        margin-left: 30px;
+        font-size: 20px;
+        }
+
+        .table {
+        font-size: 10px;
+        margin: 0;
+        padding-bottom: 15px;
+        }
+
+        .th, .td {
+        padding-top: 0.;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        }
+
+        .edit a{
+            font-size: 8px;
+            padding: 2px 5px;
+        }
+
+        .edit, .delete {
+            font-size: 8px;
+            padding: 2px 5px;
+        }
+    .p1, .p2, .p3 {
+      font-size: 12px;
+      padding: 3px;
+      margin: 5px;
+    }
+
+    .footer {
+      height: auto;
+    }
+
+  .foot1,
+  .foot2,
+  .foot3 {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .foot2 {
+    margin-top: 5px;
+  }
+
+  .foot2 p,
+  .foot3 p {
+    margin: 3px;
+  }
 }
