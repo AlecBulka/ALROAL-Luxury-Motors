@@ -40,7 +40,8 @@
                             <input type="number" id="year"><br>
                         </div>
                         <div class="addimage">
-                            <input type="file" name="image" id="image">
+                            <input type="file" name="image" id="image" class="image">
+                            <label for="image">Upload an image</label>
                         </div>
                     </div>
                 </div>

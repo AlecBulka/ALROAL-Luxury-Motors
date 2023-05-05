@@ -97,10 +97,34 @@ form input{
     margin-top: 35px;
 }
 
-.addimage input{
+/*.image {
     background-color: white;
     width: 155px;
     height: 25px;
+}*/
+
+.image {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.image + label {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    width: 150px;
+    height: 23px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.image + label {
+	cursor: pointer;
 }
 
 .btnsell{
