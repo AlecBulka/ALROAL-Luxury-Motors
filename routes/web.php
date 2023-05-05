@@ -44,6 +44,10 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+Route::get('/car-buy-page-finance', function () {
+    return view('car-buy-page-finance');
+})->name('car-buy-page-finance');
+
 // Like Routes
 Route::post('/save/{car}', [SavedController::class, 'save'])->name('save');
 
