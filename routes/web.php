@@ -87,6 +87,10 @@ Route::delete('/employee/delete-car/{car}', [EmployeeController::class, 'destroy
 
 
 //Admin Routes
+Route::get('/admin/dashboard', function () {
+    return view('admin/dashboard');
+})->name('admin-dashboard');
+
 Route::get('/admin/view-cars', [AdminController::class, 'viewCars'])->name('admin-view-cars');
 
 Route::get('/admin/add-car', [AdminController::class, 'createCars'])->name('admin-add-cars');
