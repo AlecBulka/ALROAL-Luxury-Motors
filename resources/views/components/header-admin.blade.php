@@ -1,6 +1,6 @@
     <div class="menu">
         <div class="dashboard">
-            <a href="#">Dashboard</a>
+            <a href="{{route('admin-dashboard')}}">Dashboard</a>
         </div>
         <div class="view-cars">
             <a href="{{route('admin-view-cars')}}">View Cars</a>

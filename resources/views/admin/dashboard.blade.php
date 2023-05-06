@@ -19,15 +19,15 @@
     <div class="info">
         <div class="totalUsers">
             <h3>Total Users</h3>
-            <p>8</p>
+            <p>{{$users}}</p>
         </div>
         <div class="totalCars">
             <h3>Total Cars</h3>
-            <p>40</p>
+            <p>{{$cars}}</p>
         </div>
         <div class="carsSolid">
-            <h3>Cars Solid</h3>
-            <p>25</p>
+            <h3>Cars Sold</h3>
+            <p>{{$carsSold}}</p>
         </div>
     </div>
 

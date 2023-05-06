@@ -13,6 +13,14 @@ use App\Models\Billing;
 
 class AdminController extends Controller
 {
+    public function dashboard() {
+        return view('admin.dashboard', [
+            'users' => count(User::all()),
+            'cars' => count(Car::all()),
+            'carsSold' => count(Car::where('isSold', true)->get())
+        ]);
+    }
+
     public function viewCars()
     {
         $cars = Car::all();

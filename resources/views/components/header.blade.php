@@ -42,7 +42,7 @@
                         </svg>
                     </a>
                 @elseif (Auth::user()->role_id == 3)
-                    <a href="{{ route('admin-view-cars') }}" class="">
+                    <a href="{{ route('admin-dashboard') }}" class="">
                         <svg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
                             xmlns:xlink='http://www.w3.org/1999/xlink'>
                             <rect width='24' height='24' stroke='none' fill='#000000' opacity='0' />
