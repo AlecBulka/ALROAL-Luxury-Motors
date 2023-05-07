@@ -46,9 +46,16 @@ class EmployeeController extends Controller
             'carmodel_id'=>'required|integer',
             'carbrand_id'=>'required|integer',
             'year'=>'required|integer',
+            'image' => 'required|image|mimes:png,jpg,jpeg|max:5120',
         ]);
 
+        $imageName = date('Y-m-d').'-'.$request->image->getClientOriginalName();
+
+        $request->image->move(public_path('img/cars'), $imageName);
+
         $validated['isSold'] = false;
+
+        $validated['image'] = $imageName;
 
         Car::create($validated);
 

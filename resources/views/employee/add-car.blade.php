@@ -15,11 +15,12 @@
 <body>
     <x-header />
     <x-header-employee />
-    <form action="{{ route('employee-store-cars') }}" method="post">
+    <form action="{{ route('employee-store-cars') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="sell">
             <div class="img">
-                <p id="p1">Select image</p>
+                <input type="file" name="image" id="image" class="image">
+                <label for="image">Upload an image</label>
             </div>
             <div class="column">
                 <div>

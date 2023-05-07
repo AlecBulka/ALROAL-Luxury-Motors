@@ -1,5 +1,5 @@
 <div class="nav">
-    <img src="{{ asset('img/logo/logo-color.svg') }}"">
+    <img src="{{ asset('img/logo/logo-color.svg') }}">
     <div class="links">
         @if (Route::has('register'))
             @auth

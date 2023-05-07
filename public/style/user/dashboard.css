@@ -1,28 +1,28 @@
-body{
+body {
     margin: 0;
     padding: 0;
-    }
+}
 
-.nav{
-        background-color: white;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        height: 50px;
-        border: solid 1px #939393;
-    }
+.nav {
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: solid 1px #939393;
+}
 
-img{
+img {
     width: 50px;
 }
 
-.nav img{
+.nav img {
     margin-right: auto;
     margin-left: 10px;
 }
 
-.links{
+.links {
     display: flex;
     align-items: center;
     padding: 10px;
@@ -30,19 +30,19 @@ img{
     color: black;
 }
 
-.links a{
+.links a {
     padding: 10px;
     text-decoration: none;
     color: black;
 }
 
-.menu{
+.menu {
     display: flex;
     margin-left: 38px;
     margin-top: 20px;
 }
 
-.menu a{
+.menu a {
     text-decoration: none;
     color: black;
     font-family: 'Poppins', sans-serif;
@@ -50,11 +50,11 @@ img{
     font-weight: bold;
 }
 
-.menu .saved-cars{
+.menu .saved-cars {
     margin-left: 38px;
 }
 
-.personal-details{
+.personal-details {
     width: 1100px;
     margin-top: 50px;
     margin-left: 120px;
@@ -65,11 +65,11 @@ img{
     margin-bottom: 150px;
 }
 
-.details{
+.details {
     margin-top: 20px;
 }
 
-form input{
+form input {
     border-radius: 10px;
     border: 1px solid black;
     width: 150px;
@@ -77,20 +77,20 @@ form input{
     margin-top: 70px;
 }
 
-label{
+label {
     margin-left: 50px;
 
 }
 
-#email{
+#email {
     width: 200px;
 }
 
-.btnEdit{
+.btnEdit {
     text-align: end;
 }
 
-#edit{
+#edit {
     padding: 5px 40px;
     background-color: #374151;
     color: white;
@@ -99,11 +99,11 @@ label{
     text-decoration: none;
 }
 
-#edit:hover{
+#edit:hover {
     cursor: pointer;
 }
 
-.footer{
+.footer {
     background-color: white;
     width: 100%;
     height: 150px;
@@ -111,23 +111,27 @@ label{
     position: absolute;
     border-top: 1px solid black;
 }
-.foot1{
+
+.foot1 {
     display: flex;
     justify-content: center;
 }
-.foot2{
+
+.foot2 {
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.p1,.p2,.p3{
+.p1,
+.p2,
+.p3 {
     padding: 5px;
     margin: 10px;
 }
 
-.foot3{
+.foot3 {
     align-items: center;
     display: flex;
     flex-direction: row;

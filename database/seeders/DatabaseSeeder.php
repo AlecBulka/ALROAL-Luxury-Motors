@@ -114,7 +114,8 @@ class DatabaseSeeder extends Seeder
             'carmodel_id' => 1,
             'carbrand_id' => 1,
             'year' => 2022,
-            'isSold' => false
+            'isSold' => false,
+            'image' => 'Lamborghini-Huracan-STO.jpg'
         ]);
 
         Car::create([
@@ -136,7 +137,8 @@ class DatabaseSeeder extends Seeder
             'carmodel_id' => 2,
             'carbrand_id' => 2,
             'year' => 2024,
-            'isSold' => false
+            'isSold' => false,
+            'image' => 'Ferrari-Purosangue.jpg'
         ]);
     }
 }

@@ -17,7 +17,7 @@
     <x-header />
     @foreach ($cars as $car)
         <div class="container">
-            <img class="car" src="/img/main-img1.jpg" alt="" aria-label="Car image">
+            <img class="car" src="{{asset('img/cars/' . $car->image)}}" alt="" aria-label="Car image">
             <div class="text">
                 <div class="top">
                     <div>

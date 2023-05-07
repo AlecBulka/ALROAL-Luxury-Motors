@@ -30,6 +30,7 @@ class Car extends Model
         'carmodel_id',
         'carbrand_id',
         'year',
+        'image'
     ];
 
     public function carbrand()
