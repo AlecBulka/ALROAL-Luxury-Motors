@@ -52,6 +52,10 @@ Route::get('/car-buy-page-finance', function () {
     return view('car-buy-page-finance');
 })->name('car-buy-page-finance');
 
+Route::get('/car-buy-page-cash', function () {
+    return view('car-buy-page-cash');
+})->name('car-buy-page-cash');
+
 // Like Routes
 Route::post('/save/{car}', [SavedController::class, 'save'])->name('save');
 
