@@ -63,67 +63,70 @@ Route::delete('/save/{car}', [SavedController::class, 'removeSave'])->name('remo
 
 
 // User Routes
-Route::get('/user/dashboard', [UserController::class, 'dashboard'])->name('user-dashboard');
+Route::middleware(['auth', 'user'])->group(function () {
+    Route::get('/user/dashboard', [UserController::class, 'dashboard'])->name('user-dashboard');
 
-Route::get('/user/account', [UserController::class, 'account'])->name('user-account');
+    Route::get('/user/account', [UserController::class, 'account'])->name('user-account');
 
-Route::get('/user/saved-cars', [SavedController::class, 'index'])->name('user-saved-cars');
+    Route::get('/user/saved-cars', [SavedController::class, 'index'])->name('user-saved-cars');
 
-Route::put('/user/update-personal-details', [UserController::class, 'updatePersonalDetails'])->name('user-update-personal-details');
+    Route::put('/user/update-personal-details', [UserController::class, 'updatePersonalDetails'])->name('user-update-personal-details');
 
-Route::put('/user/update-billing-details', [UserController::class, 'updateBillingDetails'])->name('user-update-billing-details');
+    Route::put('/user/update-billing-details', [UserController::class, 'updateBillingDetails'])->name('user-update-billing-details');
 
-Route::put('/user/update-password', [UserController::class, 'updatePassword'])->name('user-update-password');
+    Route::put('/user/update-password', [UserController::class, 'updatePassword'])->name('user-update-password');
 
-Route::delete('/user/{user}', [UserController::class, 'destroy'])->name('user-delete');
+    Route::delete('/user/{user}', [UserController::class, 'destroy'])->name('user-delete');
+});
 
 
 //Employee Routes
-Route::get('/employee/view-cars', [EmployeeController::class, 'index'])->name('employee-view-cars');
+Route::middleware(['auth', 'employee'])->group(function () {
+    Route::get('/employee/view-cars', [EmployeeController::class, 'index'])->name('employee-view-cars');
 
-Route::get('/employee/add-car', [EmployeeController::class, 'create'])->name('employee-add-cars');
+    Route::get('/employee/add-car', [EmployeeController::class, 'create'])->name('employee-add-cars');
 
-Route::post('/employee/add-car', [EmployeeController::class, 'store'])->name('employee-store-cars');
+    Route::post('/employee/add-car', [EmployeeController::class, 'store'])->name('employee-store-cars');
 
-Route::get('/employee/edit-car/{car}', [EmployeeController::class, 'edit'])->name('employee-edit-cars');
+    Route::get('/employee/edit-car/{car}', [EmployeeController::class, 'edit'])->name('employee-edit-cars');
 
-Route::put('/employee/edit-car/{car}', [EmployeeController::class, 'update'])->name('employee-update-cars');
+    Route::put('/employee/edit-car/{car}', [EmployeeController::class, 'update'])->name('employee-update-cars');
 
-Route::delete('/employee/delete-car/{car}', [EmployeeController::class, 'destroy'])->name('employee-delete-cars');
+    Route::delete('/employee/delete-car/{car}', [EmployeeController::class, 'destroy'])->name('employee-delete-cars');
+});
 
 
 
 
 //Admin Routes
-Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin-dashboard');
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin-dashboard');
 
-Route::get('/admin/view-cars', [AdminController::class, 'viewCars'])->name('admin-view-cars');
+    Route::get('/admin/view-cars', [AdminController::class, 'viewCars'])->name('admin-view-cars');
 
-Route::get('/admin/add-car', [AdminController::class, 'createCars'])->name('admin-add-cars');
+    Route::get('/admin/add-car', [AdminController::class, 'createCars'])->name('admin-add-cars');
 
-Route::post('/admin/add-car', [AdminController::class, 'storeCars'])->name('admin-store-cars');
+    Route::post('/admin/add-car', [AdminController::class, 'storeCars'])->name('admin-store-cars');
 
-Route::get('/admin/edit-car/{car}', [AdminController::class, 'editCars'])->name('admin-edit-cars');
+    Route::get('/admin/edit-car/{car}', [AdminController::class, 'editCars'])->name('admin-edit-cars');
 
-Route::put('/admin/edit-car/{car}', [AdminController::class, 'updateCars'])->name('admin-update-cars');
+    Route::put('/admin/edit-car/{car}', [AdminController::class, 'updateCars'])->name('admin-update-cars');
 
-Route::delete('/admin/delete-car/{car}', [AdminController::class, 'destroyCars'])->name('admin-delete-cars');
+    Route::delete('/admin/delete-car/{car}', [AdminController::class, 'destroyCars'])->name('admin-delete-cars');
 
+    Route::get('/admin/view-users', [AdminController::class, 'viewUsers'])->name('admin-view-users');
 
+    Route::get('/admin/add-user', [AdminController::class, 'createUsers'])->name('admin-add-users');
 
+    Route::post('/admin/add-user', [AdminController::class, 'storeUsers'])->name('admin-store-users');
 
+    Route::get('/admin/edit-user/{user}', [AdminController::class, 'editUsers'])->name('admin-edit-users');
 
-Route::get('/admin/view-users', [AdminController::class, 'viewUsers'])->name('admin-view-users');
+    Route::put('/admin/edit-user/{user}', [AdminController::class, 'updateUsers'])->name('admin-update-users');
 
-Route::get('/admin/add-user', [AdminController::class, 'createUsers'])->name('admin-add-users');
+    Route::delete('/admin/delete-user/{user}', [AdminController::class, 'destroyUsers'])->name('admin-delete-users');
+});
 
-Route::post('/admin/add-user', [AdminController::class, 'storeUsers'])->name('admin-store-users');
-
-Route::get('/admin/edit-user/{user}', [AdminController::class, 'editUsers'])->name('admin-edit-users');
-
-Route::put('/admin/edit-user/{user}', [AdminController::class, 'updateUsers'])->name('admin-update-users');
-
-Route::delete('/admin/delete-user/{user}', [AdminController::class, 'destroyUsers'])->name('admin-delete-users');
 
 
 
