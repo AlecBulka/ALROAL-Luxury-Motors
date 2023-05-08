@@ -32,6 +32,10 @@ Route::get('/buy-cars', [CarController::class, 'index'])->name('buy-cars');
 
 Route::get('/car/{car}', [CarController::class, 'show'])->name('car-details');
 
+Route::get('/car-payment', function () {
+    return view('car-buy-payment');
+})->name('car-buy-payment');
+
 Route::get('/sell-cars', function () {
     return view('sell-cars');
 })->name('sell-cars');
