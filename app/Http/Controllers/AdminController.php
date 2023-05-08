@@ -190,7 +190,6 @@ class AdminController extends Controller
 
     public function updateUsers(Request $request, User $user)
     {
-        //dd($request);
         $userValidated = $request->validate([
             'name' => 'string',
             'email' => 'email',
