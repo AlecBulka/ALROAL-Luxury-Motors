@@ -21,30 +21,40 @@
             <div class="column-one">
                 <label for="">Name:</label>
                 <input type="text" name="name" id="name"><br>
+                <x-input-error :messages="$errors->get('name')" class="mt-2" />
                 <label for="">Email:</label>
                 <input type="email" name="email" id="email"><br>
+                <x-input-error :messages="$errors->get('email')" class="mt-2" />
                 <label for="">Postal Code:</label>
                 <input type="text" name="postalCode" id="code"><br>
+                <x-input-error :messages="$errors->get('postalCode')" class="mt-2" />
                 <label for="">Address:</label>
                 <input type="text" name="address" id="address"><br>
+                <x-input-error :messages="$errors->get('address')" class="mt-2" />
                 <label for="">City:</label>
                 <input type="text" name="city" id="city"><br>
+                <x-input-error :messages="$errors->get('city')" class="mt-2" />
             </div>
             <div class="column-two">
                 <label for="">Phone Number:</label>
                 <input type="tel" name="phoneNumber" id="number"><br>
+                <x-input-error :messages="$errors->get('phoneNumber')" class="mt-2" />
                 <label for="">Role:</label>
                 <select name="role_id" id="role">
                     @foreach ($roles as $role)
                         <option value={{ $role->id }}>{{ $role->role }}</option>
                     @endforeach
                 </select><br>
+                <x-input-error :messages="$errors->get('role_id')" class="mt-2" />
                 <label for="">Password:</label>
                 <input type="password" name="password" id="passwd"><br>
+                <x-input-error :messages="$errors->get('password')" class="mt-2" />
                 <label for="">Country:</label>
                 <input type="text" name="country" id="country"><br>
+                <x-input-error :messages="$errors->get('country')" class="mt-2" />
                 <label for="">Province:</label>
                 <input type="text" name="province" id="province"><br>
+                <x-input-error :messages="$errors->get('province')" class="mt-2" />
             </div>
         </div>
         <div class="btnAdd">

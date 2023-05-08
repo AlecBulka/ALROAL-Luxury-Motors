@@ -19,6 +19,8 @@ class EmployeeController extends Controller
 
     public function create()
     {
+        $this->authorize('create', Car::class);
+
         return view('employee.add-car', [
             'brands' => $brands = Carbrand::all(),
             'models' => $models = Carmodel::all()
@@ -27,6 +29,8 @@ class EmployeeController extends Controller
 
     public function store(Request $request)
     {
+        $this->authorize('create', Car::class);
+
         $validated = $request->validate([
             'name'=>'required|string|max:45',
             'horsepower'=>'required|integer',
@@ -65,6 +69,8 @@ class EmployeeController extends Controller
 
     public function edit(Car $car)
     {
+        $this->authorize('update', $car);
+
         return view('employee.edit-car', [
             'car' => $car,
             'brands' => $brands = Carbrand::all(),
@@ -74,6 +80,8 @@ class EmployeeController extends Controller
 
     public function update(Request $request, Car $car)
     {
+        $this->authorize('update', $car);
+
         $validated = $request->validate([
             'name'=>'string|max:45',
             'horsepower'=>'integer',
@@ -102,6 +110,8 @@ class EmployeeController extends Controller
 
     public function destroy(Car $car)
     {
+        $this->authorize('delete', $car);
+        
         $car->delete();
 
         return redirect(route('employee-view-cars'));

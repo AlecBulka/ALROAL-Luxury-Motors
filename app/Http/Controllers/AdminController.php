@@ -31,6 +31,8 @@ class AdminController extends Controller
 
     public function createCars()
     {
+        $this->authorize('create', Car::class);
+
         return view('admin.add-car', [
             'brands' => $brands = Carbrand::all(),
             'models' => $models = Carmodel::all()
@@ -39,6 +41,8 @@ class AdminController extends Controller
 
     public function storeCars(Request $request)
     {
+        $this->authorize('create', Car::class);
+
         $validated = $request->validate([
             'name'=>'required|string|max:45',
             'horsepower'=>'required|integer',
@@ -77,6 +81,8 @@ class AdminController extends Controller
 
     public function editCars(Car $car)
     {
+        $this->authorize('update', $car);
+
         return view('admin.edit-car', [
             'car' => $car,
             'brands' => $brands = Carbrand::all(),
@@ -86,6 +92,8 @@ class AdminController extends Controller
 
     public function updateCars(Request $request, Car $car)
     {
+        $this->authorize('update', $car);
+
         $validated = $request->validate([
             'name'=>'string|max:45',
             'horsepower'=>'integer',
@@ -114,6 +122,8 @@ class AdminController extends Controller
 
     public function destroyCars(Car $car)
     {
+        $this->authorize('delete', $car);
+
         $car->delete();
 
         return redirect(route('admin-view-cars'));
@@ -139,6 +149,8 @@ class AdminController extends Controller
 
     public function createUsers()
     {
+        $this->authorize('create', User::class);
+
         return view('admin.add-user', [
             'roles' => $roles = Role::all()
         ]);
@@ -146,6 +158,8 @@ class AdminController extends Controller
 
     public function storeUsers(Request $request)
     {
+        $this->authorize('create', User::class);
+
         $validated = $request->validate([
             'name' => 'required|string',
             'email' => 'required|email',
@@ -182,6 +196,8 @@ class AdminController extends Controller
 
     public function editUsers(User $user)
     {
+        $this->authorize('update', $user);
+
         return view('admin.edit-user', [
             'user' => $user,
             'roles' => $roles = Role::all()
@@ -190,6 +206,8 @@ class AdminController extends Controller
 
     public function updateUsers(Request $request, User $user)
     {
+        $this->authorize('update', $user);
+
         $userValidated = $request->validate([
             'name' => 'string',
             'email' => 'email',
@@ -215,6 +233,8 @@ class AdminController extends Controller
 
     public function destroyUsers(User $user)
     {
+        $this->authorize('delete', $user);
+
         $user->delete();
 
         return redirect(route('admin-view-users'));

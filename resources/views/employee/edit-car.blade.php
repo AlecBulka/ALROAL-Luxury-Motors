@@ -26,34 +26,42 @@
                 <div>
                     <label for="name">Name</label><br>
                     <input type="text" id="name" name="name" value="{{ $car->name }}">
+                    <x-input-error :messages="$errors->get('name')" class="mt-2" />
                 </div>
                 <div>
                     <label for="torque">Torque</label><br>
                     <input type="text" id="torque" name="torque" value={{ $car->torque }}>
+                    <x-input-error :messages="$errors->get('torque')" class="mt-2" />
                 </div>
                 <div>
                     <label for="top-speed">Top Speed</label><br>
                     <input type="text" id="top-speed" name="topSpeed" value={{ $car->topSpeed }}>
+                    <x-input-error :messages="$errors->get('topSpeed')" class="mt-2" />
                 </div>
                 <div>
                     <label for="motor">Motor</label><br>
                     <input type="text" id="motor" name="engine" value="{{ $car->engine }}">
+                    <x-input-error :messages="$errors->get('engine')" class="mt-2" />
                 </div>
                 <div>
                     <label for="tires">Tires</label><br>
                     <input type="text" id="tires" name="tires" value="{{ $car->tires }}">
+                    <x-input-error :messages="$errors->get('tires')" class="mt-2" />
                 </div>
                 <div>
                     <label for="gearbox">GearBox</label><br>
                     <input type="text" id="gearbox" name="gearbox" value="{{ $car->gearbox }}">
+                    <x-input-error :messages="$errors->get('gearbox')" class="mt-2" />
                 </div>
                 <div>
                     <label for="kilometers">Kilometers</label><br>
                     <input type="text" id="kilometers" name="kilometers" value={{ $car->kilometers }}>
+                    <x-input-error :messages="$errors->get('kilometers')" class="mt-2" />
                 </div>
                 <div>
                     <label for="price">Price</label><br>
                     <input type="text" id="price" name="price" value={{ $car->price }}>
+                    <x-input-error :messages="$errors->get('price')" class="mt-2" />
                 </div>
                 <div>
                     <label for="brand">Brand</label><br>
@@ -66,38 +74,47 @@
                             @endif
                         @endforeach
                     </select>
+                    <x-input-error :messages="$errors->get('carbrand_id')" class="mt-2" />
                 </div>
                 <div>
                     <label for="horsepower">Horse Power</label><br>
                     <input type="text" name="horsepower" id="horsepower" value={{ $car->horsepower }}>
+                    <x-input-error :messages="$errors->get('horsepower')" class="mt-2" />
                 </div>
                 <div>
                     <label for="consumption">Consumption</label><br>
                     <input type="text" id="consumption" name="consumption" value={{ $car->consumption }}>
+                    <x-input-error :messages="$errors->get('consumption')" class="mt-2" />
                 </div>
                 <div>
                     <label for="acceleration">Acceleration</label><br>
                     <input type="text" id="acceleration" name="acceleration" value={{ $car->acceleration }}>
+                    <x-input-error :messages="$errors->get('acceleration')" class="mt-2" />
                 </div>
                 <div>
                     <label for="wheels">Wheels</label><br>
                     <input type="text" id="wheels" name="wheels" value="{{ $car->wheels }}">
+                    <x-input-error :messages="$errors->get('wheels')" class="mt-2" />
                 </div>
                 <div>
                     <label for="drivetrain">DriveTrain</label><br>
                     <input type="text" id="drivetrain" name="driveTrain" value="{{ $car->driveTrain }}">
+                    <x-input-error :messages="$errors->get('driveTrain')" class="mt-2" />
                 </div>
                 <div>
                     <label for="exterior">Exterior</label><br>
                     <input type="text" id="exterior" name="exterior" value="{{ $car->exterior }}">
+                    <x-input-error :messages="$errors->get('exterior')" class="mt-2" />
                 </div>
                 <div>
                     <label for="interior">Interior</label><br>
                     <input type="text" id="interior" name="interior" value="{{ $car->interior }}">
+                    <x-input-error :messages="$errors->get('interior')" class="mt-2" />
                 </div>
                 <div>
                     <label for="year">Year</label><br>
                     <input type="text" id="year" name="year" value={{ $car->year }}>
+                    <x-input-error :messages="$errors->get('year')" class="mt-2" />
                 </div>
                 <div>
                     <label for="model">Model</label><br>
@@ -110,6 +127,7 @@
                             @endif
                         @endforeach
                     </select>
+                    <x-input-error :messages="$errors->get('carmodel_id')" class="mt-2" />
                 </div>
             </div>
         </div>
