@@ -20,7 +20,7 @@
         @method('PUT')
         <div class="sell">
             <div class="img">
-                <p id="p1">Select image</p>
+                <img src="{{asset('img/cars/' . $car->image)}}" alt="">
             </div>
             <div class="column">
                 <div>
