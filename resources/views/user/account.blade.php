@@ -22,6 +22,12 @@
         <div class="saved-cars">
             <a href="{{ route('user-saved-cars') }}" aria-label="Saved cars">Saved Cars</a>
         </div>
+        <div class="logout">
+            <form action="{{route('logout')}}" method="POST">
+                @csrf
+                <button type="submit">Logout</button>
+            </form>
+        </div>
     </div>
     <h1>Account Settings</h1>
     <div class="account-settings">

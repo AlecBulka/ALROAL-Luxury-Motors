@@ -99,6 +99,27 @@ h3{
     margin-left: 20px;
 }
 
+.logout{
+    width: 82%;
+    text-align: end;
+}
+
+.logout button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    background-color: rgb(196, 0, 0);
+    border: 1px solid black;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    width: 80px;
+    height: 35px;
+}
+
+.logout button:hover{
+    cursor: pointer;
+}
+
 form input{
     border-radius: 10px;
     border: 1px solid black;
