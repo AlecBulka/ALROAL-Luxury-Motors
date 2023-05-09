@@ -96,6 +96,16 @@ img {
     cursor: pointer;
 }
 
+h1{
+    margin-left: 25px;
+}
+
+.container img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 40px;
+}
+
 .car {
     object-fit: cover;
     width: 25%;
@@ -152,7 +162,10 @@ hr {
     stroke: black;
     fill: yellow;
 }
-
+.right-seccion svg{
+    width: 200px;
+    height: 200px;
+}
 
 .footer {
     background-color: white;
