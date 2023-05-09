@@ -19,31 +19,41 @@
         <div class="hero">
             <div class="header">
                 <h1>{{ $car->name }}</h1>
-                @if ($saved->count() == 0)
-                    <form action="{{ route('save', $car) }}" method="POST">
-                        @csrf
-                        <button class="save-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="none" class="save">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
-                              </svg>
-                        </button>
-                    </form>
+                @if (Auth::user() and Auth::user()->role_id == 1)
+                    @if ($saved->count() == 0)
+                        <form action="{{ route('save', $car) }}" method="POST">
+                            @csrf
+                            <button class="save-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="none" class="save">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                                </svg>
+                            </button>
+                        </form>
+                    @else
+                        <form action="{{ route('remove-save', $car) }}" method="POST">
+                            @csrf
+                            @method('delete')
+                            <button class="save-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="none" class="saved">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                                </svg>
+                            </button>
+                        </form>
+                    @endif
                 @else
-                    <form action="{{ route('remove-save', $car) }}" method="POST">
-                        @csrf
-                        @method('delete')
-                        <button class="save-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="none" class="saved">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
-                              </svg>
-                        </button>
-                    </form>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="none" class="save" aria-label="Save Card">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                    </svg>
                 @endif
-
-
             </div>
             <div class="car">
-                <img src="{{asset('img/cars/' . $car->image)}}" alt="" aria-label="image car">
+                <img src="{{ asset('img/cars/' . $car->image) }}" alt="" aria-label="image car">
             </div>
         </div>
         <div class="buy">

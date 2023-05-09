@@ -26,7 +26,7 @@
                         <h3 aria-label="Car year {{ $car->year }}">{{ $car->year }}</h3>
                         <h2 aria-label="Car name {{ $car->name }}">{{ $car->name }}</h2>
                     </div>
-                    @if (Auth::user())
+                    @if (Auth::user() and Auth::user()->role_id == 1)
                         @if (count($car->saveds) == 0)
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="none" class="save" aria-label="Save Card">
