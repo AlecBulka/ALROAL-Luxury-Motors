@@ -42,7 +42,9 @@
 
 
             </div>
-            <img class="car" src="{{asset('img/cars/' . $car->image)}}" alt="" aria-label="image car">
+            <div class="car">
+                <img src="{{asset('img/cars/' . $car->image)}}" alt="" aria-label="image car">
+            </div>
         </div>
         <div class="buy">
             <div class="price">
