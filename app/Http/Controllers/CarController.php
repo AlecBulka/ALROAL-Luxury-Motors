@@ -23,4 +23,16 @@ class CarController extends Controller
             'saved' => Saved::where('car_id', $car->id)->where('user_id', auth()->id())->get()
         ]);
     }
+
+    public function carBuyFinance(Car $car) {
+        return view('car-buy-page-finance', [
+            'car' => $car
+        ]);
+    }
+
+    public function carBuyCash(Car $car) {
+        return view('car-buy-page-cash', [
+            'car' => $car
+        ]);
+    }
 }

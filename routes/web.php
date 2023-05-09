@@ -48,13 +48,9 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/car-buy-page-finance', function () {
-    return view('car-buy-page-finance');
-})->name('car-buy-page-finance');
+Route::get('/car-buy-page-finance/{car}', [CarController::class, 'carBuyFinance'])->name('car-finance-page');
 
-Route::get('/car-buy-page-cash', function () {
-    return view('car-buy-page-cash');
-})->name('car-buy-page-cash');
+Route::get('/car-buy-page-cash/{car}', [CarController::class, 'carBuyCash'])->name('car-cash-page');
 
 // Like Routes
 Route::post('/save/{car}', [SavedController::class, 'save'])->name('save');

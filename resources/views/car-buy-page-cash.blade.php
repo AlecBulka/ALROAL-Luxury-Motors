@@ -42,7 +42,7 @@
         </div>
         <div class="config">
             <h3>Payment Configurator</h3>
-            <div class="links"><a href="#" id="fin">Finance</a><a href="#" id="cas">Cash</a>
+            <div class="links"><a href="{{route('car-finance-page', $car)}}" id="fin">Finance</a><a href="#" id="cas">Cash</a>
             </div>
 
 

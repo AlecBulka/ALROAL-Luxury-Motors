@@ -61,7 +61,7 @@
                 <h3>{{ $car->price }}€</h3>
             </div>
             <div class="btnBuy">
-                <button type="submit" id="buyCar" aria-label="Buy car">Buy</button>
+                <a id="buyCar" aria-label="Buy car" href="{{route('car-cash-page', $car)}}">Buy Car</a>
             </div>
         </div>
     </div>
