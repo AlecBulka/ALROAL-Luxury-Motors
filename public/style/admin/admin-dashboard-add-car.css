@@ -3,9 +3,37 @@ body{
     padding: 0;
 }
 
+.nav{
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: solid 1px #939393;
+}
+
+.routes{
+    display: flex;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 38px;
+    margin-top: 20px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
 .logout{
-    width: 59%;
-    text-align: end;
+    margin-right: 50px;
 }
 
 .logout button{
@@ -24,29 +52,28 @@ body{
     cursor: pointer;
 }
 
-.nav{
-    background-color: white;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    border-bottom: solid 1px #939393;
-}
-
-.menu{
-    display: flex;
+.menu .view-cars {
     margin-left: 38px;
-    margin-top: 20px;
 }
 
-.menu a{
-    text-decoration: none;
-    color: black;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    margin: 15px;
+.menu .view-users {
+    margin-left: 38px;
+}
+
+.menu .add-car {
+    margin-left: 38px;
+}
+
+.menu .add-user {
+    margin-left: 38px;
+}
+
+.menu .buy-cars {
+    margin-left: 38px;
+}
+
+.menu .order-cars {
+    margin-left: 38px;
 }
 
 img{
@@ -70,21 +97,6 @@ img{
     padding: 10px;
     text-decoration: none;
     color: black;
-}
-
-.menu{
-    display: flex;
-    margin-left: 38px;
-    margin-top: 20px;
-}
-
-.menu a{
-    text-decoration: none;
-    color: black;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    margin: 15px;
 }
 
 .sell{

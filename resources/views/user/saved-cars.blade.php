@@ -15,20 +15,7 @@
 
 <body>
     <x-header />
-    <div class="menu">
-        <div class="dashboard">
-            <a href="{{ route('user-dashboard') }}" aria-label="Dashboard">Dashboard</a>
-        </div>
-        <div class="saved-cars">
-            <a href="{{ route('user-saved-cars') }}" aria-label="Saved Cars">Saved Cars</a>
-        </div>
-        <div class="logout">
-            <form action="{{route('logout')}}" method="POST">
-                @csrf
-                <button type="submit">Logout</button>
-            </form>
-        </div>
-    </div>
+    <x-header-user/>
     @foreach ($cars as $car)
         @foreach ($car->saveds as $saved)
             @if ($saved->user_id == Auth::user()->id)

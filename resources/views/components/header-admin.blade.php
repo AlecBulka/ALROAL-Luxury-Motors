@@ -1,4 +1,5 @@
-    <div class="menu">
+<div class="menu">
+    <div class="routes">
         <div class="dashboard">
             <a href="{{route('admin-dashboard')}}">Dashboard</a>
         </div>
@@ -14,13 +15,14 @@
         <div class="add-user">
             <a href="{{route('admin-add-users')}}">Add User</a>
         </div>
-        <div class="add-user">
+        <div class="order-cars">
             <a href="{{route('view-ordered-cars')}}">Ordered Cars</a>
         </div>
-        <div class="logout">
-            <form action="{{route('logout')}}" method="POST">
-                @csrf
-                <button type="submit">Logout</button>
-            </form>
-        </div>
     </div>
+    <div class="logout">
+        <form action="{{route('logout')}}" method="POST">
+            @csrf
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</div>
