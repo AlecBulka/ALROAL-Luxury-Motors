@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href={{ asset('style/car-buy-payment/style.css') }}>
+    <link rel="stylesheet" href={{ asset('style/car-finance-payment/style.css') }}>
 </head>
 
 <body>
@@ -19,10 +19,10 @@
     <div class="payment">
         <div class="car-info">
             <div class="name">
-                <h3>2022 Lamborghini STO</h3>
+                <h3>{{$car->name}}</h3>
             </div>
             <div class="image">
-                <img src="img/main-img4.jpg" alt="">
+                <img src="{{asset('img/cars/' . $car->image)}}" alt="">
             </div>
             <div class="price">
                 <h3>4.531,33€/monthly</h3>

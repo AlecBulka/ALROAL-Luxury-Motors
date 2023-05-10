@@ -32,10 +32,6 @@ Route::get('/buy-cars', [CarController::class, 'index'])->name('buy-cars');
 
 Route::get('/car/{car}', [CarController::class, 'show'])->name('car-details');
 
-Route::get('/car-payment', function () {
-    return view('car-buy-payment');
-})->name('car-buy-payment');
-
 Route::get('/sell-cars', function () {
     return view('sell-cars');
 })->name('sell-cars');
@@ -56,9 +52,13 @@ Route::get('/view-ordered-cars', function () {
     return view('/admin/view-ordered-cars');
 })->name('view-ordered-cars');
 
-Route::get('/car-buy-page-finance/{car}', [CarController::class, 'carBuyFinance'])->name('car-finance-page');
+Route::get('/car-finance/{car}', [CarController::class, 'carFinance'])->name('car-finance-page');
 
-Route::get('/car-buy-page-cash/{car}', [CarController::class, 'carBuyCash'])->name('car-cash-page');
+Route::get('/car-cash/{car}', [CarController::class, 'carCash'])->name('car-cash-page');
+
+Route::get('/car-finance-payment/{car}', [CarController::class, 'carFinancePayment'])->name('car-finance-payment');
+
+Route::get('/car-cash-payment/{car}', [CarController::class, 'carCashPayment'])->name('car-cash-payment');
 
 // Like Routes
 Route::post('/save/{car}', [SavedController::class, 'save'])->name('save');

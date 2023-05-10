@@ -17,104 +17,100 @@
     <x-header />
     <div class="container">
         <div class="box1">
-            <h3>2022 Lamborghini STO</h3>
-            <div class="imagen"><img src="/img/main-img1.jpg" alt=""></div>
+            <h3>{{$car->name}}</h3>
+            <div class="imagen"><img src="{{ asset('img/cars/' . $car->image) }}" alt=""></div>
 
             <h4>Overview</h4>
             <div class="over">
                 <div class="col1">
                     <div class="p1">Transmission</div>
-                    <div class="p2">7-Speed</div>
+                    <div class="p2">{{ $car->gearbox }}</div>
                     <div class="p3">Exterior Color</div>
-                    <div class="p4">Red</div>
+                    <div class="p4">{{ $car->exterior }}</div>
                     <div class="p5">Drivetrain</div>
-                    <div class="p6">AWD</div>
+                    <div class="p6">{{ $car->driveTrain }}</div>
                 </div>
                 <div class="col2">
                     <div class="p7">Engine</div>
-                    <div class="p8">640HP</div>
+                    <div class="p8">{{ $car->engine }}</div>
                     <div class="p9">Interior Color</div>
-                    <div class="p10">Black</div>
+                    <div class="p10">{{ $car->interior }}</div>
                     <div class="p11">Odometer</div>
-                    <div class="p12">2,500 KM</div>
+                    <div class="p12">{{ $car->kilometers }} KM</div>
                 </div>
             </div>
         </div>
         <div class="config">
             <h3>Payment Configurator</h3>
-            <div class="links"><a href="#" id="fin">Finance</a><a href="{{route('car-cash-page', $car)}}" id="cas">Cash</a>
+            <div class="links"><a href="#" id="fin">Finance</a><a
+                    href="{{ route('car-cash-page', $car) }}" id="cas">Cash</a>
             </div>
             <div class="sel">
                 <h4>Frequency</h4>
-                <select name="select">
-                    <option value="value1">Monthly </option>
-                    <option value="value2" selected>Monthly</option>
-                    <option value="value3">Monthly</option>
+                <input value="Monthly" readonly>
+            </div>
+            <div class="sel">
+                <h4>Finance Term</h4>
+                <select id="term" name="select">
+                    <option value="12">12 Months</option>
+                    <option value="24">24 Months</option>
+                    <option value="36">36 Months</option>
+                    <option value="48">48 Months</option>
+                    <option value="60">60 Months</option>
                 </select>
             </div>
             <div class="sel">
-                <h4>Frequency</h4>
-                <select name="select">
-                    <option value="value1">60 Months </option>
-                    <option value="value2" selected>60 Months</option>
-                    <option value="value3">60 Months</option>
-                </select>
-            </div>
-            <div class="sel">
-                <h4>Frequency</h4>
-                <select name="select">
-                    <option value="value1">50.000€ </option>
-                    <option value="value2" selected>50.000€</option>
-                    <option value="value3">50.000€</option>
-                </select>
+                <h4>Down Payment</h4>
+                <input id="downPayment" type="number" min="0" max="{{ $car->price }}">
             </div>
         </div>
         <div class="pri">
-            <h1>4.531,33€/monthly</h1>
+            <h1 id="monthlyCost"></h1>
             <h3>Pricing Breakdown</h3>
             <hr>
             <h4>Vehicle Price</h4>
             <div class="pri1">
                 <p class="p13">Vehicle Price</p>
-                <p class="p14">250.000,00€</p>
+                <p class="p14" id="vehiclePrice">{{ number_format($car->price, 2) }} €</p>
             </div>
             <hr>
             <div class="pri1">
                 <p class="p15">Sub Total(if Financing)</p>
-                <p class="p16">5.000,00€</p>
+                <p class="p16" id="subTotal">{{ number_format($car->price * 1.1, 2) }} €</p>
             </div>
             <div class="pri1">
                 <p class="p17">Fees</p>
-                <p class="p18">5.000,00€</p>
+                <p class="p18">{{ number_format($car->price * 1.1 - $car->price, 2) }} €</p>
             </div>
             <div class="pri1">
                 <p class="p19">Deposit Paid</p>
-                <p class="p20">50.000,00€</p>
+                <p class="p20" id="deposit">{{ number_format(0, 2) }} €</p>
             </div>
             <hr>
             <div class="pri1">
                 <p class="p21">Total Amount Financed</p>
-                <p class="p22">205.000,00€</p>
+                <p class="p22" id="totalFinanced"></p>
             </div>
             <hr>
             <h3>Finance Payment</h3>
             <div class="pri1">
                 <p class="p23">Interest Rate</p>
-                <p class="p24">5,99%</p>
+                <p class="p24">5.99 %</p>
             </div>
             <div class="pri1">
                 <p class="p25">Finance Term</p>
-                <p class="p26">60 months</p>
+                <p class="p26" id="financeTerm">12 Months</p>
             </div>
             <hr>
             <div class="pri1">
                 <p class="p27">Finance Payment</p>
-                <p class="p28">4.439,96€</p>
+                <p class="p28" id="financePayment"></p>
             </div>
-            <div class="buy"><a href="#">Buy</a></div>
+            <div class="buy"><a href="{{route('car-finance-payment', [$car, 5.3])}}">Buy</a></div>
         </div>
     </div>
     <x-footer />
+    <script src="{{ asset('js/finance.js') }}"></script>
 </body>
 
 </html>

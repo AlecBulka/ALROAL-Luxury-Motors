@@ -24,14 +24,27 @@ class CarController extends Controller
         ]);
     }
 
-    public function carBuyFinance(Car $car) {
+    public function carFinance(Car $car) {
         return view('car-buy-page-finance', [
             'car' => $car
         ]);
     }
 
-    public function carBuyCash(Car $car) {
+    public function carCash(Car $car) {
         return view('car-buy-page-cash', [
+            'car' => $car
+        ]);
+    }
+
+    public function carFinancePayment(Car $car, float $monthlyAmount) {
+        return view('car-finance-payment', [
+            'car' => $car,
+            'monthlyAmount' => $amount
+        ]);
+    }
+
+    public function carCashPayment(Car $car) {
+        return view('car-cash-payment', [
             'car' => $car
         ]);
     }
