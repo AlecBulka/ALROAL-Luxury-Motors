@@ -14,6 +14,9 @@
         <div class="add-user">
             <a href="{{route('admin-add-users')}}">Add User</a>
         </div>
+        <div class="add-user">
+            <a href="{{route('view-ordered-cars')}}">Ordered Cars</a>
+        </div>
         <div class="logout">
             <form action="{{route('logout')}}" method="POST">
                 @csrf

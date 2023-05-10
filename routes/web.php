@@ -52,6 +52,10 @@ Route::get('/ordered-cars', function () {
     return view('/user/ordered-cars');
 })->name('ordered-cars');
 
+Route::get('/view-ordered-cars', function () {
+    return view('/admin/view-ordered-cars');
+})->name('view-ordered-cars');
+
 Route::get('/car-buy-page-finance/{car}', [CarController::class, 'carBuyFinance'])->name('car-finance-page');
 
 Route::get('/car-buy-page-cash/{car}', [CarController::class, 'carBuyCash'])->name('car-cash-page');
