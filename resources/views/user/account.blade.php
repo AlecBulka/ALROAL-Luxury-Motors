@@ -15,20 +15,7 @@
 
 <body>
     <x-header />
-    <div class="menu">
-        <div class="dashboard">
-            <a href="{{ route('user-dashboard') }}" aria-label="Dashboard">Dashboard</a>
-        </div>
-        <div class="saved-cars">
-            <a href="{{ route('user-saved-cars') }}" aria-label="Saved cars">Saved Cars</a>
-        </div>
-        <div class="logout">
-            <form action="{{route('logout')}}" method="POST">
-                @csrf
-                <button type="submit">Logout</button>
-            </form>
-        </div>
-    </div>
+    <x-header-user/>
     <h1>Account Settings</h1>
     <div class="account-settings">
         <form action="{{ route('user-update-personal-details') }}" method="post" id="personal-details"
