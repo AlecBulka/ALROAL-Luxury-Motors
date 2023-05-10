@@ -46,4 +46,8 @@ class Car extends Model
     public function saveds() {
         return $this->hasMany(Saved::class);
     }
+
+    public function orders() {
+        return $this->hasMany(Order::class);
+    }
 }

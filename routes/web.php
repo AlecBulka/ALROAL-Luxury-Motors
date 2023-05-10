@@ -56,24 +56,26 @@ Route::get('/view-ordered-cars', function () {
     return view('/admin/view-ordered-cars');
 })->name('view-ordered-cars');
 
-Route::get('/car-finance/{car}', [CarController::class, 'carFinance'])->name('car-finance-page');
 
-Route::get('/car-cash/{car}', [CarController::class, 'carCash'])->name('car-cash-page');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/car-finance/{car}', [CarController::class, 'carFinance'])->name('car-finance-page');
 
-Route::get('/car-finance-payment/{car}', [CarController::class, 'carFinancePaymentGet'])->name('car-finance-payment-get');
+    Route::get('/car-cash/{car}', [CarController::class, 'carCash'])->name('car-cash-page');
 
-Route::post('/car-finance-payment/{car}', [CarController::class, 'carFinancePaymentPost'])->name('car-finance-payment-post');
+    
 
-Route::get('/car-cash-payment/{car}', [CarController::class, 'carCashPayment'])->name('car-cash-payment');
+    Route::get('/car-finance-payment/{car}', [CarController::class, 'carFinancePaymentGet'])->name('car-finance-payment-get');
 
-// Like Routes
-Route::post('/save/{car}', [SavedController::class, 'save'])->name('save');
+    Route::post('/car-finance-payment/{car}', [CarController::class, 'carFinancePaymentPost'])->name('car-finance-payment-post');
 
-Route::delete('/save/{car}', [SavedController::class, 'removeSave'])->name('remove-save');
+    Route::get('/car-cash-payment/{car}', [CarController::class, 'carCashPayment'])->name('car-cash-payment');
+});
 
 
-// User Routes
+
+
 Route::middleware(['auth', 'user'])->group(function () {
+    // User Routes
     Route::get('/user/dashboard', [UserController::class, 'dashboard'])->name('user-dashboard');
 
     Route::get('/user/account', [UserController::class, 'account'])->name('user-account');
@@ -88,11 +90,16 @@ Route::middleware(['auth', 'user'])->group(function () {
     Route::put('/user/update-password', [UserController::class, 'updatePassword'])->name('user-update-password');
 
     Route::delete('/user/{user}', [UserController::class, 'destroy'])->name('user-delete');
+
+    // Like Routes
+    Route::post('/save/{car}', [SavedController::class, 'save'])->name('save');
+
+    Route::delete('/save/{car}', [SavedController::class, 'removeSave'])->name('remove-save');
 });
 
 
-//Employee Routes
 Route::middleware(['auth', 'employee'])->group(function () {
+    //Employee Routes
     Route::get('/employee/view-cars', [EmployeeController::class, 'index'])->name('employee-view-cars');
 
     Route::get('/employee/add-car', [EmployeeController::class, 'create'])->name('employee-add-cars');
@@ -109,8 +116,8 @@ Route::middleware(['auth', 'employee'])->group(function () {
 
 
 
-//Admin Routes
 Route::middleware(['auth', 'admin'])->group(function () {
+    //Admin Routes
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin-dashboard');
 
     Route::get('/admin/view-cars', [AdminController::class, 'viewCars'])->name('admin-view-cars');
