@@ -106,7 +106,13 @@
                 <p class="p27">Finance Payment</p>
                 <p class="p28" id="financePayment"></p>
             </div>
-            <div class="buy"><a href="{{route('car-finance-payment', [$car, 5.3])}}">Buy</a></div>
+            <div class="buy">
+                <form action="{{route('car-finance-payment-post', $car)}}" method="post">
+                    @csrf
+                    <input type="number" name="monthly" value="5.0">
+                    <button>Buy</button>
+                </form>
+            </div>
         </div>
     </div>
     <x-footer />

@@ -60,7 +60,9 @@ Route::get('/car-finance/{car}', [CarController::class, 'carFinance'])->name('ca
 
 Route::get('/car-cash/{car}', [CarController::class, 'carCash'])->name('car-cash-page');
 
-Route::get('/car-finance-payment/{car}', [CarController::class, 'carFinancePayment'])->name('car-finance-payment');
+Route::get('/car-finance-payment/{car}', [CarController::class, 'carFinancePaymentGet'])->name('car-finance-payment-get');
+
+Route::post('/car-finance-payment/{car}', [CarController::class, 'carFinancePaymentPost'])->name('car-finance-payment-post');
 
 Route::get('/car-cash-payment/{car}', [CarController::class, 'carCashPayment'])->name('car-cash-payment');
 
