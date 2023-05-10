@@ -36,6 +36,10 @@ Route::get('/sell-cars', function () {
     return view('sell-cars');
 })->name('sell-cars');
 
+Route::get('/purchase-page', function () {
+    return view('purchase-page');
+})->name('purchase-page');
+
 Route::get('/tunning', function () {
     return view('tunning');
 })->name('tunning');
