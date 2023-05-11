@@ -27,22 +27,12 @@ class CarController extends Controller
         ]);
     }
 
+
+    
+
     public function carFinance(Car $car) {
         return view('car-buy-page-finance', [
             'car' => $car
-        ]);
-    }
-
-    public function carCash(Car $car) {
-        return view('car-buy-page-cash', [
-            'car' => $car
-        ]);
-    }
-
-    public function carFinancePaymentGet(Car $car) {
-        return view('car-finance-payment', [
-            'car' => $car,
-            'order' => Order::where('car_id', $car->id)->where('user_id', Auth::user()->id)->latest()->first()
         ]);
     }
 
@@ -60,10 +50,19 @@ class CarController extends Controller
         return redirect(route('car-finance-payment-get', $car));
     }
 
-    public function carCashPaymentGet(Car $car) {
-        return view('car-cash-payment', [
+    public function carFinancePaymentGet(Car $car) {
+        return view('car-finance-payment', [
             'car' => $car,
             'order' => Order::where('car_id', $car->id)->where('user_id', Auth::user()->id)->latest()->first()
+        ]);
+    }
+
+
+
+
+    public function carCash(Car $car) {
+        return view('car-buy-page-cash', [
+            'car' => $car
         ]);
     }
 
@@ -75,5 +74,12 @@ class CarController extends Controller
             'car_id' => $car->id
         ]);
         return redirect(route('car-cash-payment-post', $car));
+    }
+
+    public function carCashPaymentGet(Car $car) {
+        return view('car-cash-payment', [
+            'car' => $car,
+            'order' => Order::where('car_id', $car->id)->where('user_id', Auth::user()->id)->latest()->first()
+        ]);
     }
 }
