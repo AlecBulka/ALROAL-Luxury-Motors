@@ -50,6 +50,18 @@
         background-color: black;
         }
 
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1, h2, h3, form, .forg, #form, input {
+            animation: fadeIn 1s ease-in-out;
+        }
 
     h2 {
         margin-top: 25px;
