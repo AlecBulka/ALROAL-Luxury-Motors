@@ -48,8 +48,7 @@
                 <input type="text" name="name-card" id="name-card" placeholder="Name on card"><br><br>
                 <label for="">Country or region</label><br>
                 <select name="country" id="country">
-                    <option value=""></option>
-                    <option value="">Spain</option>
+                    <option>Select a Country</option>
                 </select><br><br>
                 <div class="btnpay">
                     <a href="#">PAY NOW</a>
@@ -59,6 +58,7 @@
     </div>
 
     <x-footer />
+    <script src="{{ asset('js/countries.js') }}"></script>
 </body>
 
 </html>
