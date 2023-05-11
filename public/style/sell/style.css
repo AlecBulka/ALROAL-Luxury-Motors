@@ -57,7 +57,7 @@ body{
 }
 
 form{
-    background-color: #939393;
+    background-color: #EEEEEE;
     border: 1px solid black;
     border-radius: 10px;
     width: 500px;
@@ -108,11 +108,9 @@ form input{
     margin-top: 35px;
 }
 
-/*.image {
-    background-color: white;
-    width: 155px;
-    height: 25px;
-}*/
+.addimage label{
+    border: solid 1px black;
+}
 
 .image {
     width: 0.1px;
