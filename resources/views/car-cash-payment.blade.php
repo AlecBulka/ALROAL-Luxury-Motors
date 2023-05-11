@@ -25,7 +25,7 @@
                 <img src="{{asset('img/cars/' . $car->image)}}" alt="">
             </div>
             <div class="price">
-                <h3>{{number_format($car->price * 1.10, 2)}} €</h3>
+                <h3>{{number_format($order->totalCost, 2)}} €</h3>
             </div>
         </div>
         <div class="user-info">

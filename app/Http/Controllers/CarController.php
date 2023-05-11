@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Car;
 use App\Models\Saved;
+use App\Models\Order;
+use Illuminate\Support\Facades\Http;
 
 class CarController extends Controller
 {
@@ -43,13 +45,22 @@ class CarController extends Controller
     }
 
     public function carFinancePaymentPost(Request $request, Car $car) {
-        dd($request);
+
         return redirect(route('car-finance-payment-get', $car));
     }
 
-    public function carCashPayment(Car $car) {
+    public function carCashPaymentGet(Car $car) {
         return view('car-cash-payment', [
-            'car' => $car
+            'car' => $car,
+            'order' => Order::where('user_id', Auth::user()->id())->where('car_id', $car->id)->get()
         ]);
+    }
+
+    public function carCashPaymentPost(Request $request, Car $car) {
+        $order = Http::asForm()->post('https://alroalluxurymotors.alecbulka.com/api/orders', [
+            'status' => $request->status,
+            'totalCost' => $request->totalCost,
+        ]);
+        return redirect(route('car-finance-payment-get', $car));
     }
 }

@@ -109,7 +109,12 @@
             <div class="buy">
                 <form action="{{route('car-finance-payment-post', $car)}}" method="post">
                     @csrf
-                    <input type="number" name="monthly" value="5.0">
+                    <input type="text" name="status" value="paymentPending" hidden>
+                    <input type="number" name="totalCost" hidden>
+                    <input type="checkbox" name="finance" hidden checked>
+                    <input type="number" name="monthsFinanced" hidden>
+                    <input type="number" name="downPayment" hidden>
+                    <input type="number" name="monthlyCost" hidden>
                     <button>Buy</button>
                 </form>
             </div>

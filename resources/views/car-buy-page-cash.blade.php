@@ -70,7 +70,14 @@
                 <p class="p21">Total Purchase Price</p>
                 <p class="p22">{{number_format($car->price * 1.10, 2)}} €</p>
             </div>
-            <div class="buy"><a href="{{route('car-cash-payment', $car)}}">Buy</a></div>
+            <div class="buy">
+                <form action="{{route('car-cash-payment-post', $car)}}" method="post">
+                    @csrf
+                    <input type="text" name="status" value="paymentPending" hidden>
+                    <input type="number" name="totalCost" value="{{number_format($car->price * 1.10, 2)}}" hidden>
+                    <button>Buy</button>
+                </form>
+            </div>
         </div>
     </div>
     <x-footer />

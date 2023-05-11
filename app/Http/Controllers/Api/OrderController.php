@@ -31,20 +31,22 @@ class OrderController extends Controller
                 'downPayment' => 'required|numeric',
                 'monthlyCost' => 'required|numeric',
             ]);
+
             $validated['user_id'] = Auth::user()->id();
             $validated['car_id'] = $car->id;
-            Order::create($validated);
-            return redirect(route('admin-view-cars'));
+            $order = Order::create($validated);
+            return $order;
         }
 
         $validated = $request->validate([
             'status' => 'required|string',
             'totalCost' => 'required|numeric'
         ]);
+
         $validated['user_id'] = Auth::user()->id();
         $validated['car_id'] = $car->id;
-        Order::create($validated);
-        return redirect(route('admin-view-cars'));
+        $order = Order::create($validated);
+        return $order;
     }
 
     /**
@@ -69,16 +71,18 @@ class OrderController extends Controller
                 'downPayment' => 'numeric',
                 'monthlyCost' => 'numeric',
             ]);
+
             $order->update($validated);
-            return redirect(route('admin-view-cars'));
+            return $order;
         }
 
         $validated = $request->validate([
             'status' => 'required|string',
             'totalCost' => 'required|numeric'
         ]);
+
         $order->update($validated);
-        return redirect(route('admin-view-cars'));
+        return $order;
     }
 
     /**

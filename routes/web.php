@@ -62,13 +62,15 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/car-cash/{car}', [CarController::class, 'carCash'])->name('car-cash-page');
 
-    
+
 
     Route::get('/car-finance-payment/{car}', [CarController::class, 'carFinancePaymentGet'])->name('car-finance-payment-get');
 
     Route::post('/car-finance-payment/{car}', [CarController::class, 'carFinancePaymentPost'])->name('car-finance-payment-post');
 
-    Route::get('/car-cash-payment/{car}', [CarController::class, 'carCashPayment'])->name('car-cash-payment');
+    Route::get('/car-cash-payment/{car}', [CarController::class, 'carCashPaymentGet'])->name('car-cash-payment-get');
+
+    Route::post('/car-cash-payment/{car}', [CarController::class, 'carCashPaymentPost'])->name('car-cash-payment-post');
 });
 
 
