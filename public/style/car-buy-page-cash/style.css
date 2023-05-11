@@ -513,77 +513,7 @@ h4{
 }
 
 @media screen and (min-width: 800px){
-    .nav {
-        height: 40px;
-      }
-      .nav img {
-        display: none;
-      }
-      .links {
-          padding: 5px;
-      }
-      .links a{
-          font-size: 10px;
-      }
-
-      .p1, .p2, .p3 {
-        font-size: 12px;
-        padding: 3px;
-        margin: 5px;
-      }
-          .container {
-            flex-direction: column;
-            height: auto;
-          }
-          .box1 {
-            width: 100%;
-            height: auto;
-            border-right: none;
-            border-bottom: solid 1px #939393;
-          }
-          .imagen {
-            height: 150px;
-          }
-          .over {
-            width: 100%;
-            flex-direction: column;
-            margin-right: 0;
-          }
-          .col1 {
-            margin-right: 0;
-            width: 100%;
-          }
-          .col2 {
-            margin: 0;
-            margin-top: 20px;
-          }
-          .config {
-            width: 100%;
-            margin-top: 20px;
-          }
-          .buy {
-            margin-left: auto;
-            margin-right: auto;
-          }
-          h1,
-          h3,
-          h4 {
-            margin-left: 0;
-          }
-          .pri1 {
-            margin-left: 0;
-            flex-direction: column;
-          }
-          .p14,
-          .p16,
-          .p18,
-          .p20,
-          .p24,
-          .p26,
-          .p28 {
-            margin-left: 0;
-            margin-top: 10px;
-          }
+   
     .footer {
         height: 100px;
     }
