@@ -243,3 +243,27 @@ select{
   }
 
 }
+
+@media screen and (min-width: 800px){
+    .nav {
+        height: 40px;
+      }
+      .nav img {
+        display: none;
+      }
+      .links {
+          padding: 5px;
+      }
+      .links a{
+          font-size: 10px;
+      }
+
+      .p1, .p2, .p3 {
+        font-size: 12px;
+        padding: 3px;
+        margin: 5px;
+      }
+    .footer {
+        height: 100px;
+    }
+}

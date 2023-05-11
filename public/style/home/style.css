@@ -239,58 +239,58 @@ input[type="submit"] {
     .foot3 p {
         margin: 3px;
     }
+}
 
-    @media screen and (min-width: 800px){
-        .nav {
-            height: 40px;
-        }
+@media screen and (min-width: 800px){
+    .nav {
+        height: 40px;
+    }
 
-        img {
-            width: 40px;
-        }
+    img {
+        width: 40px;
+    }
 
-        .nav img {
-            margin-left: 5px;
-        }
+    .nav img {
+        margin-left: 5px;
+    }
 
-        .links {
-            padding: 5px;
-        }
+    .links {
+        padding: 5px;
+    }
 
-        .links a {
-            padding: 5px;
-        }
+    .links a {
+        padding: 5px;
+    }
 
-        form {
-            width: 90%;
-            height: 300px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    form {
+        width: 90%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-        input {
-            width: 80%;
-        }
+    input {
+        width: 80%;
+    }
 
-        input[type="submit"] {
-            width: 60%;
-            margin-top: 5px;
-            margin-left: 20px;
-        }
+    input[type="submit"] {
+        width: 60%;
+        margin-top: 5px;
+        margin-left: 20px;
+    }
 
-        select {
-            width: 60%;
-        }
+    select {
+        width: 60%;
+    }
 
-        .footer {
-            height: 100px;
-        }
+    .footer {
+        height: 100px;
+    }
 
-        .p1,
-        .p2,
-        .p3 {
-            padding: 2px;
-            margin: 5px;
-        }
+    .p1,
+    .p2,
+    .p3 {
+        padding: 2px;
+        margin: 5px;
     }
 }
