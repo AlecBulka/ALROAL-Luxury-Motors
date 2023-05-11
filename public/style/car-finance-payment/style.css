@@ -103,25 +103,21 @@ select{
     height: 25px;
 }
 
-.btnpay{
-    margin: 0 auto;
-    background-color: #374151;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 20px;
-    width: 80px;
-    text-align: center;
-    margin-bottom: 100px;
+.btnpay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+
 }
 
-.btnpay a {
+.btnpay button {
+    padding: 10px 40px;
+    border-radius: 10px;
+    background-color: rgb(66, 65, 81);
     color: white;
-    text-decoration: none;
+    border: none;
     font-weight: bold;
-    text-align: center;
-}
-
-.btnpay:hover{
     cursor: pointer;
 }
 

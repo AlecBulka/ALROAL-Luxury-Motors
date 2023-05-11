@@ -50,7 +50,7 @@
                     <option>Select a Country</option>
                 </select><br><br>
                 <div class="btnpay">
-                    <a href="#">PAY NOW</a>
+                    <button>Pay Now</button>
                 </div>
             </form>
         </div>
