@@ -336,3 +336,76 @@ hr {
         fill: yellow;
     }
 }
+
+@media screen and (min-width: 800px){
+    .nav {
+        height: 40px;
+      }
+      .nav img {
+        display: none;
+      }
+      .links {
+          padding: 5px;
+      }
+      .links a{
+          font-size: 10px;
+      }
+
+      .p1, .p2, .p3 {
+        font-size: 12px;
+        padding: 3px;
+        margin: 5px;
+      }
+      
+  .container {
+    flex-direction: column;
+    margin: 10px;
+    }
+
+    .text {
+    margin: 20px;
+    }
+
+    .car {
+    width: 100%;
+    height: auto;
+    margin: 20px;
+    }
+
+    .seccion {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .left-seccion, .right-seccion {
+    text-align: center;
+    }
+
+    .viewCar {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .top {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .save {
+        width: 24px;
+        height: 24px;
+        stroke: black;
+        fill: none;
+    }
+
+    .saved{
+        width: 24px;
+        height: 24px;
+        stroke: black;
+        fill: yellow;
+    }
+    .footer {
+        height: 100px;
+    }
+}

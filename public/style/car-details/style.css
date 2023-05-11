@@ -348,3 +348,79 @@ h2 {
   }
 
 }
+
+@media screen and (min-width: 800px){
+    .nav {
+        height: 40px;
+      }
+      .nav img {
+        display: none;
+      }
+      .links {
+          padding: 5px;
+      }
+      .links a{
+          font-size: 10px;
+      }
+
+      .p1, .p2, .p3 {
+        font-size: 12px;
+        padding: 3px;
+        margin: 5px;
+      }
+      .container {
+          margin: 10px;
+          padding: 10px;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+          margin-left: 20px;
+        }
+
+        .save-btn {
+          margin-right: 20px;
+          margin-top: 10px;
+        }
+
+        .save, .saved {
+          width: 24px;
+          height: 24px;
+          margin-right: 20px;
+          margin-bottom: 20px;
+        }
+
+        .car {
+          width: 100%;
+          height: auto;
+        }
+
+        .hero {
+          margin-bottom: 20px;
+        }
+
+        .buy {
+          margin-right: 20px;
+        }
+
+        #buyCar {
+          width: 90px;
+          height: 30px;
+          margin-right: 10px;
+          font-size: 14px;
+        }
+
+        .list {
+          flex-direction: column;
+          text-align: center;
+          margin-left: 0;
+        }
+
+        #list-one, #list-two {
+          margin-left: 0;
+        }
+
+    .footer {
+        height: 100px;
+    }
+}

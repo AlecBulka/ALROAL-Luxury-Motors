@@ -385,3 +385,93 @@ body {
     margin: 3px;
   }
 }
+
+@media screen and (min-width: 800px){
+    .nav {
+        height: 40px;
+      }
+      .nav img {
+        display: none;
+      }
+      .links {
+          padding: 5px;
+      }
+      .links a{
+          font-size: 10px;
+      }
+      .menu{
+          display: block;
+          margin: 20px auto;
+          margin-left: 50px;
+      }
+
+      .menu a{
+          display: block;
+          margin: 10px 0;
+      }
+
+      .menu .view-cars{
+          margin: 10px 0;
+      }
+
+      .menu .view-users{
+          margin: 10px 0;
+      }
+
+      .menu .add-car{
+          margin: 10px 0;
+      }
+
+      .menu .add-user{
+          margin: 10px 0;
+      }
+
+      .menu .buy-cars{
+          margin: 10px 0;
+      }
+
+      .details{
+          margin-top: 20px;
+      }
+
+      .container {
+          margin: 15px;
+          border-radius: 30px;
+          }
+
+          .title {
+          margin-left: 30px;
+          font-size: 20px;
+          }
+
+          .table {
+          font-size: 10px;
+          margin: 0;
+          padding-bottom: 15px;
+          }
+
+          .th, .td {
+          padding-top: 0.;
+          padding-bottom: 0;
+          padding-left: 0;
+          padding-right: 0;
+          }
+
+          .edit a{
+              font-size: 8px;
+              padding: 2px 5px;
+          }
+
+          .edit, .delete {
+              font-size: 8px;
+              padding: 2px 5px;
+          }
+      .p1, .p2, .p3 {
+        font-size: 12px;
+        padding: 3px;
+        margin: 5px;
+      }
+    .footer {
+        height: 100px;
+    }
+}
