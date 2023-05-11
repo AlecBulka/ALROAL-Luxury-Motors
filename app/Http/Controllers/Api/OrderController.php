@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Order;
+use App\Models\Car;
 Use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -19,9 +20,31 @@ class OrderController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, Car $car)
     {
-        //
+        if ($request->has('finance')) {
+            $validated = $request->validate([
+                'status' => 'required|string',
+                'totalCost' => 'required|numeric',
+                'finance' => 'required|boolean',
+                'monthsFinanced' => 'required|integer',
+                'downPayment' => 'required|numeric',
+                'monthlyCost' => 'required|numeric',
+            ]);
+            $validated['user_id'] = Auth::user()->id();
+            $validated['car_id'] = $car->id;
+            Order::create($validated);
+            return redirect(route('admin-view-cars'));
+        }
+
+        $validated = $request->validate([
+            'status' => 'required|string',
+            'totalCost' => 'required|numeric'
+        ]);
+        $validated['user_id'] = Auth::user()->id();
+        $validated['car_id'] = $car->id;
+        Order::create($validated);
+        return redirect(route('admin-view-cars'));
     }
 
     /**
@@ -37,7 +60,25 @@ class OrderController extends Controller
      */
     public function update(Request $request, Order $order)
     {
-        //
+        if ($order->finance == true) {
+            $validated = $request->validate([
+                'status' => 'string',
+                'totalCost' => 'numeric',
+                'finance' => 'boolean',
+                'monthsFinanced' => 'integer',
+                'downPayment' => 'numeric',
+                'monthlyCost' => 'numeric',
+            ]);
+            $order->update($validated);
+            return redirect(route('admin-view-cars'));
+        }
+
+        $validated = $request->validate([
+            'status' => 'required|string',
+            'totalCost' => 'required|numeric'
+        ]);
+        $order->update($validated);
+        return redirect(route('admin-view-cars'));
     }
 
     /**

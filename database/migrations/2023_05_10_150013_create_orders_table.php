@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->string('status');
-            $table->decimal('totalCost');
+            $table->decimal('totalCost', 12, 2);
             $table->boolean('finance')->default(false);
             $table->integer('monthsFinanced')->nullable();
             $table->decimal('downPayment', 12, 2)->nullable();
