@@ -15,7 +15,6 @@
 
 <body>
     <x-header />
-
     <div class="payment">
         <div class="car-info">
             <div class="name">

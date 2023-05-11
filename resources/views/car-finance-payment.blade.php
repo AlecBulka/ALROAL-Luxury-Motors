@@ -25,7 +25,7 @@
                 <img src="{{asset('img/cars/' . $car->image)}}" alt="">
             </div>
             <div class="price">
-                <h3>4.531,33€/monthly</h3>
+                <h3>{{number_format($order->monthlyCost, 2)}} €/monthly</h3>
             </div>
         </div>
         <div class="user-info">

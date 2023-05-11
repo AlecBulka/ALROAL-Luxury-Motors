@@ -110,11 +110,11 @@
                 <form action="{{route('car-finance-payment-post', $car)}}" method="post">
                     @csrf
                     <input type="text" name="status" value="paymentPending" hidden>
-                    <input type="number" name="totalCost" hidden>
-                    <input type="checkbox" name="finance" hidden checked>
-                    <input type="number" name="monthsFinanced" hidden>
-                    <input type="number" name="downPayment" hidden>
-                    <input type="number" name="monthlyCost" hidden>
+                    <input type="number" name="totalCost" value="{{$car->price * 1.10, 2}}" hidden>
+                    <input type="number" name="finance" value="1" hidden>
+                    <input type="text" id="inputMF" name="monthsFinanced" hidden>
+                    <input type="text" id="inputDP" name="downPayment" hidden>
+                    <input type="text" id="inputMC" name="monthlyCost" hidden>
                     <button>Buy</button>
                 </form>
             </div>

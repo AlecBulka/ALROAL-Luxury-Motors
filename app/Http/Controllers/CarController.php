@@ -7,6 +7,7 @@ use App\Models\Car;
 use App\Models\Saved;
 use App\Models\Order;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Auth;
 
 class CarController extends Controller
 {
@@ -40,27 +41,39 @@ class CarController extends Controller
 
     public function carFinancePaymentGet(Car $car) {
         return view('car-finance-payment', [
-            'car' => $car
+            'car' => $car,
+            'order' => Order::where('car_id', $car->id)->where('user_id', Auth::user()->id)->latest()->first()
         ]);
     }
 
     public function carFinancePaymentPost(Request $request, Car $car) {
-
+        Http::post('https://alroalluxurymotors.alecbulka.com/api/orders', [
+            'status' => $request->status,
+            'totalCost' => $request->totalCost,
+            'finance' => $request->finance,
+            'monthsFinanced' => $request->monthsFinanced,
+            'downPayment' => $request->downPayment,
+            'monthlyCost' => $request->monthlyCost,
+            'user_id' => Auth::user()->id,
+            'car_id' => $car->id
+        ]);
         return redirect(route('car-finance-payment-get', $car));
     }
 
     public function carCashPaymentGet(Car $car) {
         return view('car-cash-payment', [
             'car' => $car,
-            'order' => Order::where('user_id', Auth::user()->id())->where('car_id', $car->id)->get()
+            'order' => Order::where('car_id', $car->id)->where('user_id', Auth::user()->id)->latest()->first()
         ]);
     }
 
     public function carCashPaymentPost(Request $request, Car $car) {
-        $order = Http::asForm()->post('https://alroalluxurymotors.alecbulka.com/api/orders', [
+        Http::post('https://alroalluxurymotors.alecbulka.com/api/orders', [
             'status' => $request->status,
             'totalCost' => $request->totalCost,
+            'user_id' => Auth::user()->id,
+            'car_id' => $car->id
         ]);
-        return redirect(route('car-finance-payment-get', $car));
+        return redirect(route('car-cash-payment-post', $car));
     }
 }

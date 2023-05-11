@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Order;
-use App\Models\Car;
 Use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -20,7 +19,7 @@ class OrderController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request, Car $car)
+    public function store(Request $request)
     {
         if ($request->has('finance')) {
             $validated = $request->validate([
@@ -32,8 +31,8 @@ class OrderController extends Controller
                 'monthlyCost' => 'required|numeric',
             ]);
 
-            $validated['user_id'] = Auth::user()->id();
-            $validated['car_id'] = $car->id;
+            $validated['user_id'] = $request->user_id;
+            $validated['car_id'] = $request->car_id;
             $order = Order::create($validated);
             return $order;
         }
@@ -43,8 +42,8 @@ class OrderController extends Controller
             'totalCost' => 'required|numeric'
         ]);
 
-        $validated['user_id'] = Auth::user()->id();
-        $validated['car_id'] = $car->id;
+        $validated['user_id'] = $request->user_id;
+        $validated['car_id'] = $request->car_id;
         $order = Order::create($validated);
         return $order;
     }

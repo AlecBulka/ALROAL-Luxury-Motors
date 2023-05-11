@@ -74,7 +74,7 @@
                 <form action="{{route('car-cash-payment-post', $car)}}" method="post">
                     @csrf
                     <input type="text" name="status" value="paymentPending" hidden>
-                    <input type="number" name="totalCost" value="{{number_format($car->price * 1.10, 2)}}" hidden>
+                    <input type="number" name="totalCost" value="{{$car->price * 1.10, 2}}" hidden>
                     <button>Buy</button>
                 </form>
             </div>
