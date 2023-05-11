@@ -49,18 +49,6 @@ body{
     height: 1px;
     background-color: black;
     }
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-
-    .sell {
-        animation: fadeIn 1s ease-in-out;
-    }
 
 .sell{
     display: flex;
