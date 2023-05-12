@@ -43,7 +43,7 @@
                         MONTHLY COST
                     </th>
                     <th scope="col" class="th">
-                        USER
+                        ORDER DATE
                     </th>
                 </tr>
             </thead>
@@ -72,7 +72,7 @@
                             {{ number_format($order->monthlyCost, 2) }} €
                         </td>
                         <td class="td">
-                            {{ $order->user->name }}
+                            {{ $order->updated_at->format('d-m-Y') }}
                         </td>
                 @endforeach
             </tbody>
