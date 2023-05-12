@@ -586,9 +586,8 @@ h4 {
 
 }
 
-@media screen and (min-width: 800px){
-    
+@media screen and (max-width: 600px){
     .footer {
-        height: 100px;
+        position: absolute;
     }
 }

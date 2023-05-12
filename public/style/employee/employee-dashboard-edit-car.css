@@ -353,8 +353,8 @@ input,select{
   }
 }
 
-@media screen and (min-width: 600px){
+@media screen and (max-width: 600px){
     .footer {
-        position: relative;
+        position: absolute;
     }
 }
