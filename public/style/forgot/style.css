@@ -242,3 +242,9 @@
             margin: 3px;
         }
     }
+
+    @media screen and (min-width: 600px){
+        .footer {
+            position: absolute;
+        }
+    }
