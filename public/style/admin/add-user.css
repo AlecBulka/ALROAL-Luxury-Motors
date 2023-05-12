@@ -360,6 +360,6 @@ form select {
 
 @media screen and (min-width: 800px){
     .footer {
-        height: 100px;
+        position: relative;
     }
 }
