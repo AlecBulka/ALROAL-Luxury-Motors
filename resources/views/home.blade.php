@@ -20,7 +20,7 @@
         <h1>ALROAL Luxury Motors</h1>
         <h3>Explore the +20 luxury vehicles of that we have globally</h3>
 
-        <form class="form1">
+        <form action="#" class="form1">
             <h2>Search for cars by Make, Model or Price</h2>
             <select class="sel" aria-label="Select make">
                 <option aria-label="">Any Make</option>
