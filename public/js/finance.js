@@ -8,6 +8,7 @@ let subTotal = document.getElementById('subTotal');
 let deposit = document.getElementById('deposit');
 let totalFinanced = document.getElementById('totalFinanced');
 let financeTerm = document.getElementById('financeTerm');
+let TCWI = document.getElementById('TCWI');
 let financePayment = document.getElementById('financePayment');
 
 let totalInterest = 0.00;
@@ -18,13 +19,16 @@ let formatCurrency = new Intl.NumberFormat('en-ES', {minimumFractionDigits: 2});
 
 let inputMonthsFinanced = document.getElementById('inputMF');
 let inputDownPayment = document.getElementById('inputDP');
+let inputTotalCost = document.getElementById('inputTC');
 let inputMonthlyCost = document.getElementById('inputMC');
 
 let calculateTotalFinanced = () => {
     totalFinanced.innerHTML = `${formatCurrency.format((parseFloat(subTotal.innerHTML.replace(' €', '').replace(',', '')) - depositAmount))} €`;
+    TCWI.innerHTML = `${formatCurrency.format(totalCostWithInterest)} €`;
 
     inputMonthsFinanced.value = parseInt(term.value);
     inputDownPayment.value = parseFloat(depositAmount).toFixed(2);
+    inputTotalCost.value = parseFloat(totalCostWithInterest).toFixed(2);
     inputMonthlyCost.value = parseFloat(monthlyCostWithInterest).toFixed(2);
 };
 
@@ -37,9 +41,11 @@ let calculateMonthlyCost = () => {
 
     monthlyCost.innerHTML = `${formatCurrency.format(monthlyCostWithInterest)} € / Monthly`;
     financePayment.innerHTML = `${formatCurrency.format(monthlyCostWithInterest)} €`;
+    TCWI.innerHTML = `${formatCurrency.format(totalCostWithInterest)} €`;
 
     inputMonthsFinanced.value = parseInt(term.value);
     inputDownPayment.value = parseFloat(depositAmount).toFixed(2);
+    inputTotalCost.value = parseFloat(totalCostWithInterest).toFixed(2);
     inputMonthlyCost.value = parseFloat(monthlyCostWithInterest).toFixed(2);
 };
 

@@ -16,7 +16,7 @@
             <a href="{{route('admin-add-users')}}">Add User</a>
         </div>
         <div class="order-cars">
-            <a href="{{route('view-ordered-cars')}}">Ordered Cars</a>
+            <a href="{{route('admin-view-orders')}}">View Orders</a>
         </div>
     </div>
     <div class="logout">

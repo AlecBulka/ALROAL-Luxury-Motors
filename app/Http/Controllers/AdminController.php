@@ -10,6 +10,7 @@ use App\Models\Carbrand;
 use App\Models\User;
 use App\Models\Role;
 use App\Models\Billing;
+use App\Models\Order;
 
 class AdminController extends Controller
 {
@@ -17,7 +18,7 @@ class AdminController extends Controller
         return view('admin.dashboard', [
             'users' => count(User::all()),
             'cars' => count(Car::all()),
-            'carsSold' => count(Car::where('isSold', true)->get())
+            'carsSold' => count(Order::where('status', 'Paid')->get())
         ]);
     }
 
@@ -132,13 +133,6 @@ class AdminController extends Controller
 
 
 
-
-
-
-
-
-
-
     public function viewUsers()
     {
         $users = User::all();
@@ -240,4 +234,13 @@ class AdminController extends Controller
         return redirect(route('admin-view-users'));
     }
 
+
+
+
+    public function viewOrders()
+    {
+        return view('admin.view-orders', [
+            'orders' => Order::latest()->get()
+        ]);
+    }
 }

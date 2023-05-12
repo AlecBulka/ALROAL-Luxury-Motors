@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href={{ asset('style/admin/view-cars.css') }}>
+    <link rel="stylesheet" href={{ asset('style/admin/view-orders.css') }}>
 </head>
 
 <body>
@@ -22,47 +22,28 @@
             <thead class="thead">
                 <tr>
                     <th scope="col" class="th">
-                        NAME
+                        ORDER NUMBER
                     </th>
                     <th scope="col" class="th">
-                        YEAR
+                        STATUS
                     </th>
                     <th scope="col" class="th">
-                        KILOMETERS
+                        TOTAL COST
                     </th>
-                    <th scope="col" class="th">
-                        PRICE
-                    </th>
-                    <th scope="col" class="th"></th>
-                    <th scope="col" class="th"></th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($cars as $car)
+                @foreach ($orders as $order)
                     <tr>
                         <td class="td">
-                            {{ $car->name }}
+                            {{ $order->orderNumber }}
                         </td>
                         <td class="td">
-                            {{ $car->year }}
+                            {{ $order->status }}
                         </td>
                         <td class="td">
-                            {{ $car->kilometers }} KM
+                            {{ number_format($order->totalCost, 2) }} €
                         </td>
-                        <td class="td">
-                            {{ number_format($car->price, 2) }} €
-                        </td>
-                        <td class="td">
-                            <button class="edit"><a href="{{ route('admin-edit-cars', $car) }}">Edit</a></button>
-                        </td>
-                        <td class="td">
-                            <form action="{{ route('admin-delete-cars', $car) }}" method="post">
-                                @csrf
-                                @method('DELETE')
-                                <button class="delete">Delete</button>
-                            </form>
-                        </td>
-                    </tr>
                 @endforeach
             </tbody>
         </table>

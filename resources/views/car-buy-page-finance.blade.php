@@ -101,6 +101,10 @@
                 <p class="p25">Finance Term</p>
                 <p class="p26" id="financeTerm">12 Months</p>
             </div>
+            <div class="pri1">
+                <p class="p27">Total Cost With Interest</p>
+                <p class="p28" id="TCWI"></p>
+            </div>
             <hr>
             <div class="pri1">
                 <p class="p27">Finance Payment</p>
@@ -110,7 +114,7 @@
                 <form action="{{route('car-finance-post', $car)}}" method="post">
                     @csrf
                     <input type="text" name="status" value="paymentPending" hidden>
-                    <input type="number" name="totalCost" value="{{$car->price * 1.10, 2}}" hidden>
+                    <input type="text" id="inputTC" name="totalCost" hidden>
                     <input type="number" name="finance" value="1" hidden>
                     <input type="text" id="inputMF" name="monthsFinanced" hidden>
                     <input type="text" id="inputDP" name="downPayment" hidden>

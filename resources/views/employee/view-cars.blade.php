@@ -51,7 +51,7 @@
                             {{ $car->kilometers }} KM
                         </td>
                         <td class="td">
-                            {{ $car->price }}€
+                            {{ number_format($car->price, 2) }} €
                         </td>
                         <td class="td">
                             <button class="edit"><a href="{{ route('employee-edit-cars', $car) }}">Edit</a></button>

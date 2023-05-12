@@ -45,7 +45,7 @@
                                 <p>Drivetrain: {{ $car->driveTrain }}</p>
                                 <p>Transmission: {{ $car->gearbox }}</p>
                                 <p>Engine: {{ $car->horsepower }} HP</p>
-                                <h3>{{ $car->price }}€</h3>
+                                <h3>{{ number_format($car->price, 2) }} €</h3>
                                 <button class="viewCar" aria-label="View car"><a
                                         href="{{ route('car-details', $car) }}">View
                                         Car</a></button>

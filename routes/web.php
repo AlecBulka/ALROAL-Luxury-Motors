@@ -44,10 +44,6 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/view-ordered-cars', function () {
-    return view('/admin/view-ordered-cars');
-})->name('view-ordered-cars');
-
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/car-finance/{car}', [CarController::class, 'carFinance'])->name('car-finance-page');
@@ -55,14 +51,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/car-finance/{car}', [CarController::class, 'carFinancePost'])->name('car-finance-post');
 
 
-
-
     Route::get('/car-cash/{car}', [CarController::class, 'carCash'])->name('car-cash-page');
 
     Route::post('/car-cash/{car}', [CarController::class, 'carCashPost'])->name('car-cash-post');
-
-
-
 
 
     Route::get('/car-payment/{order}', [CarController::class, 'carPayment'])->name('car-payment');
@@ -148,6 +139,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::put('/admin/edit-user/{user}', [AdminController::class, 'updateUsers'])->name('admin-update-users');
 
     Route::delete('/admin/delete-user/{user}', [AdminController::class, 'destroyUsers'])->name('admin-delete-users');
+
+    Route::get('/admin/view-orders', [AdminController::class, 'viewOrders'])->name('admin-view-orders');
 });
 
 

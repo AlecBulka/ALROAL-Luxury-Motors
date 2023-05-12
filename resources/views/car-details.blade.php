@@ -58,7 +58,7 @@
         </div>
         <div class="buy">
             <div class="price">
-                <h3>{{ $car->price }}€</h3>
+                <h3>{{ number_format($car->price, 2) }} €</h3>
             </div>
             <div class="btnBuy">
                 <a id="buyCar" aria-label="Buy car" href="{{route('car-cash-page', $car)}}">Buy Car</a>
