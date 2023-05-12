@@ -115,22 +115,13 @@ body {
     margin-left: 20px;
 }
 
-h1{
-    margin-left: 25px;
-}
-
-.container img{
-    width: 200px;
-    height: 200px;
-    margin-bottom: 40px;
-}
-
 .car {
     object-fit: cover;
     width: 25%;
     height: 280px;
     border-radius: 0.5rem;
     margin: 20px 20px 0 20px;
+    margin-bottom: 20px;
 }
 
 hr {
@@ -150,24 +141,31 @@ hr {
     text-align: left;
 }
 
-.right-seccion {
-    text-align: right;
-}
-
-.viewCar {
+.pay {
     padding: 10px 40px;
     background-color: #374151;
-    border: none;
     border-radius: 10px;
     margin-bottom: 20px;
-
-}
-
-.viewCar a {
     color: white;
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
+
+}
+
+.delete {
+    background-color: #FF0000;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.delete:hover {
+    cursor: pointer;
 }
 
 .top {
@@ -175,16 +173,6 @@ hr {
     justify-content: space-between;
 }
 
-.saved {
-    width: 36px;
-    height: 36px;
-    stroke: black;
-    fill: yellow;
-}
-.right-seccion svg{
-    width: 200px;
-    height: 200px;
-}
 
 .footer {
     background-color: white;

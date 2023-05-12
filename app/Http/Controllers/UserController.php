@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 Use App\Models\User;
+Use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
+use Illuminate\Support\Facades\Http;
 
 class UserController extends Controller
 {
@@ -68,5 +70,17 @@ class UserController extends Controller
         $user->delete();
 
         return redirect(route('home'));
+    }
+
+    public function orders() {
+        return view('user.orders', [
+            'orders' => Order::where('user_id', Auth::user()->id)->latest()->get()
+        ]);
+    }
+
+    public function deleteOrder(Order $order) {
+        Http::delete('https://alroalluxurymotors.alecbulka.com/api/orders/' . $order->orderNumber);
+
+        return redirect(route('user-orders', $order));
     }
 }

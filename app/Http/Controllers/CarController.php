@@ -83,7 +83,6 @@ class CarController extends Controller
         $order = Order::where('orderNumber', $orderNumber)->first();
 
         return view('car-payment', [
-            'car' => Car::where('id', $order->car_id)->first(),
             'order' => $order
         ]);
     }

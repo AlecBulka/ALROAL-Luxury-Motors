@@ -7,7 +7,7 @@
             <a href="{{ route('user-saved-cars') }}" aria-label="Saved cars">Saved Cars</a>
         </div>
         <div class="ordered-cars">
-            <a href="#" aria-label="Ordered Cars">Ordered Cars</a>
+            <a href="{{ route('user-orders') }}" aria-label="Orders">Orders</a>
         </div>
     </div>
     <div class="logout">

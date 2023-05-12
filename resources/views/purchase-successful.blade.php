@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href={{ asset('style/purchase-page/style.css') }}>
+    <link rel="stylesheet" href={{ asset('style/purchase-successful/style.css') }}>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
               </svg>
             <h1>CAR PURCHASED SUCCESSFULLY</h1>
             <h3>Your order number is: {{$order->orderNumber}}</h3>
-            <button class="order">VIEW ORDER</button>
+            <a class="order" href="{{route('user-orders')}}">VIEW ORDER</a>
         </div>
     <x-footer />
 </body>

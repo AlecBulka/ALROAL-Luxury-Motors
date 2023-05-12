@@ -44,10 +44,6 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/ordered-cars', function () {
-    return view('/user/ordered-cars');
-})->name('ordered-cars');
-
 Route::get('/view-ordered-cars', function () {
     return view('/admin/view-ordered-cars');
 })->name('view-ordered-cars');
@@ -86,6 +82,10 @@ Route::middleware(['auth', 'user'])->group(function () {
     Route::get('/user/account', [UserController::class, 'account'])->name('user-account');
 
     Route::get('/user/saved-cars', [SavedController::class, 'index'])->name('user-saved-cars');
+
+    Route::get('/user/orders', [UserController::class, 'orders'])->name('user-orders');
+
+    Route::post('/user/orders/{order}', [UserController::class, 'deleteOrder'])->name('user-delete-orders');
 
 
     Route::put('/user/update-personal-details', [UserController::class, 'updatePersonalDetails'])->name('user-update-personal-details');

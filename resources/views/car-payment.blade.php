@@ -18,10 +18,10 @@
     <div class="payment">
         <div class="car-info">
             <div class="name">
-                <h3>{{ $car->name }}</h3>
+                <h3>{{ $order->car->name }}</h3>
             </div>
             <div class="image">
-                <img src="{{ asset('img/cars/' . $car->image) }}" alt="">
+                <img src="{{ asset('img/cars/' . $order->car->image) }}" alt="">
             </div>
             <div class="price">
                 @if ($order->finance)
