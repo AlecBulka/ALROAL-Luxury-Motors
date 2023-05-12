@@ -81,8 +81,9 @@ class DatabaseSeeder extends Seeder
             'name' => 'Lamborghini'
         ]);
 
-        Carbrand::create([
-            'name' => 'Ferrari'
+        Carmodel::create([
+            'name' => 'Revuelto',
+            'carbrand_id' => 1
         ]);
 
         Carmodel::create([
@@ -91,9 +92,195 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Carmodel::create([
+            'name' => 'Huracan Tecnica',
+            'carbrand_id' => 1
+        ]);
+
+        Carmodel::create([
+            'name' => 'Huracan Sterrato',
+            'carbrand_id' => 1
+        ]);
+
+        Carmodel::create([
+            'name' => 'Urus S',
+            'carbrand_id' => 1
+        ]);
+
+        Carmodel::create([
+            'name' => 'Sian Roadster',
+            'carbrand_id' => 1
+        ]);
+
+        Carbrand::create([
+            'name' => 'Ferrari'
+        ]);
+
+        Carmodel::create([
             'name' => 'Purosangue',
             'carbrand_id' => 2
         ]);
+
+        Carmodel::create([
+            'name' => '296 GTB',
+            'carbrand_id' => 2
+        ]);
+
+        Carmodel::create([
+            'name' => '296 GTS',
+            'carbrand_id' => 2
+        ]);
+
+        Carmodel::create([
+            'name' => 'SF90 Stradale',
+            'carbrand_id' => 2
+        ]);
+
+        Carmodel::create([
+            'name' => 'F8 Tributo',
+            'carbrand_id' => 2
+        ]);
+
+        Carbrand::create([
+            'name' => 'Aston Martin'
+        ]);
+
+        Carmodel::create([
+            'name' => 'DBX',
+            'carbrand_id' => 3
+        ]);
+
+        Carmodel::create([
+            'name' => 'Vantage',
+            'carbrand_id' => 3
+        ]);
+
+        Carmodel::create([
+            'name' => 'DB11',
+            'carbrand_id' => 3
+        ]);
+
+        Carmodel::create([
+            'name' => 'DBS',
+            'carbrand_id' => 3
+        ]);
+
+        Carmodel::create([
+            'name' => 'Valkyrie',
+            'carbrand_id' => 3
+        ]);
+
+        Carmodel::create([
+            'name' => 'Valhalla',
+            'carbrand_id' => 3
+        ]);
+
+        Carbrand::create([
+            'name' => 'McLaren'
+        ]);
+
+        Carmodel::create([
+            'name' => '750S',
+            'carbrand_id' => 4
+        ]);
+
+        Carmodel::create([
+            'name' => 'Artura',
+            'carbrand_id' => 4
+        ]);
+
+        Carmodel::create([
+            'name' => '765LT',
+            'carbrand_id' => 4
+        ]);
+
+        Carmodel::create([
+            'name' => '720S',
+            'carbrand_id' => 4
+        ]);
+
+        Carmodel::create([
+            'name' => '675LT',
+            'carbrand_id' => 4
+        ]);
+
+        Carmodel::create([
+            'name' => 'P1',
+            'carbrand_id' => 4
+        ]);
+
+        Carmodel::create([
+            'name' => 'Senna',
+            'carbrand_id' => 4
+        ]);
+
+        Carbrand::create([
+            'name' => 'Bugatti'
+        ]);
+
+        Carmodel::create([
+            'name' => 'Chiron',
+            'carbrand_id' => 5
+        ]);
+
+        Carmodel::create([
+            'name' => 'Veyron',
+            'carbrand_id' => 5
+        ]);
+
+        Carmodel::create([
+            'name' => 'W16 Mistral',
+            'carbrand_id' => 5
+        ]);
+
+        Carmodel::create([
+            'name' => 'Divo',
+            'carbrand_id' => 5
+        ]);
+
+        Carmodel::create([
+            'name' => 'Centodieci',
+            'carbrand_id' => 5
+        ]);
+
+        Carmodel::create([
+            'name' => 'La Voiture Noire',
+            'carbrand_id' => 5
+        ]);
+
+        Carbrand::create([
+            'name' => 'Porsche'
+        ]);
+
+        Carmodel::create([
+            'name' => '911 GT3',
+            'carbrand_id' => 6
+        ]);
+
+        Carmodel::create([
+            'name' => '911 GT3 RS',
+            'carbrand_id' => 6
+        ]);
+
+        Carmodel::create([
+            'name' => '911 Turbo S',
+            'carbrand_id' => 6
+        ]);
+
+        Carmodel::create([
+            'name' => '911 Carrera 4S',
+            'carbrand_id' => 6
+        ]);
+
+        Carmodel::create([
+            'name' => '718 Cayman GT4',
+            'carbrand_id' => 6
+        ]);
+
+        Carmodel::create([
+            'name' => '718 Cayman GT4 RS',
+            'carbrand_id' => 6
+        ]);
+
 
         Car::create([
             'name' => 'Lamborghini Huracan STO',
