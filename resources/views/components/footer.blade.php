@@ -1,5 +1,5 @@
 <div class="footer">
-    <div class="foot1"><p class="p1">© 2018 Luxury Motors. All rights reserved</p></div>
+    <div class="foot1"><p class="p1">© 2023 Luxury Motors. All rights reserved</p></div>
     <div class="foot2">
     <p class="p2">Privacy Policy</p>
     <p class="p2">Contact</p>
