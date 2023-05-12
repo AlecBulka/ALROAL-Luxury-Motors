@@ -17,7 +17,7 @@
     <x-header-admin/>
 
     <div class="container">
-        <h1 class="title">Cars List</h1>
+        <h1 class="title">Orders List</h1>
         <table class="table">
             <thead class="thead">
                 <tr>
@@ -29,6 +29,21 @@
                     </th>
                     <th scope="col" class="th">
                         TOTAL COST
+                    </th>
+                    <th scope="col" class="th">
+                        FINANCED
+                    </th>
+                    <th scope="col" class="th">
+                        MONTHS FINANCED
+                    </th>
+                    <th scope="col" class="th">
+                        DOWN PAYMENT
+                    </th>
+                    <th scope="col" class="th">
+                        MONTHLY COST
+                    </th>
+                    <th scope="col" class="th">
+                        USER
                     </th>
                 </tr>
             </thead>
@@ -43,6 +58,21 @@
                         </td>
                         <td class="td">
                             {{ number_format($order->totalCost, 2) }} €
+                        </td>
+                        <td class="td">
+                            {{ $order->finance }}
+                        </td>
+                        <td class="td">
+                            {{ $order->monthsFinanced }}
+                        </td>
+                        <td class="td">
+                            {{ number_format($order->downPayment, 2) }} €
+                        </td>
+                        <td class="td">
+                            {{ number_format($order->monthlyCost, 2) }} €
+                        </td>
+                        <td class="td">
+                            {{ $order->user->name }}
                         </td>
                 @endforeach
             </tbody>
