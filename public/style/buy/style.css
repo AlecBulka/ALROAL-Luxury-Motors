@@ -246,6 +246,12 @@ hr {
             stroke: black;
             fill: yellow;
         }
+
+        .car img {
+            width: 70%;
+            height: 70%;
+            border-radius: 0.5rem;
+        }
 }
 /* Media query para pantallas de hasta 468px */
 @media screen and (max-width: 320px) {
