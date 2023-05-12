@@ -8,6 +8,7 @@ use App\Models\Saved;
 use App\Models\Order;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class CarController extends Controller
 {
@@ -28,7 +29,7 @@ class CarController extends Controller
     }
 
 
-    
+
 
     public function carFinance(Car $car) {
         return view('car-buy-page-finance', [
@@ -36,8 +37,11 @@ class CarController extends Controller
         ]);
     }
 
-    public function carFinancePaymentPost(Request $request, Car $car) {
+    public function carFinancePost(Request $request, Car $car) {
+        $orderNumber = 'ARALM-' . Str::random(6);
+
         Http::post('https://alroalluxurymotors.alecbulka.com/api/orders', [
+            'orderNumber' => $orderNumber,
             'status' => $request->status,
             'totalCost' => $request->totalCost,
             'finance' => $request->finance,
@@ -47,14 +51,7 @@ class CarController extends Controller
             'user_id' => Auth::user()->id,
             'car_id' => $car->id
         ]);
-        return redirect(route('car-finance-payment-get', $car));
-    }
-
-    public function carFinancePaymentGet(Car $car) {
-        return view('car-finance-payment', [
-            'car' => $car,
-            'order' => Order::where('car_id', $car->id)->where('user_id', Auth::user()->id)->latest()->first()
-        ]);
+        return redirect(route('car-payment', $orderNumber));
     }
 
 
@@ -66,20 +63,45 @@ class CarController extends Controller
         ]);
     }
 
-    public function carCashPaymentPost(Request $request, Car $car) {
+    public function carCashPost(Request $request, Car $car) {
+        $orderNumber = 'ARALM-' . Str::random(6);
+
         Http::post('https://alroalluxurymotors.alecbulka.com/api/orders', [
+            'orderNumber' => $orderNumber,
             'status' => $request->status,
             'totalCost' => $request->totalCost,
             'user_id' => Auth::user()->id,
             'car_id' => $car->id
         ]);
-        return redirect(route('car-cash-payment-post', $car));
+        return redirect(route('car-payment', $orderNumber));
     }
 
-    public function carCashPaymentGet(Car $car) {
-        return view('car-cash-payment', [
-            'car' => $car,
-            'order' => Order::where('car_id', $car->id)->where('user_id', Auth::user()->id)->latest()->first()
+
+
+
+    public function carPayment(string $orderNumber) {
+        $order = Order::where('orderNumber', $orderNumber)->first();
+
+        return view('car-payment', [
+            'car' => Car::where('id', $order->car_id)->first(),
+            'order' => $order
+        ]);
+    }
+
+    public function carPaymentPost(Request $request, Order $order) {
+        Http::put('https://alroalluxurymotors.alecbulka.com/api/orders/' . $order->orderNumber, [
+            'status' => $request->status
+        ]);
+
+        return redirect(route('purchase-successful', $order));
+    }
+
+
+
+
+    public function purchaseSuccessful(Order $order) {
+        return view('purchase-successful', [
+            'order' => $order
         ]);
     }
 }

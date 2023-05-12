@@ -10,6 +10,7 @@ class Order extends Model
     use HasFactory;
 
     protected $fillable = [
+        'orderNumber',
         'status',
         'totalCost',
         'finance',
@@ -19,6 +20,10 @@ class Order extends Model
         'car_id',
         'user_id'
     ];
+
+    public function getRouteKeyName() {
+        return 'orderNumber';
+    }
 
     public function user() {
         return $this->belongsTo(User::class);

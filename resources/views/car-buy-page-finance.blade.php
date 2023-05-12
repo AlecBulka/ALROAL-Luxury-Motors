@@ -107,7 +107,7 @@
                 <p class="p28" id="financePayment"></p>
             </div>
             <div class="buy">
-                <form action="{{route('car-finance-payment-post', $car)}}" method="post">
+                <form action="{{route('car-finance-post', $car)}}" method="post">
                     @csrf
                     <input type="text" name="status" value="paymentPending" hidden>
                     <input type="number" name="totalCost" value="{{$car->price * 1.10, 2}}" hidden>

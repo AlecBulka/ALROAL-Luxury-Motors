@@ -10,22 +10,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href={{ asset('style/car-finance-payment/style.css') }}>
+    <link rel="stylesheet" href={{ asset('style/car-payment/style.css') }}>
 </head>
 
 <body>
     <x-header />
-
     <div class="payment">
         <div class="car-info">
             <div class="name">
-                <h3>{{$car->name}}</h3>
+                <h3>{{ $car->name }}</h3>
             </div>
             <div class="image">
-                <img src="{{asset('img/cars/' . $car->image)}}" alt="">
+                <img src="{{ asset('img/cars/' . $car->image) }}" alt="">
             </div>
             <div class="price">
-                <h3>{{number_format($order->monthlyCost, 2)}} €/monthly</h3>
+                @if ($order->finance)
+                    <h3>{{ number_format($order->monthlyCost, 2) }} €/monthly</h3>
+                @else
+                    <h3>{{ number_format($order->totalCost, 2) }} €</h3>
+                @endif
             </div>
         </div>
         <div class="user-info">
@@ -35,22 +38,24 @@
             <div class="card">
                 <p>Card</p>
             </div>
-            <form id="form-user">
+            <form action="{{route('car-payment-post', $order)}}" method="post" id="form-user">
+                @csrf
                 <label for="">Email</label><br>
-                <input type="email" name="email" id="email" placeholder="Email"><br><br>
+                <input type="email" name="email" id="email" placeholder="Email" value="{{Auth::user()->email}}" required><br><br>
                 <div class="card-information">
                     <label for="">Card Information</label><br>
-                    <input type="number" name="card-info" id="card-info" placeholder="1234 1234 1234 1234"><br>
-                    <input type="month" name="card-date" id="card-date">
-                    <input type="text" name="card-cvc" id="card-cvc" placeholder="CVC"><br><br>
+                    <input type="number" name="card-info" id="card-info" placeholder="1234 1234 1234 1234" required><br>
+                    <input type="month" name="card-date" id="card-date" required>
+                    <input type="number" name="card-cvc" id="card-cvc" placeholder="CVC" required><br><br>
                 </div>
                 <label for="">Name on card</label><br>
-                <input type="text" name="name-card" id="name-card" placeholder="Name on card"><br><br>
+                <input type="text" name="name-card" id="name-card" placeholder="Name on card" required><br><br>
                 <label for="">Country or region</label><br>
-                <select name="country" id="country">
+                <select name="country" id="country" required>
                     <option>Select a Country</option>
                 </select><br><br>
                 <div class="btnpay">
+                    <input type="text" name="status" value="Paid" hidden>
                     <button>Pay Now</button>
                 </div>
             </form>

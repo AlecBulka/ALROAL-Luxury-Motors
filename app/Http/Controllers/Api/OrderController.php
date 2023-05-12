@@ -30,7 +30,7 @@ class OrderController extends Controller
                 'downPayment' => 'required|numeric',
                 'monthlyCost' => 'required|numeric',
             ]);
-
+            $validated['orderNumber'] = $request->orderNumber;
             $validated['user_id'] = $request->user_id;
             $validated['car_id'] = $request->car_id;
             $order = Order::create($validated);
@@ -41,7 +41,7 @@ class OrderController extends Controller
             'status' => 'required|string',
             'totalCost' => 'required|numeric'
         ]);
-
+        $validated['orderNumber'] = $request->orderNumber;
         $validated['user_id'] = $request->user_id;
         $validated['car_id'] = $request->car_id;
         $order = Order::create($validated);
@@ -63,12 +63,7 @@ class OrderController extends Controller
     {
         if ($order->finance == true) {
             $validated = $request->validate([
-                'status' => 'string',
-                'totalCost' => 'numeric',
-                'finance' => 'boolean',
-                'monthsFinanced' => 'integer',
-                'downPayment' => 'numeric',
-                'monthlyCost' => 'numeric',
+                'status' => 'required|string',
             ]);
 
             $order->update($validated);
@@ -77,7 +72,6 @@ class OrderController extends Controller
 
         $validated = $request->validate([
             'status' => 'required|string',
-            'totalCost' => 'required|numeric'
         ]);
 
         $order->update($validated);

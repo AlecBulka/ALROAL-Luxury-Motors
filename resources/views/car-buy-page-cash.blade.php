@@ -71,7 +71,7 @@
                 <p class="p22">{{number_format($car->price * 1.10, 2)}} €</p>
             </div>
             <div class="buy">
-                <form action="{{route('car-cash-payment-post', $car)}}" method="post">
+                <form action="{{route('car-cash-post', $car)}}" method="post">
                     @csrf
                     <input type="text" name="status" value="paymentPending" hidden>
                     <input type="number" name="totalCost" value="{{$car->price * 1.10, 2}}" hidden>

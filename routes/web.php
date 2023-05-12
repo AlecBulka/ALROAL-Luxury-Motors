@@ -36,10 +36,6 @@ Route::get('/sell-cars', function () {
     return view('sell-cars');
 })->name('sell-cars');
 
-Route::get('/purchase-page', function () {
-    return view('purchase-page');
-})->name('purchase-page');
-
 Route::get('/tunning', function () {
     return view('tunning');
 })->name('tunning');
@@ -60,17 +56,24 @@ Route::get('/view-ordered-cars', function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/car-finance/{car}', [CarController::class, 'carFinance'])->name('car-finance-page');
 
+    Route::post('/car-finance/{car}', [CarController::class, 'carFinancePost'])->name('car-finance-post');
+
+
+
+
     Route::get('/car-cash/{car}', [CarController::class, 'carCash'])->name('car-cash-page');
 
+    Route::post('/car-cash/{car}', [CarController::class, 'carCashPost'])->name('car-cash-post');
 
 
-    Route::get('/car-finance-payment/{car}', [CarController::class, 'carFinancePaymentGet'])->name('car-finance-payment-get');
 
-    Route::post('/car-finance-payment/{car}', [CarController::class, 'carFinancePaymentPost'])->name('car-finance-payment-post');
 
-    Route::get('/car-cash-payment/{car}', [CarController::class, 'carCashPaymentGet'])->name('car-cash-payment-get');
 
-    Route::post('/car-cash-payment/{car}', [CarController::class, 'carCashPaymentPost'])->name('car-cash-payment-post');
+    Route::get('/car-payment/{order}', [CarController::class, 'carPayment'])->name('car-payment');
+
+    Route::post('/car-payment/{order}', [CarController::class, 'carPaymentPost'])->name('car-payment-post');
+
+    Route::get('/purchase-successful/{order}', [CarController::class, 'purchaseSuccessful'])->name('purchase-successful');
 });
 
 
