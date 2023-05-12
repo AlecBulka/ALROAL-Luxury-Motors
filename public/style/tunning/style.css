@@ -356,3 +356,9 @@ body{
     margin: 3px;
   }
   }
+
+  @media screen and (max-width: 600px){
+    .footer {
+        position: absolute;
+    }
+}

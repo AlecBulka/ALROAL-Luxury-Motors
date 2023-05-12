@@ -358,8 +358,8 @@ form select {
     }
 }
 
-@media screen and (min-width: 800px){
+@media screen and (max-width: 600px){
     .footer {
-        position: relative;
+        position: absolute;
     }
 }

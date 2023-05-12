@@ -207,7 +207,7 @@ hr {
     justify-content: center;
 }
 
-@media screen and (min-width: 600px){
+@media screen and (max-width: 600px){
     .footer {
         position: absolute;
     }
