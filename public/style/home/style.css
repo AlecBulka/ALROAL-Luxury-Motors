@@ -241,8 +241,8 @@ input[type="submit"] {
     }
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 600px){
     .footer {
-        height: 100px;
+        position: absolute;
     }
 }
