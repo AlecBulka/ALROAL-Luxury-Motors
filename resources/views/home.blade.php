@@ -15,7 +15,7 @@
         <x-header/>
 
     <div class="center">
-        <h1>Luxury Motors</h1>
+        <h1>ALROAL Luxury Motors</h1>
         <h3>Explore the +20 luxury vehicles of that we have globally</h3>
 
     <form action="" class="form1">
