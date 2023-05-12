@@ -217,6 +217,6 @@ a{
 
   @media screen and (max-width: 600px){
     .footer {
-        position: absolute;
+        position: relative;
     }
 }
