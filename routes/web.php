@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Carmodel;
+use App\Models\Carbrand;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
@@ -25,7 +27,10 @@ require __DIR__.'/auth.php';
 
 //Main Routes
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        'brands' => Carbrand::all(),
+        'models' => Carmodel::all()
+    ]);
 })->name('home');
 
 Route::get('/buy-cars', [CarController::class, 'index'])->name('buy-cars');
