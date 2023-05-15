@@ -126,12 +126,16 @@ body {
 }
 
 .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     background-color: white;
     width: 100%;
     height: 150px;
-    bottom: 0;
+    border: none;
     border-top: 1px solid black;
-}
+    margin-top: 300px;
+  }
 
 .foot1 {
     display: flex;
@@ -204,9 +208,6 @@ body {
         padding: 3px 10px;
         }
 
-    .footer {
-      height: 100px;
-    }
     .p1,
     .p2,
     .p3 {
@@ -214,7 +215,7 @@ body {
       margin: 5px;
     }
 }
-/* Media query para pantallas de hasta 468px */
+
 @media screen and (max-width: 414px) {
     .nav {
       height: 40px;
@@ -301,10 +302,6 @@ body {
       margin: 5px;
     }
 
-    .footer {
-      height: auto;
-    }
-
   .foot1,
   .foot2,
   .foot3 {
@@ -320,10 +317,4 @@ body {
   .foot3 p {
     margin: 3px;
   }
-}
-
-@media screen and (max-width: 600px){
-    .footer {
-        position: absolute;
-    }
 }

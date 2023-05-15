@@ -147,7 +147,6 @@ h2 {
     margin-bottom: 100px;
 }
 
-/* Media queries para tablet */
 @media screen and (max-width: 768px) {
 
     .header {
@@ -194,13 +193,15 @@ h2 {
 }
 
 .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     background-color: white;
     width: 100%;
     height: 150px;
-    bottom: 0;
     border: none;
     border-top: 1px solid black;
-}
+  }
 
 .foot1 {
     display: flex;
@@ -256,7 +257,7 @@ h2 {
     }
 
 }
-/* Media query para pantallas de hasta 468px */
+
 @media screen and (max-width: 320px) {
     .nav {
       height: 40px;
@@ -349,8 +350,3 @@ h2 {
 
 }
 
-@media screen and (max-width: 600px){
-    .footer {
-        position: absolute;
-    }
-}

@@ -144,13 +144,15 @@ label {
 }
 
 .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     background-color: white;
     width: 100%;
     height: 150px;
-    bottom: 0;
-    position: absolute;
+    border: none;
     border-top: 1px solid black;
-}
+  }
 
 .foot1 {
     display: flex;
@@ -178,8 +180,65 @@ label {
     justify-content: center;
 }
 
-@media screen and (max-width: 600px){
-    .footer {
-        position: absolute;
-    }
+@media screen and (max-width: 480px) {
+    .nav {
+        height: 40px;
+      }
+    .nav img {
+        display: none;
+      }
+
+      .links {
+        padding: 5px;
+      }
+      .links a {
+        padding: 5px;
+      }
+  .menu {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .personal-details {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 70px;
+    height: auto;
+    margin-bottom: 100px;
+  }
+  form input {
+    width: 80%;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .nav {
+        height: 40px;
+        padding: 5px;
+      }
+      .nav img {
+        display: none;
+      }
+      .links {
+        font-size: 10px;
+        padding: 5px;
+      }
+      .links a{
+          font-size: 10px;
+      }
+  .menu {
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+  .personal-details {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 70px;
+    height: auto;
+    margin-bottom: 100px;
+  }
+  form input {
+    width: 80%;
+    margin-top: 20px;
+  }
 }

@@ -198,13 +198,16 @@ label{
     cursor: pointer;
 }
 
-.footer{
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     background-color: white;
     width: 100%;
     height: 150px;
-    bottom: 0;
+    border: none;
     border-top: 1px solid black;
-}
+  }
 .foot1{
     display: flex;
     justify-content: center;
@@ -249,10 +252,4 @@ label{
   .foot3 p {
     margin: 3px;
   }
-  }
-
-  @media screen and (max-width: 600px){
-    .footer {
-        position: absolute;
-    }
 }

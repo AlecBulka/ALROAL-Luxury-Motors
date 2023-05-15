@@ -175,13 +175,15 @@ hr {
 
 
 .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     background-color: white;
     width: 100%;
     height: 150px;
-    bottom: 0;
+    border: none;
     border-top: 1px solid black;
-}
-
+  }
 .foot1 {
     display: flex;
     justify-content: center;
@@ -208,8 +210,55 @@ hr {
     justify-content: center;
 }
 
-@media screen and (max-width: 600px){
-    .footer {
-        position: absolute;
+@media screen and (max-width: 480px) {
+    .nav {
+        height: 40px;
+      }
+      img {
+        width: 40px;
+      }
+      .nav img {
+        display: none;
+      }
+      .links {
+        padding: 5px;
+      }
+      .links a {
+        padding: 5px;
+      }
+    .menu {
+      margin-left: 10px;
+      margin-top: 10px;
     }
-}
+    .container {
+      flex-direction: column;
+    }
+    .car {
+      width: 100%;
+      height: auto;
+    }
+    .text {
+      margin: 20px;
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+
+    .nav {
+        height: 40px;
+      }
+      .nav img {
+        display: none;
+      }
+      .links {
+        padding: 5px;
+      }
+      .links a {
+        padding: 5px;
+      }
+    .menu {
+      margin-left: 30px;
+      margin-top: 20px;
+    }
+  }
+
