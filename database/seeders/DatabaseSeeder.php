@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'Admin'
         ]);
 
-        User::create([
+        $admin = User::create([
             'name' => 'Alec',
             'email' => 'alec@gmail.com',
             'password' => Hash::make('Alec123'),
@@ -49,7 +49,9 @@ class DatabaseSeeder extends Seeder
             'role_id' => 3
         ]);
 
-        User::create([
+        $admin->markEmailAsVerified();
+
+        $employee = User::create([
             'name' => 'Roger',
             'email' => 'roger@gmail.com',
             'password' => Hash::make('Roger123'),
@@ -57,13 +59,17 @@ class DatabaseSeeder extends Seeder
             'role_id' => 2
         ]);
 
-        User::create([
+        $employee->markEmailAsVerified();
+
+        $user = User::create([
             'name' => 'Alex',
             'email' => 'alex@gmail.com',
             'password' => Hash::make('Alex123'),
             'phoneNumber' => 789765456,
             'role_id' => 1
         ]);
+
+        $user->markEmailAsVerified();
 
         Billing::create([
             'user_id' => 1
