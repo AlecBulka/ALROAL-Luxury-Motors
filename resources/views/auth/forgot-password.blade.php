@@ -16,6 +16,7 @@
     <x-header />
     <div class="forg">
         <form method="POST" id="form" action="{{ route('password.email') }}">
+            @csrf
             <h2>Forgot your password?</h2>
             <x-text-input id="email" class="block mt-1 w-full"
                 placeholder="Enter your email to recover the password" type="email" name="email" :value="old('email')"

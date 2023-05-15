@@ -71,7 +71,7 @@ Route::middleware(['auth'])->group(function () {
 
 
 
-Route::middleware(['auth', 'user'])->group(function () {
+Route::middleware(['auth', 'user', 'verified'])->group(function () {
     // User Routes
     Route::get('/user/dashboard', [UserController::class, 'dashboard'])->name('user-dashboard');
 
@@ -99,7 +99,7 @@ Route::middleware(['auth', 'user'])->group(function () {
 });
 
 
-Route::middleware(['auth', 'employee'])->group(function () {
+Route::middleware(['auth', 'employee', 'verified'])->group(function () {
     //Employee Routes
     Route::get('/employee/view-cars', [EmployeeController::class, 'index'])->name('employee-view-cars');
 
@@ -117,7 +117,7 @@ Route::middleware(['auth', 'employee'])->group(function () {
 
 
 
-Route::middleware(['auth', 'admin'])->group(function () {
+Route::middleware(['auth', 'admin', 'verified'])->group(function () {
     //Admin Routes
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin-dashboard');
 

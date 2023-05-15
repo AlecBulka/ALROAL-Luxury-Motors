@@ -11,6 +11,7 @@ use App\Models\User;
 use App\Models\Role;
 use App\Models\Billing;
 use App\Models\Order;
+use Illuminate\Auth\Events\Registered;
 
 class AdminController extends Controller
 {
@@ -183,6 +184,8 @@ class AdminController extends Controller
             'country' => $request->country,
             'user_id' => $user->id
         ]);
+
+        event(new Registered($user));
 
         return redirect(route('admin-view-users'));
 
