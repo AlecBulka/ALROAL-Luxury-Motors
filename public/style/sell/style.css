@@ -157,15 +157,16 @@ form input{
     cursor: pointer;
 }
 
-.footer{
-    position: absolute;
+.footer {
+    position: fixed;
+    left: 0;
     bottom: 0;
     background-color: white;
     width: 100%;
     height: 150px;
     border: none;
     border-top: 1px solid black;
-}
+  }
 
 .foot1{
     display: flex;
@@ -251,7 +252,7 @@ form input{
       margin: 5px;
     }
 }
-/* Media query para pantallas de hasta 468px */
+
 @media screen and (max-width: 320px) {
     .nav {
       height: 40px;
@@ -324,8 +325,3 @@ form input{
   }
 }
 
-@media screen and (max-width: 600px){
-    .footer {
-        position: absolute;
-    }
-}
