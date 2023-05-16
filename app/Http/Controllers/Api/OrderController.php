@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Models\Order;
 Use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Resources\OrderResource;
+use App\Http\Resources\OrderCollection;
 
 class OrderController extends Controller
 {
@@ -13,7 +15,10 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json([
+            'status' => 'Success',
+            'data' => new OrderCollection(Order::all())
+        ], 200);
     }
 
     /**
@@ -34,7 +39,12 @@ class OrderController extends Controller
             $validated['user_id'] = $request->user_id;
             $validated['car_id'] = $request->car_id;
             $order = Order::create($validated);
-            return $order;
+
+            return response()->json([
+                'status' => 'Success',
+                'message' => 'Order Created',
+                'data' => new OrderResource($order)
+            ], 201);
         }
 
         $validated = $request->validate([
@@ -45,7 +55,12 @@ class OrderController extends Controller
         $validated['user_id'] = $request->user_id;
         $validated['car_id'] = $request->car_id;
         $order = Order::create($validated);
-        return $order;
+
+        return response()->json([
+            'status' => 'Success',
+            'message' => 'Order Created',
+            'data' => new OrderResource($order)
+        ], 201);
     }
 
     /**
@@ -53,7 +68,10 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        //
+        return response()->json([
+            'status' => 'Success',
+            'data' => new OrderResource($order)
+        ], 200);
     }
 
     /**
@@ -67,7 +85,12 @@ class OrderController extends Controller
             ]);
 
             $order->update($validated);
-            return $order;
+
+            return response()->json([
+                'status' => 'Success',
+                'message' => 'Order Updated',
+                'data' => new OrderResource($order)
+            ], 200);
         }
 
         $validated = $request->validate([
@@ -75,7 +98,12 @@ class OrderController extends Controller
         ]);
 
         $order->update($validated);
-        return $order;
+
+        return response()->json([
+            'status' => 'Success',
+            'message' => 'Order Updated',
+            'data' => new OrderResource($order)
+        ], 200);
     }
 
     /**
@@ -84,5 +112,10 @@ class OrderController extends Controller
     public function destroy(Order $order)
     {
         $order->delete();
+
+        return response()->json([
+            'status' => 'Success',
+            'message' => 'Order Deleted'
+        ], 200);
     }
 }
