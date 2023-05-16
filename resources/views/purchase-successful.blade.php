@@ -21,7 +21,7 @@
               </svg>
             <h1>CAR PURCHASED SUCCESSFULLY</h1>
             <h3>Your order number is: {{$order->orderNumber}}</h3>
-            <a class="order" href="{{route('user-orders')}}">VIEW ORDER</a>
+            <a class="order" href="{{route('user-orders')}}" aria-label="View order">VIEW ORDER</a>
         </div>
     <x-footer />
 </body>

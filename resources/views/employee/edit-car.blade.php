@@ -132,7 +132,7 @@
                 </div>
             </div>
         </div>
-        <button class="boton">Save Changes</button>
+        <button class="boton" aria-label="Save changes">Save Changes</button>
     </form>
     <x-footer />
 </body>

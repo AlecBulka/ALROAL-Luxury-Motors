@@ -64,7 +64,7 @@
             </div>
         </div>
         <div class="btnAdd">
-            <button type="submit" id="add">Save Changes</button>
+            <button type="submit" id="add" aria-label="Save changes">Save Changes</button>
         </div>
     </form>
     <x-footer></x-footer>

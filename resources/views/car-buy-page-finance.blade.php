@@ -119,7 +119,7 @@
                     <input type="text" id="inputMF" name="monthsFinanced" hidden>
                     <input type="text" id="inputDP" name="downPayment" hidden>
                     <input type="text" id="inputMC" name="monthlyCost" hidden>
-                    <button>Buy</button>
+                    <button aria-label="Buy">Buy</button>
                 </form>
             </div>
         </div>

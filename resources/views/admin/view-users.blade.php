@@ -54,7 +54,7 @@
                             {{$user->role->role}}
                         </td>
                         <td class="td">
-                            <button class="edit"><a href="{{ route('admin-edit-users', $user) }}">Edit</a></button>
+                            <button class="edit" aria-label="Edit"><a href="{{ route('admin-edit-users', $user) }}">Edit</a></button>
                         </td>
                         <td class="td">
                             <form action="{{ route('admin-delete-users', $user) }}" method="post">
