@@ -21,24 +21,24 @@
         <div class="user-details">
             <div class="column-one">
                 <label for="">Name:</label>
-                <input type="text" name="name" id="name"><br>
+                <input type="text" name="name" id="name" aria-label="Name"><br>
                 <x-input-error :messages="$errors->get('name')" class="mt-2" />
                 <label for="">Email:</label>
-                <input type="email" name="email" id="email"><br>
+                <input type="email" name="email" id="email" aria-label="Email"><br>
                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
                 <label for="">Postal Code:</label>
-                <input type="text" name="postalCode" id="code"><br>
+                <input type="text" name="postalCode" id="code" aria-label="Code"><br>
                 <x-input-error :messages="$errors->get('postalCode')" class="mt-2" />
                 <label for="">Address:</label>
-                <input type="text" name="address" id="address"><br>
+                <input type="text" name="address" id="address" aria-label="Address"><br>
                 <x-input-error :messages="$errors->get('address')" class="mt-2" />
                 <label for="">City:</label>
-                <input type="text" name="city" id="city"><br>
+                <input type="text" name="city" id="city" aria-label="City"><br>
                 <x-input-error :messages="$errors->get('city')" class="mt-2" />
             </div>
             <div class="column-two">
                 <label for="">Phone Number:</label>
-                <input type="tel" name="phoneNumber" id="number"><br>
+                <input type="tel" name="phoneNumber" id="number" aria-label="Number"><br>
                 <x-input-error :messages="$errors->get('phoneNumber')" class="mt-2" />
                 <label for="">Role:</label>
                 <select name="role_id" id="role">
@@ -48,18 +48,18 @@
                 </select><br>
                 <x-input-error :messages="$errors->get('role_id')" class="mt-2" />
                 <label for="">Password:</label>
-                <input type="password" name="password" id="passwd"><br>
+                <input type="password" name="password" id="passwd" aria-label="Password"><br>
                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
                 <label for="">Country:</label>
-                <input type="text" name="country" id="country"><br>
+                <input type="text" name="country" id="country" aria-label="Country"><br>
                 <x-input-error :messages="$errors->get('country')" class="mt-2" />
                 <label for="">Province:</label>
-                <input type="text" name="province" id="province"><br>
+                <input type="text" name="province" id="province" aria-label="Province"><br>
                 <x-input-error :messages="$errors->get('province')" class="mt-2" />
             </div>
         </div>
         <div class="btnAdd">
-            <button type="submit" id="add">Add User</button>
+            <button type="submit" id="add" aria-label="Add user">Add User</button>
         </div>
     </form>
     <x-footer></x-footer>

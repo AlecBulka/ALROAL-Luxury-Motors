@@ -75,7 +75,7 @@
                     @csrf
                     <input type="text" name="status" value="paymentPending" hidden>
                     <input type="number" name="totalCost" value="{{$car->price * 1.10, 2}}" hidden>
-                    <button>Buy</button>
+                    <button aria-label="Buy">Buy</button>
                 </form>
             </div>
         </div>

@@ -56,7 +56,7 @@
                 </select><br><br>
                 <div class="btnpay">
                     <input type="text" name="status" value="Paid" hidden>
-                    <button>Pay Now</button>
+                    <button aria-label="Pay now">Pay Now</button>
                 </div>
             </form>
         </div>

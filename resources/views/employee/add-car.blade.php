@@ -20,7 +20,7 @@
         @csrf
         <div class="sell">
             <div class="img">
-                <input type="file" name="image" id="image" class="image">
+                <input type="file" name="image" id="image" class="image" aria-label="Upload image">
                 <label for="image">Upload an image</label>
                 <x-input-error :messages="$errors->get('image')" class="mt-2" />
             </div>
@@ -125,7 +125,7 @@
                 </div>
             </div>
         </div>
-        <button class="boton">Add Car</button>
+        <button class="boton" aria-label="Add car">Add Car</button>
     </form>
     <x-footer />
 </body>

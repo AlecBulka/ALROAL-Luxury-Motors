@@ -3,15 +3,15 @@
     <div class="links">
         @if (Route::has('register'))
             @auth
-                <a href="{{ route('home') }}" class="">Home</a>
+                <a href="{{ route('home') }}" class="" aria-label="Home">Home</a>
 
-                <a href="{{ route('buy-cars') }}" class="">Buy Cars</a>
+                <a href="{{ route('buy-cars') }}" class="" aria-label="Buy cars">Buy Cars</a>
 
-                <a href="{{ route('sell-cars') }}" class="">Sell Cars</a>
+                <a href="{{ route('sell-cars') }}" class="" aria-label="Sell cars">Sell Cars</a>
 
-                <a href="{{ route('tunning') }}" class="">Tunning</a>
+                <a href="{{ route('tunning') }}" class="" aria-label="Tunning">Tunning</a>
 
-                <a href="{{ route('contact') }}" class="">Contact</a>
+                <a href="{{ route('contact') }}" class="" aria-label="Contact">Contact</a>
 
                 @if (Auth::user()->role_id == 1)
                     <a href="{{ route('user-dashboard') }}" class="">
@@ -57,15 +57,15 @@
                     </a>
                 @endif
             @else
-                <a href="{{ route('home') }}" class="">Home</a>
+                <a href="{{ route('home') }}" class="" aria-label="Home">Home</a>
 
-                <a href="{{ route('buy-cars') }}" class="">Buy Cars</a>
+                <a href="{{ route('buy-cars') }}" class="" aria-label="Buy cars">Buy Cars</a>
 
-                <a href="{{ route('sell-cars') }}" class="">Sell Cars</a>
+                <a href="{{ route('sell-cars') }}" class="" aria-label="Sell cars">Sell Cars</a>
 
-                <a href="{{ route('tunning') }}" class="">Tunning</a>
+                <a href="{{ route('tunning') }}" class="" aria-label="Tunning">Tunning</a>
 
-                <a href="{{ route('contact') }}" class="">Contact</a>
+                <a href="{{ route('contact') }}" class="" aria-label="COntact">Contact</a>
 
                 <a href="{{ route('login') }}" class="">
                     <svg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
