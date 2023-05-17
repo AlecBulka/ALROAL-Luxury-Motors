@@ -50,7 +50,7 @@ Route::get('/contact', function () {
 })->name('contact');
 
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/car-finance/{car}', [CarController::class, 'carFinance'])->name('car-finance-page');
 
     Route::post('/car-finance/{car}', [CarController::class, 'carFinancePost'])->name('car-finance-post');
